@@ -1,854 +1,286 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Victor William | Structured Strength Coach</title>
-    <meta name="description" content="Transform your training with structured strength coaching. No shortcuts. Just results.">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Victor William — Training System</title>
+<meta name="description" content="Structured strength and wellness training system.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
-    /* ===== CSS VARIABLES ===== */
-    :root {
-        --primary-bg: #0A0A0A;
-        --secondary-bg: #111111;
-        --text-white: #FFFFFF;
-        --text-light: #F0F0F0;
-        --text-gray: #AAAAAA;
-        --accent-gold: #D4AF37;
-        --accent-dark-gold: #B8860B;
-        --overlay-dark: rgba(0, 0, 0, 0.7);
-        --overlay-light: rgba(0, 0, 0, 0.4);
-        --transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    }
-
-    /* ===== RESET & BASE ===== */
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
-
-    html {
-        scroll-behavior: smooth;
-        scroll-padding-top: 80px;
-    }
-
-    body {
-        font-family: 'Poppins', sans-serif;
-        line-height: 1.6;
-        color: var(--text-white);
-        background: var(--primary-bg);
-        overflow-x: hidden;
-        -webkit-font-smoothing: antialiased;
-        text-rendering: optimizeLegibility;
-    }
-
-    .container {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 0 20px;
-    }
-
-    /* ===== TYPOGRAPHY ===== */
-    h1, h2, h3, h4 {
-        font-family: 'Montserrat', sans-serif;
-        font-weight: 700;
-        line-height: 1.1;
-        color: var(--text-white);
-    }
-
-    h1 {
-        font-size: 4.5rem;
-        margin-bottom: 1.5rem;
-        letter-spacing: 2px;
-        text-transform: uppercase;
-    }
-
-    h2 {
-        font-size: 3rem;
-        margin-bottom: 1.5rem;
-        position: relative;
-        display: inline-block;
-    }
-
-    h2::after {
-        content: '';
-        position: absolute;
-        bottom: -10px;
-        left: 0;
-        width: 60px;
-        height: 3px;
-        background: var(--accent-gold);
-        border-radius: 2px;
-    }
-
-    h3 {
-        font-size: 2rem;
-        margin-bottom: 1rem;
-        color: var(--accent-gold);
-    }
-
-    p, li {
-        font-family: 'Poppins', sans-serif;
-        font-weight: 400;
-        font-size: 1.2rem;
-        line-height: 1.8;
-        margin-bottom: 1.5rem;
-        color: var(--text-light);
-    }
-
-    .lead {
-        font-size: 1.6rem;
-        font-weight: 500;
-        margin-bottom: 2rem;
-        color: var(--accent-gold);
-    }
-
-    /* ===== HEADER ===== */
-    .header {
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        padding: 15px 0;
-        background: rgba(10, 10, 10, 0.95);
-        backdrop-filter: blur(10px);
-        z-index: 1000;
-        border-bottom: 1px solid rgba(212, 175, 55, 0.2);
-    }
-
-    .header-content {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    .logo-container {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        text-decoration: none;
-    }
-
-    .logo {
-        font-family: 'Montserrat', sans-serif;
-        font-size: 1.8rem;
-        font-weight: 800;
-        color: var(--text-white);
-        letter-spacing: 2px;
-    }
-
-    .logo-gold {
-        color: var(--accent-gold);
-    }
-
-    /* ===== IMAGE SECTIONS ===== */
-    .image-section {
-        min-height: 100vh;
-        position: relative;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        overflow: hidden;
-    }
-
-    .section-bg {
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        z-index: 1;
-        transition: transform 0.8s ease-out;
-    }
-
-    .section-overlay {
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: var(--overlay-dark);
-        z-index: 2;
-    }
-
-    .section-content {
-        position: relative;
-        z-index: 3;
-        max-width: 800px;
-        padding: 40px;
-        text-align: left;
-    }
-
-    /* ===== BUTTONS ===== */
-    .btn {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        gap: 10px;
-        padding: 16px 36px;
-        border-radius: 6px;
-        font-family: 'Montserrat', sans-serif;
-        font-weight: 600;
-        font-size: 1rem;
-        text-decoration: none;
-        text-transform: uppercase;
-        letter-spacing: 1.5px;
-        transition: var(--transition);
-        border: 2px solid var(--accent-gold);
-        background: transparent;
-        color: var(--text-white);
-        cursor: pointer;
-        position: relative;
-        overflow: hidden;
-    }
-
-    .btn::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: -100%;
-        width: 100%;
-        height: 100%;
-        background: var(--accent-gold);
-        z-index: -1;
-        transition: var(--transition);
-    }
-
-    .btn:hover::before {
-        left: 0;
-    }
-
-    .btn:hover {
-        color: var(--primary-bg);
-        transform: translateY(-3px);
-        box-shadow: 0 10px 30px rgba(212, 175, 55, 0.3);
-    }
-
-    .btn-whatsapp {
-        background: #25D366;
-        border-color: #25D366;
-        color: white;
-    }
-
-    .btn-whatsapp::before {
-        background: #128C7E;
-    }
-
-    .btn-email {
-        background: transparent;
-        border-color: var(--text-white);
-    }
-
-    .btn-email:hover {
-        border-color: var(--accent-gold);
-    }
-
-    /* ===== SOCIAL LINKS ===== */
-    .social-links {
-        display: flex;
-        gap: 15px;
-        margin-top: 30px;
-    }
-
-    .social-link {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        width: 50px;
-        height: 50px;
-        border-radius: 50%;
-        background: rgba(255, 255, 255, 0.1);
-        color: var(--text-white);
-        font-size: 1.2rem;
-        transition: var(--transition);
-        text-decoration: none;
-    }
-
-    .social-link:hover {
-        background: var(--accent-gold);
-        transform: translateY(-3px);
-        color: var(--primary-bg);
-    }
-
-    /* ===== HERO SECTION ===== */
-    #hero {
-        text-align: center;
-    }
-
-    #hero .section-overlay {
-        background: rgba(0, 0, 0, 0.6);
-    }
-
-    #hero h1 {
-        margin-bottom: 0.5rem;
-    }
-
-    .hero-tagline {
-        font-size: 1.4rem;
-        color: var(--text-light);
-        margin-bottom: 2rem;
-    }
-
-    .hero-buttons {
-        display: flex;
-        gap: 20px;
-        justify-content: center;
-        margin-top: 30px;
-        flex-wrap: wrap;
-    }
-
-    /* ===== WHO IS VICTOR SECTION ===== */
-    #who-is-victor .section-overlay {
-        background: rgba(0, 0, 0, 0.7);
-    }
-
-    /* ===== MY STORY SECTION ===== */
-    #my-story .section-overlay {
-        background: rgba(0, 0, 0, 0.65);
-    }
-
-    /* ===== WHAT I DO SECTION ===== */
-    #what-i-do .section-overlay {
-        background: rgba(0, 0, 0, 0.7);
-    }
-
-    .services-list {
-        list-style: none;
-        margin: 30px 0;
-        padding: 0;
-    }
-
-    .services-list li {
-        position: relative;
-        margin-bottom: 20px;
-        padding-left: 40px;
-        font-size: 1.3rem;
-        transition: var(--transition);
-    }
-
-    .services-list li:hover {
-        transform: translateX(10px);
-        color: var(--accent-gold);
-    }
-
-    .services-list li:before {
-        content: "✓";
-        position: absolute;
-        left: 0;
-        color: var(--accent-gold);
-        font-size: 1.8rem;
-        font-weight: bold;
-    }
-
-    /* ===== MY APPROACH SECTION ===== */
-    #my-approach .section-overlay {
-        background: rgba(0, 0, 0, 0.6);
-    }
-
-    /* ===== WHY I COACH SECTION ===== */
-    #why-i-coach .section-overlay {
-        background: rgba(0, 0, 0, 0.65);
-    }
-
-    /* ===== WHY TRAIN WITH ME SECTION ===== */
-    #why-train-with-me .section-overlay {
-        background: rgba(0, 0, 0, 0.7);
-    }
-
-    .reasons-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 30px;
-        margin-top: 40px;
-    }
-
-    .reason-card {
-        padding: 25px;
-        background: rgba(255, 255, 255, 0.05);
-        border-radius: 10px;
-        border-left: 4px solid var(--accent-gold);
-        transition: var(--transition);
-    }
-
-    .reason-card:hover {
-        background: rgba(255, 255, 255, 0.1);
-        transform: translateY(-5px);
-    }
-
-    .reason-number {
-        font-size: 2.5rem;
-        font-weight: 800;
-        color: rgba(212, 175, 55, 0.3);
-        margin-bottom: 10px;
-    }
-
-    /* ===== CALL TO ACTION SECTION ===== */
-    #cta {
-        text-align: center;
-    }
-
-    #cta .section-overlay {
-        background: rgba(0, 0, 0, 0.5);
-    }
-
-    .cta-buttons {
-        display: flex;
-        gap: 20px;
-        justify-content: center;
-        margin-top: 40px;
-        flex-wrap: wrap;
-    }
-
-    /* ===== FOOTER ===== */
-    .footer {
-        padding: 60px 0 40px;
-        background: #050505;
-        text-align: center;
-        border-top: 1px solid rgba(212, 175, 55, 0.1);
-    }
-
-    .footer-logo {
-        font-family: 'Montserrat', sans-serif;
-        font-size: 2rem;
-        font-weight: 800;
-        color: var(--text-white);
-        margin-bottom: 20px;
-        display: block;
-        text-decoration: none;
-        letter-spacing: 2px;
-    }
-
-    .footer-tagline {
-        color: var(--text-gray);
-        margin-bottom: 40px;
-        max-width: 600px;
-        margin-left: auto;
-        margin-right: auto;
-        font-size: 1rem;
-    }
-
-    .footer-contact {
-        display: flex;
-        flex-direction: column;
-        gap: 15px;
-        margin: 30px 0;
-    }
-
-    .contact-item {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 10px;
-        color: var(--text-gray);
-        text-decoration: none;
-        transition: var(--transition);
-        font-weight: 500;
-    }
-
-    .contact-item:hover {
-        color: var(--accent-gold);
-        transform: translateX(5px);
-    }
-
-    .contact-item i {
-        color: var(--accent-gold);
-        width: 20px;
-        font-size: 1rem;
-    }
-
-    .copyright {
-        color: var(--text-gray);
-        font-size: 0.9rem;
-        margin-top: 40px;
-        padding-top: 30px;
-        border-top: 1px solid rgba(255, 255, 255, 0.05);
-    }
-
-    /* ===== ANIMATIONS ===== */
-    @keyframes fadeInUp {
-        from {
-            opacity: 0;
-            transform: translateY(40px);
-        }
-        to {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    }
-
-    @keyframes fadeIn {
-        from {
-            opacity: 0;
-        }
-        to {
-            opacity: 1;
-        }
-    }
-
-    .animate-in {
-        animation: fadeInUp 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
-        opacity: 0;
-    }
-
-    .delay-1 { animation-delay: 0.2s; }
-    .delay-2 { animation-delay: 0.4s; }
-    .delay-3 { animation-delay: 0.6s; }
-
-    /* ===== RESPONSIVE ===== */
-    @media (max-width: 768px) {
-        h1 {
-            font-size: 3rem;
-        }
-
-        h2 {
-            font-size: 2.2rem;
-        }
-
-        h3 {
-            font-size: 1.6rem;
-        }
-
-        p, li {
-            font-size: 1.1rem;
-        }
-
-        .lead {
-            font-size: 1.3rem;
-        }
-
-        .section-content {
-            padding: 30px;
-        }
-
-        .header-content {
-            flex-direction: column;
-            gap: 15px;
-            text-align: center;
-        }
-
-        .logo {
-            font-size: 1.5rem;
-        }
-
-        .hero-buttons, .cta-buttons {
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .btn {
-            width: 100%;
-            max-width: 300px;
-        }
-
-        .reasons-grid {
-            grid-template-columns: 1fr;
-        }
-    }
-
-    @media (max-width: 480px) {
-        h1 {
-            font-size: 2.5rem;
-        }
-
-        h2 {
-            font-size: 1.8rem;
-        }
-
-        .image-section {
-            min-height: 90vh;
-        }
-
-        .section-content {
-            padding: 20px;
-        }
-    }
+/* ================= SYSTEM THEME ================= */
+:root {
+  --bg-primary: #050A14;
+  --bg-secondary: #0A1222;
+  --panel-bg: rgba(15,25,45,0.6);
+  --panel-strong: rgba(15,25,45,0.8);
+
+  --text-primary: #E6ECF5;
+  --text-secondary: #9FB0CC;
+  --text-muted: #6C7A96;
+
+  --accent: #3B82F6;
+  --border-soft: rgba(255,255,255,0.08);
+}
+
+/* ================= RESET ================= */
+* { margin:0; padding:0; box-sizing:border-box; }
+body {
+  font-family:'Poppins',sans-serif;
+  background:var(--bg-primary);
+  color:var(--text-primary);
+  line-height:1.6;
+}
+
+/* ================= LAYOUT ================= */
+.container {
+  max-width:1100px;
+  margin:0 auto;
+  padding:0 24px;
+}
+
+.system-block {
+  margin:120px auto;
+}
+
+/* ================= HEADER ================= */
+header {
+  position:fixed;
+  top:0;
+  width:100%;
+  background:rgba(5,10,20,0.85);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--border-soft);
+  z-index:100;
+}
+.header-inner {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:16px 24px;
+}
+.logo {
+  font-family:'Montserrat',sans-serif;
+  font-weight:700;
+  letter-spacing:1px;
+}
+.header-actions a {
+  color:var(--text-secondary);
+  text-decoration:none;
+  font-size:0.9rem;
+}
+
+/* ================= GLASS PANEL ================= */
+.glass {
+  position:relative;
+  border-radius:18px;
+  overflow:hidden;
+  background:var(--panel-bg);
+  backdrop-filter:blur(18px);
+  -webkit-backdrop-filter:blur(18px);
+  border:1px solid var(--border-soft);
+}
+
+.glass img {
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  filter:brightness(0.45) saturate(0.9);
+  z-index:1;
+}
+
+.panel-overlay {
+  position:absolute;
+  inset:0;
+  background:linear-gradient(
+    180deg,
+    rgba(5,10,20,0.6),
+    rgba(5,10,20,0.9)
+  );
+  z-index:2;
+}
+
+.panel-content {
+  position:relative;
+  z-index:3;
+  padding:48px;
+}
+
+/* ================= TYPOGRAPHY ================= */
+h1,h2,h3 {
+  font-family:'Montserrat',sans-serif;
+  font-weight:600;
+}
+h1 { font-size:2.4rem; margin-bottom:16px; }
+h2 { font-size:1.8rem; margin-bottom:12px; }
+h3 { font-size:1.2rem; margin-bottom:8px; }
+
+p {
+  color:var(--text-secondary);
+  max-width:60ch;
+  margin-bottom:16px;
+}
+
+/* ================= BUTTONS ================= */
+.btn {
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  padding:14px 28px;
+  border-radius:10px;
+  background:var(--panel-strong);
+  border:1px solid var(--border-soft);
+  color:var(--text-primary);
+  text-decoration:none;
+  transition:0.3s;
+}
+.btn:hover {
+  background:rgba(30,45,80,0.7);
+}
+
+/* ================= GRID ================= */
+.grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:24px;
+}
+
+/* ================= FOOTER ================= */
+footer {
+  padding:80px 24px;
+  border-top:1px solid var(--border-soft);
+  text-align:center;
+  color:var(--text-muted);
+  font-size:0.9rem;
+}
+
+/* ================= RESPONSIVE ================= */
+@media(max-width:768px){
+  .panel-content{padding:32px}
+  h1{font-size:2rem}
+}
 </style>
-
 </head>
+
 <body>
-    <!-- HEADER -->
-    <header class="header">
-        <div class="container">
-            <div class="header-content">
-                <a href="#hero" class="logo-container">
-                    <div class="logo">VICTOR <span class="logo-gold">WILLIAM</span></div>
-                </a>
-                <nav>
-                    <a href="https://instagram.com/victorwilliam.coach" class="btn btn-email" target="_blank">
-                        <i class="fab fa-instagram"></i> Instagram
-                    </a>
-                </nav>
-            </div>
-        </div>
-    </header>
 
-    <!-- HERO SECTION - victor1.jpeg -->
-    <section id="hero" class="image-section">
-        <div class="section-bg" style="background-image: url('images/victor1.jpeg');"></div>
-        <div class="section-overlay"></div>
-        <div class="section-content animate-in">
-            <h1>VICTOR WILLIAM</h1>
-            <p class="hero-tagline">Structured Strength Coach • Mombasa & Online</p>
-            <p class="lead">Transform your training. No confusion. No shortcuts. Just structure.</p>
-            
-            <div class="hero-buttons">
-                <a href="https://wa.me/254726707895" class="btn btn-whatsapp" target="_blank">
-                    <i class="fab fa-whatsapp"></i> WhatsApp
-                </a>
-                <a href="mailto:victorwilliamfit@gmail.com" class="btn btn-email">
-                    <i class="fas fa-envelope"></i> Email
-                </a>
-            </div>
+<header>
+  <div class="header-inner">
+    <div class="logo">VICTOR WILLIAM</div>
+    <div class="header-actions">
+      <a href="https://instagram.com/victorwilliam.coach" target="_blank">Instagram</a>
+    </div>
+  </div>
+</header>
 
-            <div class="social-links">
-                <a href="https://www.instagram.com/victorwilliam.coach" class="social-link" target="_blank">
-                    <i class="fab fa-instagram"></i>
-                </a>
-                <a href="https://www.facebook.com/victorwilliam.coach" class="social-link" target="_blank">
-                    <i class="fab fa-facebook-f"></i>
-                </a>
-            </div>
-        </div>
-    </section>
+<main class="container" style="padding-top:120px">
 
-    <!-- WHO IS VICTOR - victor.jpeg -->
-    <section id="who-is-victor" class="image-section">
-        <div class="section-bg" style="background-image: url('images/victor.jpeg');"></div>
-        <div class="section-overlay"></div>
-        <div class="section-content animate-in delay-1">
-            <h2>WHO IS VICTOR WILLIAM?</h2>
-            <p class="lead">ACE certified fitness coach, digital creator, trainer mentor, and founder of Fitbeat Wellness.</p>
-            
-            <p>As someone who juggles multiple roles, I understand the daily struggles of busy individuals trying to get many things done within 24 hours.</p>
-            
-            <p>Whether you're a professional aiming to elevate your performance, a parent balancing countless responsibilities, someone who has tried everything with little success, or simply unsure where to start—I'm here to guide you.</p>
-            
-            <p>I know what it's like to have big goals but feel stuck due to lack of time or direction, and I'm excited to help you make it all possible!</p>
-        </div>
-    </section>
+<!-- HERO -->
+<section class="system-block">
+  <div class="glass">
+    <img src="images/victor1.jpeg" loading="lazy" decoding="async">
+    <div class="panel-overlay"></div>
+    <div class="panel-content">
+      <h1>Structured Training System</h1>
+      <p>Strength, wellness, and performance delivered through a disciplined framework.</p>
+      <a href="https://wa.me/254726707895" class="btn"><i class="fab fa-whatsapp"></i> Start Intake</a>
+    </div>
+  </div>
+</section>
 
-    <!-- MY STORY - victor2.jpeg -->
-    <section id="my-story" class="image-section">
-        <div class="section-bg" style="background-image: url('images/victor2.jpeg');"></div>
-        <div class="section-overlay"></div>
-        <div class="section-content animate-in delay-2">
-            <h2>MY STORY</h2>
-            <p class="lead">My fitness journey didn't start in the gym—it started as a skinny young boy with low self-esteem, searching for confidence and fulfillment in ALL areas of my life.</p>
-            
-            <p>After years of chasing external results, I realized that true wellness is not just about the physical body, but also about mental clarity, emotional resilience, and sustainable habits.</p>
-            
-            <p>That's when I decided to dive into holistic fitness, and let me tell you, it changed my life!</p>
-            
-            <p>Today, I live and breathe wellness, not just for myself, but to help YOU discover what you're truly capable of when you align your mind, body, and soul.</p>
-        </div>
-    </section>
+<!-- BACKGROUND -->
+<section class="system-block">
+  <div class="glass">
+    <img src="images/victor.jpeg" loading="lazy">
+    <div class="panel-overlay"></div>
+    <div class="panel-content">
+      <h2>Background</h2>
+      <p>ACE certified coach with experience training professionals, parents, and high-responsibility individuals.</p>
+    </div>
+  </div>
+</section>
 
-    <!-- WHAT I DO - victor3.jpeg -->
-    <section id="what-i-do" class="image-section">
-        <div class="section-bg" style="background-image: url('images/victor3.jpeg');"></div>
-        <div class="section-overlay"></div>
-        <div class="section-content animate-in">
-            <h2>WHAT I DO</h2>
-            <p class="lead">I help people achieve their fitness and wellness goals through a holistic approach:</p>
-            
-            <ul class="services-list">
-                <li><strong>Physical Fitness</strong> – Building strength, endurance, and flexibility while finding joy in movement</li>
-                <li><strong>High Performance Coaching</strong> – Restructuring routines for busy professionals</li>
-                <li><strong>Nutrition Coaching</strong> – Building positive relationships with food</li>
-                <li><strong>Mindset Coaching</strong> – Developing mental toughness and consistency</li>
-                <li><strong>Self-Care & Wellness</strong> – Incorporating routines that nurture mind and soul</li>
-            </ul>
-            
-            <p>With Fitbeat, we're creating a community that thrives on positivity, balance, accountability, and fun!</p>
-        </div>
-    </section>
+<!-- STORY -->
+<section class="system-block">
+  <div class="glass">
+    <img src="images/victor2.jpeg" loading="lazy">
+    <div class="panel-overlay"></div>
+    <div class="panel-content">
+      <h2>System Origin</h2>
+      <p>Built from personal transformation and refined into a repeatable structure focused on sustainability.</p>
+    </div>
+  </div>
+</section>
 
-    <!-- MY APPROACH - victor4.jpeg -->
-    <section id="my-approach" class="image-section">
-        <div class="section-bg" style="background-image: url('images/victor4.jpeg');"></div>
-        <div class="section-overlay"></div>
-        <div class="section-content animate-in delay-1">
-            <h2>MY APPROACH</h2>
-            <p class="lead">Training transcends exercise. It's built on movement mastery, relentless consistency, and confidence through structure.</p>
-            
-            <p>I focus on the whole YOU—balancing physical fitness with emotional well-being and sustainable habits to keep you thriving and aging gracefully.</p>
-            
-            <p>This holistic approach isn't just about workouts; it's about creating a lifestyle that supports your goals, your schedule, and your vision for who you want to become.</p>
-        </div>
-    </section>
+<!-- CAPABILITIES -->
+<section class="system-block">
+  <div class="glass">
+    <img src="images/victor3.jpeg" loading="lazy">
+    <div class="panel-overlay"></div>
+    <div class="panel-content">
+      <h2>Capabilities</h2>
+      <div class="grid">
+        <p>Strength Programming</p>
+        <p>Nutrition Structuring</p>
+        <p>Routine Engineering</p>
+        <p>Mindset Conditioning</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <!-- WHY I COACH - victor5.jpeg -->
-    <section id="why-i-coach" class="image-section">
-        <div class="section-bg" style="background-image: url('images/victor5.jpeg');"></div>
-        <div class="section-overlay"></div>
-        <div class="section-content animate-in delay-2">
-            <h2>WHY I COACH</h2>
-            <p class="lead">To help you stop the endless restart cycle and replace confusion with absolute clarity.</p>
-            
-            <p>I believe we all deserve to feel good, look good, wear the clothes we love, and experience what the good life truly looks like—not just in appearance, but in how we MOVE, FEEL, THINK, and LIVE.</p>
-            
-            <p>Fitness isn't one-size-fits-all. Everyone is made to move in their own unique way, and I'm here to help you find the path that works for YOU.</p>
-            
-            <p>My mission is to inspire and empower you to take that first step toward a life full of energy, confidence, and purpose.</p>
-        </div>
-    </section>
+<!-- APPROACH -->
+<section class="system-block">
+  <div class="glass">
+    <img src="images/victor4.jpeg" loading="lazy">
+    <div class="panel-overlay"></div>
+    <div class="panel-content">
+      <h2>Methodology</h2>
+      <p>No shortcuts. No chaos. Training is treated as a system with inputs, outputs, and accountability.</p>
+    </div>
+  </div>
+</section>
 
-    <!-- WHY TRAIN WITH ME - victor6.jpeg -->
-    <section id="why-train-with-me" class="image-section">
-        <div class="section-bg" style="background-image: url('images/victor6.jpeg');"></div>
-        <div class="section-overlay"></div>
-        <div class="section-content animate-in">
-            <h2>WHY TRAIN WITH ME</h2>
-            <p class="lead">No promises of shortcuts. Just pure execution based on years of experience.</p>
-            
-            <div class="reasons-grid">
-                <div class="reason-card">
-                    <div class="reason-number">01</div>
-                    <h3>Experience</h3>
-                    <p>Years of training people from all walks of life and mentoring other trainers</p>
-                </div>
-                
-                <div class="reason-card">
-                    <div class="reason-number">02</div>
-                    <h3>Empathy & Accountability</h3>
-                    <p>Understanding the challenges and celebrating every win with you</p>
-                </div>
-                
-                <div class="reason-card">
-                    <div class="reason-number">03</div>
-                    <h3>Community</h3>
-                    <p>A thriving community of like-minded individuals who support each other</p>
-                </div>
-            </div>
-            
-            <p>For serious people ready to get serious results through crystal-clear structure and real accountability.</p>
-        </div>
-    </section>
+<!-- ADVANTAGES -->
+<section class="system-block">
+  <div class="glass">
+    <img src="images/victor6.jpeg" loading="lazy">
+    <div class="panel-overlay"></div>
+    <div class="panel-content">
+      <h2>System Advantages</h2>
+      <div class="grid">
+        <p>Clear structure</p>
+        <p>Adaptive programming</p>
+        <p>Direct accountability</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <!-- CALL TO ACTION - victor7.jpeg -->
-    <section id="cta" class="image-section">
-        <div class="section-bg" style="background-image: url('images/victor7.jpeg');"></div>
-        <div class="section-overlay"></div>
-        <div class="section-content animate-in delay-1">
-            <h2>LET'S GET STARTED!</h2>
-            <p class="lead">Ready to transform your body, regain confidence, and discover a stronger, healthier, more confident YOU?</p>
-            
-            <p>I'd love to guide you! Whether you're just starting out or looking to get back on track, I'm here to support you every step of the way.</p>
-            
-            <p>Let's create a plan that fits your life, boosts your energy, and brings balance and well-being.</p>
-            
-            <div class="cta-buttons">
-                <a href="https://form.jotform.com/260245859907064" class="btn" target="_blank">
-                    <i class="fas fa-calendar-check"></i> Apply for Coaching
-                </a>
-                <a href="https://form.jotform.com/260245818736059" class="btn" target="_blank">
-                    <i class="fas fa-download"></i> Get Free Guide
-                </a>
-                <a href="https://wa.me/254726707895" class="btn btn-whatsapp" target="_blank">
-                    <i class="fab fa-whatsapp"></i> WhatsApp Consultation
-                </a>
-            </div>
-        </div>
-    </section>
+<!-- ONBOARDING -->
+<section class="system-block">
+  <div class="glass">
+    <img src="images/victor7.jpeg" loading="lazy">
+    <div class="panel-overlay"></div>
+    <div class="panel-content">
+      <h2>Onboarding</h2>
+      <p>Entry requires intent and consistency. Apply to begin.</p>
+      <a href="https://form.jotform.com/260245859907064" class="btn">Apply</a>
+    </div>
+  </div>
+</section>
 
-    <!-- FOOTER -->
-    <footer class="footer">
-        <div class="container">
-            <a href="#hero" class="footer-logo">VICTOR WILLIAM</a>
-            <p class="footer-tagline">Structured Strength Coaching • Holistic Wellness • Mombasa & Online Worldwide</p>
-            
-            <div class="footer-contact">
-                <a href="mailto:victorwilliamfit@gmail.com" class="contact-item">
-                    <i class="fas fa-envelope"></i>
-                    <span>victorwilliamfit@gmail.com</span>
-                </a>
-                <a href="tel:+254726707895" class="contact-item">
-                    <i class="fas fa-phone"></i>
-                    <span>+254 726 707 895</span>
-                </a>
-                <a href="https://instagram.com/victorwilliam.coach" class="contact-item" target="_blank">
-                    <i class="fab fa-instagram"></i>
-                    <span>@victorwilliam.coach</span>
-                </a>
-                <a href="https://facebook.com/victorwilliam.coach" class="contact-item" target="_blank">
-                    <i class="fab fa-facebook-f"></i>
-                    <span>Victor William Coach</span>
-                </a>
-            </div>
-            
-            <p class="copyright">
-                © 2024-2025 Victor William. All rights reserved.<br>
-                ACE Certified Fitness Coach • Serving professionals worldwide
-            </p>
-        </div>
-    </footer>
+</main>
 
-<script>
-    // Header scroll effect
-    const header = document.querySelector('.header');
-    window.addEventListener('scroll', () => {
-        header.classList.toggle('scrolled', window.scrollY > 50);
-    });
-
-    // Intersection Observer for animations
-    const observerOptions = {
-        threshold: 0.2,
-        rootMargin: '0px 0px -100px 0px'
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if(entry.isIntersecting) {
-                entry.target.classList.add('animate-in');
-                observer.unobserve(entry.target);
-            }
-        });
-    }, observerOptions);
-
-    document.querySelectorAll('.section-content').forEach(el => {
-        observer.observe(el);
-    });
-
-    // Parallax effect for sections
-    window.addEventListener('scroll', () => {
-        const sections = document.querySelectorAll('.section-bg');
-        const scrollPosition = window.scrollY;
-        
-        sections.forEach((section, index) => {
-            const speed = 0.3 + (index * 0.05);
-            const yPos = -(scrollPosition * speed);
-            section.style.transform = `translateY(${yPos}px)`;
-        });
-    });
-
-    // Smooth scrolling for navigation
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            const targetId = this.getAttribute('href');
-            if(targetId === '#') return;
-            
-            const targetElement = document.querySelector(targetId);
-            if(targetElement) {
-                window.scrollTo({
-                    top: targetElement.offsetTop - 80,
-                    behavior: 'smooth'
-                });
-            }
-        });
-    });
-
-    // Initialize first section animation
-    document.addEventListener('DOMContentLoaded', () => {
-        document.querySelector('#hero .section-content').classList.add('animate-in');
-    });
-</script>
+<footer>
+© 2025 Victor William — Training System
+</footer>
 
 </body>
 </html>
