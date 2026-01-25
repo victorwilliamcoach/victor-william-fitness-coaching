@@ -3,41 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Victor William | Structured Strength Coach - Mombasa & Online</title>
-    <meta name="description" content="Professional strength coaching for busy professionals in Mombasa & worldwide. Transform your physique with structured training programs.">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
-    
-    <!-- Open Graph Meta Tags for Social Sharing -->
-    <meta property="og:title" content="Victor William | Structured Strength Coach">
-    <meta property="og:description" content="Train with Structure, Not Confusion - Professional Strength Coaching">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://coachvictorwilliam.com">
-    <meta property="og:image" content="https://coachvictorwilliam.com/og-image.jpg">
-    
+    <title>Victor William | Personal Trainer & Online Coach</title>
     <style>
-        /* ===== CSS RESET & VARIABLES ===== */
+        /* CANVA SETUP (ONE TIME) - 1080x1080 */
         :root {
-            --primary: #0A0A0A;
-            --primary-dark: #000000;
-            --accent: #2563EB;
-            --accent-hover: #1D4ED8;
-            --accent-light: #3B82F6;
-            --gray-50: #FAFAFA;
-            --gray-100: #F4F4F5;
-            --gray-200: #E4E4E7;
-            --gray-300: #D4D4D8;
-            --gray-400: #A1A1AA;
-            --gray-500: #71717A;
-            --gray-900: #18181B;
-            --success: #10B981;
-            --border-radius: 16px;
-            --border-radius-sm: 8px;
-            --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.05);
-            --shadow-md: 0 10px 40px rgba(0, 0, 0, 0.08);
-            --shadow-lg: 0 20px 60px rgba(0, 0, 0, 0.12);
-            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            --canvas-size: 1080px;
+            --heading-font: 'Montserrat', sans-serif;
+            --body-font: 'Poppins', sans-serif;
+            --heading-weight: 600; /* SemiBold */
+            --body-weight: 400; /* Regular */
+            --overlay-color: rgba(0, 0, 0, 0.4); /* Exact from provided HTML */
+            --text-color: #ffffff;
         }
+
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Poppins:wght@400&display=swap');
 
         * {
             margin: 0;
@@ -50,489 +29,300 @@
         }
 
         body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            line-height: 1.6;
-            color: var(--gray-900);
-            background: var(--gray-50);
+            font-family: var(--body-font);
+            font-weight: var(--body-weight);
+            background: #000;
+            color: var(--text-color);
             overflow-x: hidden;
         }
 
-        .container {
-            max-width: 1200px;
+        /* SLIDE CONTAINER */
+        .slides-container {
+            width: 100%;
+            max-width: var(--canvas-size);
             margin: 0 auto;
-            padding: 0 24px;
+            position: relative;
         }
 
-        /* ===== TYPOGRAPHY ===== */
-        h1, h2, h3, h4, h5 {
-            font-family: 'Space Grotesk', sans-serif;
-            font-weight: 700;
+        /* BASE SLIDE STYLES */
+        .slide {
+            width: 100%;
+            height: 100vh;
+            min-height: var(--canvas-size);
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            background: #000;
+        }
+
+        .slide-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--overlay-color);
+            z-index: 1;
+        }
+
+        /* Overlay opacities as specified */
+        .slide:nth-child(1) .overlay { opacity: 0.15; }
+        .slide:nth-child(2) .overlay { opacity: 0.20; }
+        .slide:nth-child(3) .overlay { opacity: 0.25; }
+        .slide:nth-child(4) .overlay { opacity: 0.20; }
+        .slide:nth-child(5) .overlay { opacity: 0.225; }
+        .slide:nth-child(6) .overlay { opacity: 0.25; }
+        .slide:nth-child(7) .overlay { opacity: 0.20; }
+        .slide:nth-child(8) .overlay { opacity: 0.125; }
+
+        /* CONTENT STYLING */
+        .slide-content {
+            position: relative;
+            z-index: 2;
+            padding: 40px;
+            width: 100%;
+        }
+
+        /* Logo styling - consistent placement */
+        .logo {
+            position: absolute;
+            bottom: 40px;
+            right: 40px;
+            width: 120px;
+            height: 120px;
+            z-index: 3;
+            cursor: pointer;
+        }
+
+        .logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            filter: brightness(1.2);
+        }
+
+        /* TEXT STYLES */
+        h1, h2 {
+            font-family: var(--heading-font);
+            font-weight: var(--heading-weight);
             line-height: 1.1;
+            margin-bottom: 20px;
         }
 
         h1 {
+            font-size: 4.5rem;
+            text-align: center;
+            letter-spacing: -0.5px;
+        }
+
+        h2 {
             font-size: 3.5rem;
-            background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            letter-spacing: -0.02em;
-            margin-bottom: 1.5rem;
+        }
+
+        .subtitle {
+            font-family: var(--body-font);
+            font-weight: var(--body-weight);
+            font-size: 1.8rem;
+            opacity: 0.9;
+            margin-top: 10px;
+        }
+
+        /* Slide-specific text alignment */
+        .slide-1 .slide-content {
+            text-align: center;
+        }
+
+        .slide-2 .slide-content,
+        .slide-3 .slide-content,
+        .slide-4 .slide-content,
+        .slide-5 .slide-content,
+        .slide-6 .slide-content,
+        .slide-7 .slide-content {
+            text-align: left;
+        }
+
+        .slide-8 .slide-content {
+            text-align: center;
+        }
+
+        /* Text lines formatting */
+        .text-line {
+            font-size: 2.5rem;
+            line-height: 1.2;
+            margin-bottom: 15px;
+            font-family: var(--heading-font);
+            font-weight: var(--heading-weight);
+        }
+
+        .text-line.body {
+            font-family: var(--body-font);
+            font-weight: var(--body-weight);
+            font-size: 2rem;
+            opacity: 0.95;
+        }
+
+        .text-line.small {
+            font-size: 1.8rem;
+            opacity: 0.9;
+        }
+
+        /* Bullet points */
+        .bullet-list {
+            margin: 30px 0;
+            padding-left: 20px;
+        }
+
+        .bullet-item {
+            font-size: 1.8rem;
+            line-height: 1.4;
+            margin-bottom: 15px;
+            position: relative;
+            font-family: var(--body-font);
+        }
+
+        .bullet-item:before {
+            content: "•";
+            position: absolute;
+            left: -20px;
+            color: #fff;
+            font-size: 2rem;
+        }
+
+        /* CTA Styling */
+        .cta-container {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 25px 50px;
+            background: rgba(255, 255, 255, 0.15);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-radius: 15px;
+            font-family: var(--heading-font);
+            font-weight: var(--heading-weight);
+            font-size: 2.2rem;
+            color: var(--text-color);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+            letter-spacing: 1px;
+        }
+
+        .cta-button:hover {
+            background: rgba(255, 255, 255, 0.25);
+            border-color: rgba(255, 255, 255, 0.5);
+            transform: translateY(-3px);
+        }
+
+        /* Navigation dots */
+        .slide-nav {
+            position: fixed;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 1000;
+        }
+
+        .nav-dot {
+            display: block;
+            width: 12px;
+            height: 12px;
+            margin: 15px 0;
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .nav-dot.active {
+            background: rgba(255, 255, 255, 0.9);
+            transform: scale(1.3);
+        }
+
+        /* Responsive design */
+        @media (max-width: 1080px) {
+            .slide {
+                height: 100vh;
+                min-height: 100vh;
+            }
+            
+            h1 {
+                font-size: 3.5rem;
+            }
+            
+            h2 {
+                font-size: 2.8rem;
+            }
+            
+            .text-line {
+                font-size: 2rem;
+            }
+            
+            .text-line.body {
+                font-size: 1.6rem;
+            }
+            
+            .bullet-item {
+                font-size: 1.5rem;
+            }
+            
+            .logo {
+                width: 100px;
+                height: 100px;
+                bottom: 30px;
+                right: 30px;
+            }
         }
 
         @media (max-width: 768px) {
             h1 {
-                font-size: 2.5rem;
+                font-size: 2.8rem;
+            }
+            
+            h2 {
+                font-size: 2.2rem;
+            }
+            
+            .text-line {
+                font-size: 1.6rem;
+            }
+            
+            .text-line.body {
+                font-size: 1.3rem;
+            }
+            
+            .bullet-item {
+                font-size: 1.2rem;
+            }
+            
+            .slide-content {
+                padding: 20px;
+            }
+            
+            .logo {
+                width: 80px;
+                height: 80px;
+                bottom: 20px;
+                right: 20px;
             }
         }
 
-        h2 {
-            font-size: 2.5rem;
-            color: var(--primary);
-            margin-bottom: 1rem;
-        }
-
-        h3 {
-            font-size: 1.5rem;
-            color: var(--primary);
-        }
-
-        .lead {
-            font-size: 1.25rem;
-            color: var(--gray-500);
-            font-weight: 500;
-            margin-bottom: 2rem;
-        }
-
-        /* ===== BUTTONS ===== */
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            padding: 16px 32px;
-            border-radius: var(--border-radius-sm);
-            font-weight: 600;
-            text-decoration: none;
-            transition: var(--transition);
-            border: 2px solid transparent;
-            cursor: pointer;
-            font-size: 1rem;
-            min-width: 180px;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .btn-primary {
-            background: linear-gradient(135deg, var(--accent) 0%, var(--accent-hover) 100%);
-            color: white;
-            box-shadow: var(--shadow-sm);
-        }
-
-        .btn-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: var(--shadow-md);
-        }
-
-        .btn-secondary {
-            background: white;
-            color: var(--primary);
-            border-color: var(--gray-200);
-        }
-
-        .btn-secondary:hover {
-            background: var(--gray-50);
-            transform: translateY(-2px);
-            box-shadow: var(--shadow-sm);
-        }
-
-        .btn-outline {
-            background: transparent;
-            color: var(--accent);
-            border-color: var(--accent);
-        }
-
-        .btn-outline:hover {
-            background: var(--accent);
-            color: white;
-        }
-
-        /* ===== HEADER ===== */
-        .header {
-            padding: 32px 0;
-            position: sticky;
-            top: 0;
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            z-index: 1000;
-            border-bottom: 1px solid var(--gray-100);
-        }
-
-        .header-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-family: 'Space Grotesk', sans-serif;
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--primary);
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .logo-badge {
-            background: var(--accent);
-            color: white;
-            padding: 4px 12px;
-            border-radius: 20px;
-            font-size: 0.75rem;
-            font-weight: 600;
-        }
-
-        .cta-group {
-            display: flex;
-            gap: 16px;
-            align-items: center;
-        }
-
-        .contact-info {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            color: var(--gray-500);
-            font-size: 0.9rem;
-        }
-
-        /* ===== HERO SECTION ===== */
-        .hero {
-            padding: 100px 0;
-            position: relative;
-        }
-
-        .hero-content {
-            max-width: 800px;
-        }
-
-        .coach-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            background: var(--accent);
-            color: white;
-            padding: 8px 20px;
-            border-radius: 50px;
-            font-size: 0.875rem;
-            font-weight: 600;
-            margin-bottom: 24px;
-        }
-
-        .hero-stats {
-            display: flex;
-            gap: 48px;
-            margin: 48px 0;
-            flex-wrap: wrap;
-        }
-
-        .stat {
-            text-align: center;
-        }
-
-        .stat-number {
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: var(--accent);
-            line-height: 1;
-        }
-
-        .stat-label {
-            font-size: 0.875rem;
-            color: var(--gray-500);
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-top: 8px;
-        }
-
-        /* ===== PROFILE SECTION ===== */
-        .profile-section {
-            display: grid;
-            grid-template-columns: 350px 1fr;
-            gap: 60px;
-            margin: 80px 0;
-            align-items: start;
-        }
-
-        @media (max-width: 1024px) {
-            .profile-section {
-                grid-template-columns: 1fr;
-                gap: 40px;
-            }
-        }
-
-        .profile-card {
-            background: white;
-            border-radius: var(--border-radius);
-            box-shadow: var(--shadow-lg);
-            padding: 40px;
-            text-align: center;
-            position: sticky;
-            top: 120px;
-            border: 1px solid var(--gray-100);
-        }
-
-        .profile-avatar {
-            width: 140px;
-            height: 140px;
-            border-radius: 50%;
-            margin: 0 auto 24px;
-            border: 4px solid white;
-            box-shadow: var(--shadow-md);
-            overflow: hidden;
-            background: linear-gradient(135deg, var(--accent) 0%, var(--accent-hover) 100%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 42px;
-            color: white;
-            font-weight: 700;
-        }
-
-        .profile-avatar img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .location-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            background: var(--gray-100);
-            color: var(--gray-700);
-            padding: 6px 16px;
-            border-radius: 50px;
-            font-size: 0.875rem;
-            margin: 16px 0;
-        }
-
-        .social-links {
-            display: flex;
-            justify-content: center;
-            gap: 16px;
-            margin-top: 24px;
-        }
-
-        .social-link {
-            width: 44px;
-            height: 44px;
-            border-radius: 50%;
-            background: var(--gray-100);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--gray-700);
-            text-decoration: none;
-            transition: var(--transition);
-        }
-
-        .social-link:hover {
-            background: var(--accent);
-            color: white;
-            transform: translateY(-2px);
-        }
-
-        /* ===== SERVICES GRID ===== */
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 32px;
-            margin: 60px 0;
-        }
-
-        .service-card {
-            background: white;
-            border-radius: var(--border-radius);
-            box-shadow: var(--shadow-md);
-            padding: 40px;
-            transition: var(--transition);
-            border: 1px solid var(--gray-100);
-            height: 100%;
-        }
-
-        .service-card:hover {
-            transform: translateY(-8px);
-            box-shadow: var(--shadow-lg);
-            border-color: var(--accent-light);
-        }
-
-        .service-card.featured {
-            background: linear-gradient(135deg, var(--primary) 0%, var(--gray-900) 100%);
-            color: white;
-            border: none;
-        }
-
-        .service-card.featured * {
-            color: white;
-        }
-
-        .service-icon {
-            width: 64px;
-            height: 64px;
-            border-radius: var(--border-radius-sm);
-            background: linear-gradient(135deg, var(--accent) 0%, var(--accent-hover) 100%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 24px;
-            margin-bottom: 24px;
-        }
-
-        .service-card.featured .service-icon {
-            background: white;
-            color: var(--accent);
-        }
-
-        /* ===== TESTIMONIALS ===== */
-        .testimonials {
-            margin: 80px 0;
-        }
-
-        .testimonial-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 32px;
-            margin-top: 48px;
-        }
-
-        .testimonial-card {
-            background: white;
-            border-radius: var(--border-radius);
-            box-shadow: var(--shadow-md);
-            padding: 32px;
-            position: relative;
-            border: 1px solid var(--gray-100);
-        }
-
-        .testimonial-card::before {
-            content: '"';
-            position: absolute;
-            top: -20px;
-            left: 32px;
-            font-size: 80px;
-            color: var(--accent);
-            opacity: 0.1;
-            font-family: serif;
-            line-height: 1;
-        }
-
-        .testimonial-text {
-            font-style: italic;
-            color: var(--gray-700);
-            margin-bottom: 24px;
-            position: relative;
-            z-index: 1;
-        }
-
-        .testimonial-author {
-            display: flex;
-            align-items: center;
-            gap: 16px;
-        }
-
-        .author-avatar {
-            width: 56px;
-            height: 56px;
-            border-radius: 50%;
-            background: var(--gray-200);
-            flex-shrink: 0;
-        }
-
-        .author-info h4 {
-            margin-bottom: 4px;
-            font-size: 1rem;
-        }
-
-        .author-info p {
-            color: var(--gray-500);
-            font-size: 0.875rem;
-        }
-
-        /* ===== CTA SECTION ===== */
-        .cta-section {
-            background: linear-gradient(135deg, var(--primary) 0%, var(--gray-900) 100%);
-            border-radius: var(--border-radius);
-            padding: 80px 60px;
-            text-align: center;
-            color: white;
-            margin: 80px 0;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .cta-section::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: radial-gradient(circle at 30% 50%, rgba(59, 130, 246, 0.1) 0%, transparent 50%);
-        }
-
-        .cta-section h2,
-        .cta-section p {
-            color: white;
-            position: relative;
-            z-index: 1;
-        }
-
-        .cta-buttons {
-            display: flex;
-            gap: 20px;
-            justify-content: center;
-            margin-top: 40px;
-            flex-wrap: wrap;
-            position: relative;
-            z-index: 1;
-        }
-
-        /* ===== FOOTER ===== */
-        .footer {
-            padding: 60px 0 40px;
-            background: var(--gray-900);
-            color: var(--gray-300);
-            text-align: center;
-        }
-
-        .footer-content {
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        .footer-links {
-            display: flex;
-            justify-content: center;
-            gap: 32px;
-            margin: 32px 0;
-            flex-wrap: wrap;
-        }
-
-        .footer-link {
-            color: var(--gray-400);
-            text-decoration: none;
-            transition: var(--transition);
-        }
-
-        .footer-link:hover {
-            color: white;
-        }
-
-        /* ===== ANIMATIONS ===== */
+        /* Animations */
         @keyframes fadeInUp {
             from {
                 opacity: 0;
@@ -545,375 +335,242 @@
         }
 
         .animate-in {
-            animation: fadeInUp 0.6s ease-out forwards;
+            animation: fadeInUp 0.8s ease-out forwards;
         }
-
-        .delay-1 { animation-delay: 0.2s; }
-        .delay-2 { animation-delay: 0.4s; }
-        .delay-3 { animation-delay: 0.6s; }
-
-        /* ===== RESPONSIVE ===== */
-        @media (max-width: 768px) {
-            .container {
-                padding: 0 20px;
-            }
-            
-            .header-content {
-                flex-direction: column;
-                gap: 20px;
-                text-align: center;
-            }
-            
-            .cta-group {
-                flex-direction: column;
-            }
-            
-            .hero {
-                padding: 60px 0;
-                text-align: center;
-            }
-            
-            .hero-stats {
-                justify-content: center;
-                gap: 32px;
-            }
-            
-            .profile-card {
-                position: static;
-            }
-            
-            .cta-section {
-                padding: 60px 20px;
-            }
-            
-            .cta-buttons {
-                flex-direction: column;
-                align-items: center;
-            }
-            
-            .btn {
-                width: 100%;
-                max-width: 300px;
-            }
-        }
-
-        /* ===== UTILITY CLASSES ===== */
-        .text-center { text-align: center; }
-        .mt-1 { margin-top: 8px; }
-        .mt-2 { margin-top: 16px; }
-        .mt-3 { margin-top: 24px; }
-        .mt-4 { margin-top: 32px; }
-        .mt-8 { margin-top: 64px; }
-        .mb-1 { margin-bottom: 8px; }
-        .mb-2 { margin-bottom: 16px; }
-        .mb-3 { margin-bottom: 24px; }
-        .mb-4 { margin-bottom: 32px; }
-        .mb-8 { margin-bottom: 64px; }
     </style>
 </head>
 <body>
-    <!-- HEADER -->
-    <header class="header">
-        <div class="container">
-            <div class="header-content">
-                <a href="#" class="logo">
-                    <span>VICTOR WILLIAM</span>
-                    <span class="logo-badge">COACH</span>
-                </a>
-                
-                <div class="cta-group">
-                    <div class="contact-info">
-                        <i class="fas fa-phone"></i>
-                        <span>+254 726 707 895</span>
-                    </div>
-                    <a href="mailto:victorwilliamfit@gmail.com" class="btn btn-outline">
-                        <i class="fas fa-envelope"></i> Email Me
-                    </a>
-                </div>
+    <div class="slides-container">
+        <!-- SLIDE 1 - HERO / INTRO -->
+        <div class="slide slide-1" id="slide1">
+            <div class="slide-bg" style="background-image: url('images/victor.jpeg');"></div>
+            <div class="overlay"></div>
+            <div class="slide-content">
+                <h1 class="animate-in">MEET<br><span class="text-line">VICTOR WILLIAM</span></h1>
+                <p class="subtitle animate-in" style="animation-delay: 0.2s;">Personal Trainer & Online Coach</p>
             </div>
+            <a href="#slide1" class="logo">
+                <img src="images/logo.png" alt="Logo">
+            </a>
         </div>
-    </header>
 
-    <!-- HERO SECTION -->
-    <section class="hero">
-        <div class="container">
-            <div class="hero-content animate-in">
-                <span class="coach-badge">
-                    <i class="fas fa-shield-alt"></i> CERTIFIED STRENGTH COACH
-                </span>
-                
-                <h1>Train with Structure,<br>Not Confusion</h1>
-                
-                <p class="lead">
-                    I help busy professionals in Mombasa and worldwide build sustainable strength, 
-                    transform their physiques, and achieve performance goals through science-backed 
-                    programming and personalized accountability.
-                </p>
-                
-                <div class="hero-stats">
-                    <div class="stat">
-                        <div class="stat-number">5+</div>
-                        <div class="stat-label">Years Experience</div>
-                    </div>
-                    <div class="stat">
-                        <div class="stat-number">200+</div>
-                        <div class="stat-label">Clients Transformed</div>
-                    </div>
-                    <div class="stat">
-                        <div class="stat-number">24h</div>
-                        <div class="stat-label">Response Time</div>
-                    </div>
-                </div>
-                
-                <div class="cta-buttons">
-                    <a href="https://form.jotform.com/260245859907064" class="btn btn-primary">
-                        <i class="fas fa-calendar-check"></i> Apply for Coaching
-                    </a>
-                    <a href="https://form.jotform.com/260245818736059" class="btn btn-secondary">
-                        <i class="fas fa-download"></i> Get Free Strength Guide
-                    </a>
-                </div>
+        <!-- SLIDE 2 - WHO IS VICTOR WILLIAM -->
+        <div class="slide slide-2" id="slide2">
+            <div class="slide-bg" style="background-image: url('images/victor1.jpeg');"></div>
+            <div class="overlay"></div>
+            <div class="slide-content">
+                <h2 class="animate-in">I'm Victor William,</h2>
+                <p class="text-line body animate-in" style="animation-delay: 0.1s;">a structured strength coach<br>working with busy men & women.</p>
+                <p class="text-line small animate-in" style="animation-delay: 0.2s; margin-top: 30px;">I understand what it's like<br>to want results<br>but lack time, direction,<br>and a clear system.</p>
+                <p class="text-line body animate-in" style="animation-delay: 0.3s; margin-top: 30px;">My role is to simplify training<br>and make progress realistic.</p>
             </div>
+            <a href="#slide1" class="logo">
+                <img src="images/logo.png" alt="Logo">
+            </a>
         </div>
-    </section>
 
-    <!-- PROFILE & SERVICES -->
-    <section class="container">
-        <div class="profile-section">
-            <!-- PROFILE CARD -->
-            <div class="profile-card animate-in">
-                <div class="profile-avatar">
-                    VW
-                    <!-- Replace with: <img src="your-photo.jpg" alt="Victor William"> -->
-                </div>
-                
-                <h2>Victor William</h2>
-                <p class="lead mb-2">Structured Strength Coach</p>
-                
-                <div class="location-badge">
-                    <i class="fas fa-map-marker-alt"></i> Mombasa & Worldwide Online
-                </div>
-                
-                <p>Specializing in strength development, physique transformation, and athletic performance optimization for ambitious professionals.</p>
-                
-                <div class="social-links">
-                    <a href="https://instagram.com/victorwilliam.coach" class="social-link" target="_blank" aria-label="Instagram">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                    <a href="mailto:victorwilliamfit@gmail.com" class="social-link" aria-label="Email">
-                        <i class="fas fa-envelope"></i>
-                    </a>
-                    <a href="https://wa.me/254726707895" class="social-link" aria-label="WhatsApp">
-                        <i class="fab fa-whatsapp"></i>
-                    </a>
-                </div>
-                
-                <div class="mt-4">
-                    <a href="tel:+254726707895" class="btn btn-outline" style="width: 100%;">
-                        <i class="fas fa-phone"></i> Call +254 726 707 895
-                    </a>
-                </div>
+        <!-- SLIDE 3 - MY STORY -->
+        <div class="slide slide-3" id="slide3">
+            <div class="slide-bg" style="background-image: url('images/victor2.jpeg');"></div>
+            <div class="overlay"></div>
+            <div class="slide-content">
+                <h2 class="animate-in">My journey didn't start<br>with perfect confidence<br>or ideal conditions.</h2>
+                <p class="text-line body animate-in" style="animation-delay: 0.1s; margin-top: 30px;">It started with learning that<br>real progress comes from<br>discipline, structure,<br>and consistency over time.</p>
+                <p class="text-line small animate-in" style="animation-delay: 0.2s; margin-top: 30px;">That lesson shapes<br>how I train and coach today.</p>
             </div>
-            
-            <!-- SERVICES -->
-            <div class="services-grid">
-                <!-- PREMIUM COACHING -->
-                <div class="service-card animate-in delay-1">
-                    <div class="service-icon">
-                        <i class="fas fa-dumbbell"></i>
-                    </div>
-                    <h3>1:1 Premium Coaching</h3>
-                    <p class="mb-3">Fully personalized training and nutrition programming with direct access to me for support, adjustments, and accountability.</p>
-                    
-                    <ul style="margin-bottom: 24px; padding-left: 20px; color: var(--gray-600);">
-                        <li style="margin-bottom: 8px;">Custom workout plans tailored to your schedule</li>
-                        <li style="margin-bottom: 8px;">Nutrition guidance & meal planning</li>
-                        <li style="margin-bottom: 8px;">Form analysis & technique optimization</li>
-                        <li style="margin-bottom: 8px;">Weekly progress tracking & adjustments</li>
-                        <li style="margin-bottom: 8px;">24/7 messaging support</li>
-                    </ul>
-                    
-                    <a href="https://form.jotform.com/260245859907064" class="btn btn-primary" style="width: 100%;">
-                        <i class="fas fa-rocket"></i> Start Application
-                    </a>
-                </div>
-                
-                <!-- FREE GUIDE -->
-                <div class="service-card featured animate-in delay-2">
-                    <div class="service-icon">
-                        <i class="fas fa-graduation-cap"></i>
-                    </div>
-                    <h3>Free Strength Foundation Guide</h3>
-                    <p class="mb-3">Get instant access to my proven 5-step framework for building strength, mastering proper form, and creating sustainable training habits.</p>
-                    
-                    <div style="background: rgba(255,255,255,0.1); padding: 20px; border-radius: var(--border-radius-sm); margin: 24px 0;">
-                        <p class="mb-2"><strong>What You'll Get:</strong></p>
-                        <ul style="padding-left: 20px; opacity: 0.9;">
-                            <li style="margin-bottom: 6px;">5 Essential Exercise Breakdowns (Form Guide)</li>
-                            <li style="margin-bottom: 6px;">Progressive Overload Implementation Guide</li>
-                            <li style="margin-bottom: 6px;">Printable Form Checklist PDF</li>
-                            <li style="margin-bottom: 6px;">Sample 4-Week Beginner Program</li>
-                            <li style="margin-bottom: 6px;">Nutrition Fundamentals Guide</li>
-                        </ul>
-                    </div>
-                    
-                    <a href="https://form.jotform.com/260245818736059" class="btn btn-outline" style="width: 100%; background: rgba(255,255,255,0.1);">
-                        <i class="fas fa-download"></i> Download Free Guide
-                    </a>
-                </div>
-            </div>
+            <a href="#slide1" class="logo">
+                <img src="images/logo.png" alt="Logo">
+            </a>
         </div>
-    </section>
 
-    <!-- TESTIMONIALS -->
-    <section class="testimonials">
-        <div class="container">
-            <h2 class="text-center">What Clients Say</h2>
-            <p class="lead text-center mb-8">Real results from real people I've coached</p>
-            
-            <div class="testimonial-grid">
-                <div class="testimonial-card animate-in">
-                    <div class="testimonial-text">
-                        "Victor's programming took my deadlift from 140kg to 200kg in 6 months. The structure and accountability were exactly what I needed to break through my plateau."
-                    </div>
-                    <div class="testimonial-author">
-                        <div class="author-avatar"></div>
-                        <div class="author-info">
-                            <h4>James K.</h4>
-                            <p>Strength Athlete • 6 Months Coaching</p>
-                        </div>
-                    </div>
+        <!-- SLIDE 4 - WHAT I DO -->
+        <div class="slide slide-4" id="slide4">
+            <div class="slide-bg" style="background-image: url('images/victor3.jpeg');"></div>
+            <div class="overlay"></div>
+            <div class="slide-content">
+                <h2 class="animate-in">I help people train<br>with intention<br>through:</h2>
+                <div class="bullet-list animate-in" style="animation-delay: 0.1s;">
+                    <div class="bullet-item">Structured strength training</div>
+                    <div class="bullet-item">Sustainable progress systems</div>
+                    <div class="bullet-item">Coaching for busy schedules</div>
                 </div>
-                
-                <div class="testimonial-card animate-in delay-1">
-                    <div class="testimonial-text">
-                        "As a busy doctor with irregular hours, Victor created a flexible 3-day program that delivered better results than my previous 6-day random workouts."
-                    </div>
-                    <div class="testimonial-author">
-                        <div class="author-avatar"></div>
-                        <div class="author-info">
-                            <h4>Dr. Sarah M.</h4>
-                            <p>Medical Professional • 4 Months Coaching</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="testimonial-card animate-in delay-2">
-                    <div class="testimonial-text">
-                        "The free guide transformed how I approach training. Clear, actionable, science-backed. Downloaded it on Monday, applied for coaching by Friday."
-                    </div>
-                    <div class="testimonial-author">
-                        <div class="author-avatar"></div>
-                        <div class="author-info">
-                            <h4>Michael T.</h4>
-                            <p>Software Engineer • Free Guide User</p>
-                        </div>
-                    </div>
-                </div>
+                <p class="text-line animate-in" style="animation-delay: 0.2s; margin-top: 40px;">No guessing.<br>No random workouts.</p>
             </div>
+            <a href="#slide1" class="logo">
+                <img src="images/logo.png" alt="Logo">
+            </a>
         </div>
-    </section>
 
-    <!-- FINAL CTA -->
-    <section class="cta-section">
-        <div class="container">
-            <h2 class="animate-in">Ready to Transform Your Training?</h2>
-            <p class="lead animate-in delay-1" style="max-width: 600px; margin: 0 auto;">
-                Stop guessing and start progressing with a proven system. Whether you want the free guide or you're ready for personalized coaching, your transformation starts here.
-            </p>
-            
-            <div class="cta-buttons animate-in delay-2">
-                <a href="https://form.jotform.com/260245859907064" class="btn btn-primary">
-                    <i class="fas fa-calendar-check"></i> Apply for 1:1 Coaching
-                </a>
-                <a href="https://form.jotform.com/260245818736059" class="btn btn-outline">
-                    <i class="fas fa-download"></i> Get Free Strength Guide
-                </a>
+        <!-- SLIDE 5 - MY APPROACH -->
+        <div class="slide slide-5" id="slide5">
+            <div class="slide-bg" style="background-image: url('images/victor4.jpeg');"></div>
+            <div class="overlay"></div>
+            <div class="slide-content">
+                <h2 class="animate-in">Training is more<br>than exercise.</h2>
+                <p class="text-line body animate-in" style="animation-delay: 0.1s; margin-top: 20px; margin-bottom: 30px;">It's about:</p>
+                <div class="bullet-list animate-in" style="animation-delay: 0.2s;">
+                    <div class="bullet-item">Proper movement</div>
+                    <div class="bullet-item">Consistency</div>
+                    <div class="bullet-item">Confidence built through structure</div>
+                </div>
+                <p class="text-line animate-in" style="animation-delay: 0.3s; margin-top: 30px;">That's how results last.</p>
             </div>
-            
-            <p class="mt-4 animate-in delay-3" style="font-size: 0.9rem; opacity: 0.8;">
-                <i class="fas fa-lock"></i> Secure application • No spam • Response within 24 hours
-            </p>
+            <a href="#slide1" class="logo">
+                <img src="images/logo.png" alt="Logo">
+            </a>
         </div>
-    </section>
 
-    <!-- FOOTER -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <h3 style="color: white; margin-bottom: 16px;">Victor William</h3>
-                <p>Structured Strength Coach • Mombasa & Online Worldwide</p>
-                
-                <div class="footer-links">
-                    <a href="mailto:victorwilliamfit@gmail.com" class="footer-link">
-                        <i class="fas fa-envelope"></i> victorwilliamfit@gmail.com
-                    </a>
-                    <a href="tel:+254726707895" class="footer-link">
-                        <i class="fas fa-phone"></i> +254 726 707 895
-                    </a>
-                    <a href="https://instagram.com/victorwilliam.coach" class="footer-link" target="_blank">
-                        <i class="fab fa-instagram"></i> @victorwilliam.coach
+        <!-- SLIDE 6 - WHY I COACH -->
+        <div class="slide slide-6" id="slide6">
+            <div class="slide-bg" style="background-image: url('images/victor5.jpeg');"></div>
+            <div class="overlay"></div>
+            <div class="slide-content">
+                <h2 class="animate-in">I coach to help people<br>stop starting over.</h2>
+                <p class="text-line body animate-in" style="animation-delay: 0.1s; margin-top: 30px;">To replace confusion<br>with clarity.</p>
+                <p class="text-line body animate-in" style="animation-delay: 0.2s; margin-top: 30px;">And to build strength<br>that carries into everyday life.</p>
+            </div>
+            <a href="#slide1" class="logo">
+                <img src="images/logo.png" alt="Logo">
+            </a>
+        </div>
+
+        <!-- SLIDE 7 - WHY TRAIN WITH ME -->
+        <div class="slide slide-7" id="slide7">
+            <div class="slide-bg" style="background-image: url('images/victor6.jpeg');"></div>
+            <div class="overlay"></div>
+            <div class="slide-content">
+                <h2 class="animate-in">I don't promise shortcuts.</h2>
+                <p class="text-line body animate-in" style="animation-delay: 0.1s; margin-top: 20px; margin-bottom: 30px;">I offer:</p>
+                <div class="bullet-list animate-in" style="animation-delay: 0.2s;">
+                    <div class="bullet-item">Clear structure</div>
+                    <div class="bullet-item">Accountability</div>
+                    <div class="bullet-item">Training that fits real life</div>
+                </div>
+                <p class="text-line animate-in" style="animation-delay: 0.3s; margin-top: 30px;">For people ready<br>to train seriously.</p>
+            </div>
+            <a href="#slide1" class="logo">
+                <img src="images/logo.png" alt="Logo">
+            </a>
+        </div>
+
+        <!-- SLIDE 8 - CALL TO ACTION -->
+        <div class="slide slide-8" id="slide8">
+            <div class="slide-bg" style="background-image: url('images/victor7.jpeg');"></div>
+            <div class="overlay"></div>
+            <div class="slide-content">
+                <h1 class="animate-in">Ready to train<br>with structure?</h1>
+                <div class="cta-container animate-in" style="animation-delay: 0.2s;">
+                    <a href="https://instagram.com/victorwilliam.coach" target="_blank" class="cta-button">
+                        DM "COACHING"
                     </a>
                 </div>
-                
-                <p style="color: var(--gray-400); font-size: 0.875rem; margin-top: 32px;">
-                    © 2024 Victor William Strength Coaching. All rights reserved.
-                </p>
             </div>
+            <a href="#slide1" class="logo">
+                <img src="images/logo.png" alt="Logo">
+            </a>
         </div>
-    </footer>
+    </div>
+
+    <!-- Navigation Dots -->
+    <div class="slide-nav">
+        <a href="#slide1" class="nav-dot active"></a>
+        <a href="#slide2" class="nav-dot"></a>
+        <a href="#slide3" class="nav-dot"></a>
+        <a href="#slide4" class="nav-dot"></a>
+        <a href="#slide5" class="nav-dot"></a>
+        <a href="#slide6" class="nav-dot"></a>
+        <a href="#slide7" class="nav-dot"></a>
+        <a href="#slide8" class="nav-dot"></a>
+    </div>
 
     <script>
-        // Smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
+        // Update active navigation dot on scroll
+        const sections = document.querySelectorAll('.slide');
+        const navDots = document.querySelectorAll('.nav-dot');
+
+        const observerOptions = {
+            threshold: 0.6
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const id = entry.target.id;
+                    navDots.forEach(dot => {
+                        dot.classList.remove('active');
+                        if (dot.getAttribute('href') === `#${id}`) {
+                            dot.classList.add('active');
+                        }
+                    });
+                }
+            });
+        }, observerOptions);
+
+        sections.forEach(section => {
+            observer.observe(section);
+        });
+
+        // Smooth scroll for navigation dots
+        navDots.forEach(dot => {
+            dot.addEventListener('click', (e) => {
                 e.preventDefault();
-                const targetId = this.getAttribute('href');
-                if(targetId === '#') return;
+                const targetId = dot.getAttribute('href');
+                const targetSection = document.querySelector(targetId);
                 
-                const targetElement = document.querySelector(targetId);
-                if(targetElement) {
-                    window.scrollTo({
-                        top: targetElement.offsetTop - 80,
-                        behavior: 'smooth'
+                if (targetSection) {
+                    targetSection.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
                     });
                 }
             });
         });
 
-        // Intersection Observer for animations
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
+        // Logo click scrolls to top
+        document.querySelectorAll('.logo').forEach(logo => {
+            logo.addEventListener('click', (e) => {
+                e.preventDefault();
+                document.querySelector('#slide1').scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            });
+        });
 
-        const observer = new IntersectionObserver((entries) => {
+        // Add animations when elements come into view
+        const animateOnScroll = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
-                if(entry.isIntersecting) {
-                    entry.target.classList.add('animate-in');
-                    observer.unobserve(entry.target);
+                if (entry.isIntersecting) {
+                    const elements = entry.target.querySelectorAll('.animate-in');
+                    elements.forEach((el, index) => {
+                        setTimeout(() => {
+                            el.style.opacity = '1';
+                            el.style.transform = 'translateY(0)';
+                        }, index * 100);
+                    });
+                    animateOnScroll.unobserve(entry.target);
                 }
             });
-        }, observerOptions);
+        }, { threshold: 0.3 });
 
-        // Observe elements for animation
-        document.querySelectorAll('.service-card, .testimonial-card, .cta-section > *').forEach(el => {
-            observer.observe(el);
+        sections.forEach(section => {
+            animateOnScroll.observe(section);
         });
 
-        // Add click tracking for analytics
-        document.querySelectorAll('a.btn').forEach(btn => {
-            btn.addEventListener('click', function() {
-                const buttonText = this.textContent.trim();
-                console.log(`Button clicked: ${buttonText} - ${this.href}`);
-                // Add your analytics tracking here
+        // Handle image loading errors
+        document.addEventListener('DOMContentLoaded', function() {
+            const images = document.querySelectorAll('.slide-bg, .logo img');
+            images.forEach(img => {
+                img.onerror = function() {
+                    console.error('Failed to load image:', this.src);
+                    // Fallback: Try uppercase extension if lowercase fails
+                    if (this.src.includes('.jpeg')) {
+                        this.src = this.src.replace('.jpeg', '.JPEG');
+                    } else if (this.src.includes('.png')) {
+                        this.src = this.src.replace('.png', '.PNG');
+                    }
+                };
             });
-        });
-
-        // Add WhatsApp click handler
-        document.querySelector('a[href*="wa.me"]').addEventListener('click', function(e) {
-            // Optional: Add WhatsApp tracking
-            console.log('WhatsApp contact initiated');
         });
     </script>
 </body>
