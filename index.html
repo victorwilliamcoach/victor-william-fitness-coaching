@@ -3,27 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Victor William | Structured Strength Coach - Mombasa & Online</title>
+    <title>Victor William | Structured Strength Coach</title>
     <meta name="description" content="Transform your training with structured strength coaching. No shortcuts. Just results.">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 <style>
     /* ===== CSS VARIABLES ===== */
     :root {
         --primary-bg: #0A0A0A;
         --secondary-bg: #111111;
-        --glass-bg: rgba(255, 255, 255, 0.07);
-        --glass-border: rgba(255, 255, 255, 0.12);
-        --glass-shadow: rgba(0, 0, 0, 0.2);
         --text-white: #FFFFFF;
-        --text-light: #E8E8E8;
-        --text-gray: #B0B0B0;
-        --accent-gold: #FFD700;
-        --accent-dark-gold: #D4AF37;
-        --overlay-dark: rgba(10, 10, 10, 0.85);
+        --text-light: #F0F0F0;
+        --text-gray: #AAAAAA;
+        --accent-gold: #D4AF37;
+        --accent-dark-gold: #B8860B;
+        --overlay-dark: rgba(0, 0, 0, 0.7);
+        --overlay-light: rgba(0, 0, 0, 0.4);
         --transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-        --blur: blur(20px);
     }
 
     /* ===== RESET & BASE ===== */
@@ -35,11 +32,11 @@
 
     html {
         scroll-behavior: smooth;
-        scroll-padding-top: 100px;
+        scroll-padding-top: 80px;
     }
 
     body {
-        font-family: 'Montserrat', 'Poppins', sans-serif;
+        font-family: 'Poppins', sans-serif;
         line-height: 1.6;
         color: var(--text-white);
         background: var(--primary-bg);
@@ -54,42 +51,8 @@
         padding: 0 20px;
     }
 
-    /* ===== GLASS MORPHISM STYLES ===== */
-    .glass-card {
-        background: var(--glass-bg);
-        backdrop-filter: var(--blur);
-        -webkit-backdrop-filter: var(--blur);
-        border-radius: 20px;
-        border: 1px solid var(--glass-border);
-        box-shadow: 
-            0 10px 30px var(--glass-shadow),
-            inset 0 1px 0 rgba(255, 255, 255, 0.1);
-        transition: var(--transition);
-    }
-
-    .glass-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 
-            0 15px 40px rgba(0, 0, 0, 0.3),
-            inset 0 1px 0 rgba(255, 255, 255, 0.15);
-        border-color: rgba(255, 215, 0, 0.3);
-    }
-
-    .glass-section {
-        background: var(--glass-bg);
-        backdrop-filter: var(--blur);
-        -webkit-backdrop-filter: var(--blur);
-        border-radius: 24px;
-        border: 1px solid var(--glass-border);
-        box-shadow: 
-            0 15px 35px var(--glass-shadow),
-            inset 0 1px 0 rgba(255, 255, 255, 0.08);
-        padding: 60px;
-        margin-bottom: 40px;
-    }
-
     /* ===== TYPOGRAPHY ===== */
-    h1, h2, h3, h4, h5 {
+    h1, h2, h3, h4 {
         font-family: 'Montserrat', sans-serif;
         font-weight: 700;
         line-height: 1.1;
@@ -99,35 +62,31 @@
     h1 {
         font-size: 4.5rem;
         margin-bottom: 1.5rem;
-        letter-spacing: 1.5px;
-        background: linear-gradient(135deg, var(--text-white) 0%, var(--accent-gold) 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
+        letter-spacing: 2px;
+        text-transform: uppercase;
     }
 
     h2 {
-        font-size: 3.2rem;
-        margin-bottom: 2rem;
+        font-size: 3rem;
+        margin-bottom: 1.5rem;
         position: relative;
         display: inline-block;
-        padding-bottom: 15px;
     }
 
     h2::after {
         content: '';
         position: absolute;
-        bottom: 0;
+        bottom: -10px;
         left: 0;
-        width: 70px;
+        width: 60px;
         height: 3px;
-        background: linear-gradient(90deg, var(--accent-gold), transparent);
+        background: var(--accent-gold);
         border-radius: 2px;
     }
 
     h3 {
         font-size: 2rem;
-        margin-bottom: 1.5rem;
+        margin-bottom: 1rem;
         color: var(--accent-gold);
     }
 
@@ -141,79 +100,10 @@
     }
 
     .lead {
-        font-size: 1.8rem;
+        font-size: 1.6rem;
         font-weight: 500;
-        margin-bottom: 2.5rem;
-        color: var(--text-light);
-    }
-
-    .highlight {
+        margin-bottom: 2rem;
         color: var(--accent-gold);
-        font-weight: 600;
-    }
-
-    /* ===== BUTTONS ===== */
-    .btn {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        gap: 12px;
-        padding: 18px 42px;
-        border-radius: 12px;
-        font-family: 'Montserrat', sans-serif;
-        font-weight: 600;
-        font-size: 1.1rem;
-        text-decoration: none;
-        text-transform: uppercase;
-        letter-spacing: 1.5px;
-        transition: var(--transition);
-        border: 2px solid transparent;
-        background: linear-gradient(135deg, var(--accent-gold) 0%, var(--accent-dark-gold) 100%);
-        color: var(--primary-bg);
-        cursor: pointer;
-        position: relative;
-        overflow: hidden;
-        z-index: 1;
-    }
-
-    .btn::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(135deg, var(--text-white) 0%, var(--accent-gold) 100%);
-        opacity: 0;
-        transition: var(--transition);
-        z-index: -1;
-    }
-
-    .btn:hover::before {
-        opacity: 1;
-    }
-
-    .btn:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 15px 30px rgba(255, 215, 0, 0.3);
-        border-color: rgba(255, 255, 255, 0.2);
-    }
-
-    .btn-outline {
-        background: transparent;
-        border: 2px solid var(--accent-gold);
-        color: var(--accent-gold);
-    }
-
-    .btn-outline:hover {
-        background: linear-gradient(135deg, var(--accent-gold) 0%, var(--accent-dark-gold) 100%);
-        color: var(--primary-bg);
-    }
-
-    .btn-instagram {
-        background: linear-gradient(45deg, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D);
-        color: white;
-        border: none;
     }
 
     /* ===== HEADER ===== */
@@ -222,18 +112,11 @@
         top: 0;
         left: 0;
         right: 0;
-        padding: 25px 0;
-        background: rgba(10, 10, 10, 0.85);
-        backdrop-filter: var(--blur);
-        -webkit-backdrop-filter: var(--blur);
+        padding: 15px 0;
+        background: rgba(10, 10, 10, 0.95);
+        backdrop-filter: blur(10px);
         z-index: 1000;
-        border-bottom: 1px solid var(--glass-border);
-        transition: var(--transition);
-    }
-
-    .header.scrolled {
-        padding: 20px 0;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        border-bottom: 1px solid rgba(212, 175, 55, 0.2);
     }
 
     .header-content {
@@ -245,7 +128,7 @@
     .logo-container {
         display: flex;
         align-items: center;
-        gap: 15px;
+        gap: 10px;
         text-decoration: none;
     }
 
@@ -255,98 +138,193 @@
         font-weight: 800;
         color: var(--text-white);
         letter-spacing: 2px;
-        background: linear-gradient(135deg, var(--accent-gold), var(--text-white));
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
     }
 
-    .logo-tagline {
-        font-size: 0.85rem;
-        color: var(--text-gray);
-        font-weight: 500;
-        letter-spacing: 1px;
-        text-transform: uppercase;
-    }
-
-    .nav-cta {
-        display: flex;
-        align-items: center;
-        gap: 25px;
-    }
-
-    .contact-phone {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        color: var(--text-white);
-        text-decoration: none;
-        font-weight: 600;
-        padding: 12px 24px;
-        border: 1.5px solid var(--glass-border);
-        border-radius: 10px;
-        transition: var(--transition);
-        font-size: 1rem;
-        background: var(--glass-bg);
-        backdrop-filter: var(--blur);
-        -webkit-backdrop-filter: var(--blur);
-    }
-
-    .contact-phone:hover {
-        background: rgba(255, 215, 0, 0.1);
-        border-color: var(--accent-gold);
+    .logo-gold {
         color: var(--accent-gold);
-        box-shadow: 0 5px 20px rgba(212, 175, 55, 0.2);
     }
 
-    /* ===== MAIN SECTIONS ===== */
-    .main-content {
-        padding: 150px 0 100px;
+    /* ===== IMAGE SECTIONS ===== */
+    .image-section {
+        min-height: 100vh;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
     }
 
-    .section-divider {
-        height: 1px;
-        background: linear-gradient(90deg, transparent, var(--glass-border), transparent);
-        margin: 60px 0;
+    .section-bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        z-index: 1;
+        transition: transform 0.8s ease-out;
     }
 
-    /* ===== STORY SECTIONS ===== */
-    .story-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 30px;
-        margin-top: 50px;
+    .section-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: var(--overlay-dark);
+        z-index: 2;
     }
 
-    .story-card {
+    .section-content {
+        position: relative;
+        z-index: 3;
+        max-width: 800px;
         padding: 40px;
-        background: var(--glass-bg);
-        backdrop-filter: var(--blur);
-        -webkit-backdrop-filter: var(--blur);
-        border-radius: 20px;
-        border: 1px solid var(--glass-border);
+        text-align: left;
+    }
+
+    /* ===== BUTTONS ===== */
+    .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        padding: 16px 36px;
+        border-radius: 6px;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 600;
+        font-size: 1rem;
+        text-decoration: none;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        transition: var(--transition);
+        border: 2px solid var(--accent-gold);
+        background: transparent;
+        color: var(--text-white);
+        cursor: pointer;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .btn::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: var(--accent-gold);
+        z-index: -1;
         transition: var(--transition);
     }
 
-    .story-card:hover {
-        transform: translateY(-10px);
-        border-color: rgba(255, 215, 0, 0.3);
-        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    .btn:hover::before {
+        left: 0;
     }
 
-    .story-icon {
-        font-size: 2.5rem;
-        color: var(--accent-gold);
-        margin-bottom: 20px;
+    .btn:hover {
+        color: var(--primary-bg);
+        transform: translateY(-3px);
+        box-shadow: 0 10px 30px rgba(212, 175, 55, 0.3);
     }
 
-    /* ===== APPROACH SECTION ===== */
-    .approach-list {
+    .btn-whatsapp {
+        background: #25D366;
+        border-color: #25D366;
+        color: white;
+    }
+
+    .btn-whatsapp::before {
+        background: #128C7E;
+    }
+
+    .btn-email {
+        background: transparent;
+        border-color: var(--text-white);
+    }
+
+    .btn-email:hover {
+        border-color: var(--accent-gold);
+    }
+
+    /* ===== SOCIAL LINKS ===== */
+    .social-links {
+        display: flex;
+        gap: 15px;
+        margin-top: 30px;
+    }
+
+    .social-link {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.1);
+        color: var(--text-white);
+        font-size: 1.2rem;
+        transition: var(--transition);
+        text-decoration: none;
+    }
+
+    .social-link:hover {
+        background: var(--accent-gold);
+        transform: translateY(-3px);
+        color: var(--primary-bg);
+    }
+
+    /* ===== HERO SECTION ===== */
+    #hero {
+        text-align: center;
+    }
+
+    #hero .section-overlay {
+        background: rgba(0, 0, 0, 0.6);
+    }
+
+    #hero h1 {
+        margin-bottom: 0.5rem;
+    }
+
+    .hero-tagline {
+        font-size: 1.4rem;
+        color: var(--text-light);
+        margin-bottom: 2rem;
+    }
+
+    .hero-buttons {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        margin-top: 30px;
+        flex-wrap: wrap;
+    }
+
+    /* ===== WHO IS VICTOR SECTION ===== */
+    #who-is-victor .section-overlay {
+        background: rgba(0, 0, 0, 0.7);
+    }
+
+    /* ===== MY STORY SECTION ===== */
+    #my-story .section-overlay {
+        background: rgba(0, 0, 0, 0.65);
+    }
+
+    /* ===== WHAT I DO SECTION ===== */
+    #what-i-do .section-overlay {
+        background: rgba(0, 0, 0, 0.7);
+    }
+
+    .services-list {
         list-style: none;
         margin: 30px 0;
+        padding: 0;
     }
 
-    .approach-list li {
+    .services-list li {
         position: relative;
         margin-bottom: 20px;
         padding-left: 40px;
@@ -354,180 +332,92 @@
         transition: var(--transition);
     }
 
-    .approach-list li:hover {
+    .services-list li:hover {
         transform: translateX(10px);
         color: var(--accent-gold);
     }
 
-    .approach-list li:before {
+    .services-list li:before {
         content: "✓";
         position: absolute;
         left: 0;
         color: var(--accent-gold);
-        font-size: 1.5rem;
+        font-size: 1.8rem;
         font-weight: bold;
     }
 
-    /* ===== WHY ME SECTION ===== */
+    /* ===== MY APPROACH SECTION ===== */
+    #my-approach .section-overlay {
+        background: rgba(0, 0, 0, 0.6);
+    }
+
+    /* ===== WHY I COACH SECTION ===== */
+    #why-i-coach .section-overlay {
+        background: rgba(0, 0, 0, 0.65);
+    }
+
+    /* ===== WHY TRAIN WITH ME SECTION ===== */
+    #why-train-with-me .section-overlay {
+        background: rgba(0, 0, 0, 0.7);
+    }
+
     .reasons-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
         gap: 30px;
-        margin-top: 50px;
+        margin-top: 40px;
     }
 
     .reason-card {
-        padding: 35px;
-        background: var(--glass-bg);
-        backdrop-filter: var(--blur);
-        -webkit-backdrop-filter: var(--blur);
-        border-radius: 18px;
-        border: 1px solid var(--glass-border);
+        padding: 25px;
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 10px;
+        border-left: 4px solid var(--accent-gold);
         transition: var(--transition);
     }
 
     .reason-card:hover {
-        transform: translateY(-8px);
-        border-color: rgba(255, 215, 0, 0.4);
+        background: rgba(255, 255, 255, 0.1);
+        transform: translateY(-5px);
     }
 
     .reason-number {
-        font-size: 3rem;
+        font-size: 2.5rem;
         font-weight: 800;
-        color: rgba(255, 215, 0, 0.2);
-        margin-bottom: 15px;
+        color: rgba(212, 175, 55, 0.3);
+        margin-bottom: 10px;
     }
 
-    /* ===== TESTIMONIALS ===== */
-    .testimonials-section {
-        padding: 100px 0;
+    /* ===== CALL TO ACTION SECTION ===== */
+    #cta {
         text-align: center;
-        position: relative;
     }
 
-    .testimonials-section::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: radial-gradient(circle at 30% 30%, rgba(255, 215, 0, 0.03) 0%, transparent 50%);
-        z-index: -1;
-    }
-
-    .testimonial-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-        gap: 40px;
-        margin-top: 60px;
-    }
-
-    .testimonial-card {
-        padding: 40px;
-        background: var(--glass-bg);
-        backdrop-filter: var(--blur);
-        -webkit-backdrop-filter: var(--blur);
-        border-radius: 20px;
-        border: 1px solid var(--glass-border);
-        text-align: left;
-        transition: var(--transition);
-        position: relative;
-    }
-
-    .testimonial-card::before {
-        content: '"';
-        position: absolute;
-        top: 20px;
-        left: 20px;
-        font-size: 4rem;
-        color: rgba(255, 215, 0, 0.2);
-        font-family: Georgia, serif;
-        line-height: 1;
-    }
-
-    .testimonial-card:hover {
-        transform: translateY(-10px);
-        border-color: rgba(255, 215, 0, 0.4);
-        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
-    }
-
-    .testimonial-text {
-        font-style: italic;
-        margin: 20px 0 30px;
-        color: var(--text-light);
-        font-size: 1.15rem;
-        line-height: 1.8;
-        padding-left: 10px;
-    }
-
-    .testimonial-author {
-        font-weight: 700;
-        color: var(--accent-gold);
-        font-size: 1.1rem;
-        border-top: 1px solid var(--glass-border);
-        padding-top: 20px;
-    }
-
-    /* ===== CTA SECTION ===== */
-    .cta-section {
-        padding: 100px 0;
-        text-align: center;
-        position: relative;
-    }
-
-    .cta-section::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: radial-gradient(circle at 70% 50%, rgba(255, 215, 0, 0.05) 0%, transparent 50%);
-        z-index: -1;
-    }
-
-    .cta-content {
-        max-width: 800px;
-        margin: 0 auto;
-        padding: 60px;
-        background: var(--glass-bg);
-        backdrop-filter: var(--blur);
-        -webkit-backdrop-filter: var(--blur);
-        border-radius: 24px;
-        border: 1px solid var(--glass-border);
-        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    #cta .section-overlay {
+        background: rgba(0, 0, 0, 0.5);
     }
 
     .cta-buttons {
         display: flex;
-        gap: 25px;
+        gap: 20px;
         justify-content: center;
-        margin-top: 50px;
+        margin-top: 40px;
         flex-wrap: wrap;
     }
 
     /* ===== FOOTER ===== */
     .footer {
-        padding: 80px 0 50px;
-        background: rgba(5, 5, 5, 0.9);
+        padding: 60px 0 40px;
+        background: #050505;
         text-align: center;
-        border-top: 1px solid var(--glass-border);
-    }
-
-    .footer-content {
-        max-width: 800px;
-        margin: 0 auto;
+        border-top: 1px solid rgba(212, 175, 55, 0.1);
     }
 
     .footer-logo {
         font-family: 'Montserrat', sans-serif;
-        font-size: 2.5rem;
+        font-size: 2rem;
         font-weight: 800;
-        background: linear-gradient(135deg, var(--accent-gold), var(--text-white));
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
+        color: var(--text-white);
         margin-bottom: 20px;
         display: block;
         text-decoration: none;
@@ -536,28 +426,29 @@
 
     .footer-tagline {
         color: var(--text-gray);
-        margin-bottom: 50px;
-        font-size: 1.1rem;
-        line-height: 1.8;
+        margin-bottom: 40px;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 1rem;
     }
 
     .footer-contact {
         display: flex;
         flex-direction: column;
-        gap: 20px;
-        margin: 40px 0;
+        gap: 15px;
+        margin: 30px 0;
     }
 
     .contact-item {
         display: flex;
         align-items: center;
         justify-content: center;
-        gap: 15px;
+        gap: 10px;
         color: var(--text-gray);
         text-decoration: none;
         transition: var(--transition);
         font-weight: 500;
-        padding: 12px 0;
     }
 
     .contact-item:hover {
@@ -567,15 +458,15 @@
 
     .contact-item i {
         color: var(--accent-gold);
-        width: 24px;
-        font-size: 1.2rem;
+        width: 20px;
+        font-size: 1rem;
     }
 
     .copyright {
         color: var(--text-gray);
         font-size: 0.9rem;
-        margin-top: 50px;
-        padding-top: 40px;
+        margin-top: 40px;
+        padding-top: 30px;
         border-top: 1px solid rgba(255, 255, 255, 0.05);
     }
 
@@ -591,9 +482,13 @@
         }
     }
 
-    @keyframes float {
-        0%, 100% { transform: translateY(0); }
-        50% { transform: translateY(-10px); }
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
     }
 
     .animate-in {
@@ -604,34 +499,11 @@
     .delay-1 { animation-delay: 0.2s; }
     .delay-2 { animation-delay: 0.4s; }
     .delay-3 { animation-delay: 0.6s; }
-    .delay-4 { animation-delay: 0.8s; }
-
-    .float-animation {
-        animation: float 3s ease-in-out infinite;
-    }
 
     /* ===== RESPONSIVE ===== */
-    @media (max-width: 992px) {
-        h1 {
-            font-size: 3.5rem;
-        }
-
-        h2 {
-            font-size: 2.5rem;
-        }
-
-        h3 {
-            font-size: 1.8rem;
-        }
-
-        .glass-section {
-            padding: 40px;
-        }
-    }
-
     @media (max-width: 768px) {
         h1 {
-            font-size: 2.8rem;
+            font-size: 3rem;
         }
 
         h2 {
@@ -639,37 +511,32 @@
         }
 
         h3 {
-            font-size: 1.5rem;
+            font-size: 1.6rem;
         }
 
         p, li {
-            font-size: 1.05rem;
+            font-size: 1.1rem;
         }
 
         .lead {
             font-size: 1.3rem;
         }
 
-        .glass-section {
+        .section-content {
             padding: 30px;
         }
 
         .header-content {
             flex-direction: column;
-            gap: 20px;
+            gap: 15px;
+            text-align: center;
         }
 
-        .nav-cta {
-            flex-direction: column;
-            width: 100%;
+        .logo {
+            font-size: 1.5rem;
         }
 
-        .contact-phone {
-            width: 100%;
-            justify-content: center;
-        }
-
-        .cta-buttons {
+        .hero-buttons, .cta-buttons {
             flex-direction: column;
             align-items: center;
         }
@@ -679,44 +546,28 @@
             max-width: 300px;
         }
 
-        .testimonial-grid {
-            grid-template-columns: 1fr;
-        }
-
-        .story-grid, .reasons-grid {
+        .reasons-grid {
             grid-template-columns: 1fr;
         }
     }
 
     @media (max-width: 480px) {
         h1 {
-            font-size: 2.2rem;
+            font-size: 2.5rem;
         }
 
         h2 {
             font-size: 1.8rem;
         }
 
-        .glass-section {
-            padding: 25px;
+        .image-section {
+            min-height: 90vh;
         }
 
-        .main-content {
-            padding: 130px 0 60px;
+        .section-content {
+            padding: 20px;
         }
     }
-
-    /* ===== UTILITY ===== */
-    .text-center { text-align: center; }
-    .text-left { text-align: left; }
-    .mb-1 { margin-bottom: 10px; }
-    .mb-2 { margin-bottom: 20px; }
-    .mb-3 { margin-bottom: 30px; }
-    .mb-4 { margin-bottom: 40px; }
-    .mt-1 { margin-top: 10px; }
-    .mt-2 { margin-top: 20px; }
-    .mt-3 { margin-top: 30px; }
-    .mt-4 { margin-top: 40px; }
 </style>
 
 </head>
@@ -726,216 +577,182 @@
         <div class="container">
             <div class="header-content">
                 <a href="#hero" class="logo-container">
-                    <div class="logo">VICTOR WILLIAM</div>
-                    <div class="logo-tagline">Structured Strength Coach</div>
+                    <div class="logo">VICTOR <span class="logo-gold">WILLIAM</span></div>
                 </a>
-
-                <div class="nav-cta">
-                    <a href="tel:+254726707895" class="contact-phone">
-                        <i class="fas fa-phone"></i>
-                        <span>+254 726 707 895</span>
+                <nav>
+                    <a href="https://instagram.com/victorwilliam.coach" class="btn btn-email" target="_blank">
+                        <i class="fab fa-instagram"></i> Instagram
                     </a>
-                    <a href="mailto:victorwilliamfit@gmail.com" class="btn btn-outline">
-                        <i class="fas fa-envelope"></i> Email Me
-                    </a>
-                </div>
+                </nav>
             </div>
         </div>
     </header>
 
-    <!-- MAIN CONTENT -->
-    <main class="main-content">
-        <div class="container">
-            <!-- HERO SECTION -->
-            <section id="hero" class="glass-section animate-in">
-                <div class="text-center">
-                    <h1 class="mb-3">TRANSFORM YOUR TRAINING</h1>
-                    <p class="lead">No confusion. No shortcuts. Just structured strength coaching that delivers real results.</p>
-                    <div class="cta-buttons">
-                        <a href="#cta" class="btn">
-                            <i class="fas fa-dumbbell"></i> Start Your Journey
-                        </a>
-                        <a href="https://instagram.com/victorwilliam.coach" class="btn btn-outline" target="_blank">
-                            <i class="fab fa-instagram"></i> Follow on Instagram
-                        </a>
-                    </div>
-                </div>
-            </section>
-
-            <div class="section-divider"></div>
-
-            <!-- MY STORY SECTION -->
-            <section class="glass-section animate-in delay-1">
-                <h2 class="mb-4">MY STORY</h2>
-                <div class="story-grid">
-                    <div class="story-card">
-                        <div class="story-icon">
-                            <i class="fas fa-seedling"></i>
-                        </div>
-                        <h3>The Beginning</h3>
-                        <p>My fitness journey didn't start in the gym. It started as a skinny young boy with low self-esteem, searching for confidence and fulfillment in all areas of life.</p>
-                    </div>
-                    
-                    <div class="story-card">
-                        <div class="story-icon">
-                            <i class="fas fa-lightbulb"></i>
-                        </div>
-                        <h3>The Realization</h3>
-                        <p>After years of chasing external results, I discovered true wellness isn't just physical—it's about mental clarity, emotional resilience, and sustainable habits.</p>
-                    </div>
-                    
-                    <div class="story-card">
-                        <div class="story-icon">
-                            <i class="fas fa-rocket"></i>
-                        </div>
-                        <h3>The Transformation</h3>
-                        <p>That's when I embraced holistic fitness, and it changed everything. Today, I live and breathe wellness to help YOU discover what you're truly capable of.</p>
-                    </div>
-                </div>
-            </section>
-
-            <div class="section-divider"></div>
-
-            <!-- WHO I AM SECTION -->
-            <section class="glass-section animate-in delay-2">
-                <h2 class="mb-4">WHO IS VICTOR WILLIAM?</h2>
-                <p class="lead mb-4">I'm an ACE-certified fitness coach, digital creator, trainer mentor, and founder of the Fitbeat Wellness brand.</p>
-                
-                <p class="mb-4">As someone who juggles multiple roles, I understand the daily struggles of busy individuals trying to get everything done in 24 hours.</p>
-                
-                <p class="mb-4">Whether you're a professional aiming to elevate performance, a parent balancing responsibilities, someone who's tried everything with little success, or simply unsure where to start—I'm here to guide you.</p>
-                
-                <p>I know what it's like to have big goals but feel stuck due to lack of time or direction, and I'm excited to help you make it all possible!</p>
-            </section>
-
-            <div class="section-divider"></div>
-
-            <!-- WHY I DO THIS SECTION -->
-            <section class="glass-section animate-in delay-3">
-                <h2 class="mb-4">WHY I DO WHAT I DO</h2>
-                <p class="lead mb-4">I believe we all deserve to feel good, look good, wear the clothes we love, and experience what the good life truly looks like.</p>
-                
-                <p class="mb-4">Not just in appearance, but in how we <span class="highlight">MOVE</span>, <span class="highlight">FEEL</span>, <span class="highlight">THINK</span>, and <span class="highlight">LIVE</span>.</p>
-                
-                <p class="mb-4">Fitness isn't one-size-fits-all. Everyone is made to move in their own unique way, and I'm here to help you find the path that works for YOU.</p>
-                
-                <p>My mission is to inspire and empower you to take that first step—whether you've never experienced living your best life or you have but fell off and want to get back on track.</p>
-            </section>
-
-            <div class="section-divider"></div>
-
-            <!-- MY APPROACH SECTION -->
-            <section class="glass-section animate-in">
-                <h2 class="mb-4">MY HOLISTIC APPROACH</h2>
-                <p class="lead mb-4">I help people achieve fitness and wellness goals through a comprehensive approach:</p>
-                
-                <ul class="approach-list">
-                    <li><strong>Physical Fitness</strong> – Building strength, endurance, and flexibility while finding joy in movement</li>
-                    <li><strong>High Performance Coaching</strong> – Restructuring routines for busy professionals to optimize productivity</li>
-                    <li><strong>Nutrition Coaching</strong> – Building positive relationships with food while eating what you love</li>
-                    <li><strong>Mindset Coaching</strong> – Developing mental toughness, consistency, and breaking through self-doubt</li>
-                    <li><strong>Self-Care & Wellness</strong> – Incorporating routines that nurture mind and soul</li>
-                </ul>
-            </section>
-
-            <div class="section-divider"></div>
-
-            <!-- WHY I'M THE IDEAL COACH SECTION -->
-            <section class="glass-section animate-in delay-1">
-                <h2 class="mb-4">WHY I'M THE IDEAL COACH FOR YOU</h2>
-                
-                <div class="reasons-grid">
-                    <div class="reason-card">
-                        <div class="reason-number">01</div>
-                        <h3>Experience</h3>
-                        <p>Years of training people from all walks of life and mentoring other trainers.</p>
-                    </div>
-                    
-                    <div class="reason-card">
-                        <div class="reason-number">02</div>
-                        <h3>Holistic Approach</h3>
-                        <p>Focusing on the whole YOU—balancing physical fitness with emotional well-being.</p>
-                    </div>
-                    
-                    <div class="reason-card">
-                        <div class="reason-number">03</div>
-                        <h3>High Performance Focus</h3>
-                        <p>Helping busy professionals restructure routines to optimize productivity and prevent burnout.</p>
-                    </div>
-                    
-                    <div class="reason-card">
-                        <div class="reason-number">04</div>
-                        <h3>Empathy & Accountability</h3>
-                        <p>Understanding the challenges of staying on track and celebrating every win with you.</p>
-                    </div>
-                    
-                    <div class="reason-card">
-                        <div class="reason-number">05</div>
-                        <h3>Community Vibe</h3>
-                        <p>A thriving community of like-minded individuals who support each other's growth.</p>
-                    </div>
-                </div>
-            </section>
-        </div>
-    </main>
-
-    <!-- TESTIMONIALS -->
-    <section class="testimonials-section">
-        <div class="container">
-            <h2 class="text-center mb-2">Client Success Stories</h2>
-            <p class="lead text-center mb-4">What professionals say about training with structure</p>
+    <!-- HERO SECTION - victor1.jpeg -->
+    <section id="hero" class="image-section">
+        <div class="section-bg" style="background-image: url('images/victor1.jpeg');"></div>
+        <div class="section-overlay"></div>
+        <div class="section-content animate-in">
+            <h1>VICTOR WILLIAM</h1>
+            <p class="hero-tagline">Structured Strength Coach • Mombasa & Online</p>
+            <p class="lead">Transform your training. No confusion. No shortcuts. Just structure.</p>
             
-            <div class="testimonial-grid">
-                <div class="testimonial-card animate-in">
-                    <div class="testimonial-text">
-                        "Victor's structured approach added 60kg to my deadlift in 6 months. The clarity and discipline were exactly what I needed to stop spinning my wheels and start making real progress."
-                    </div>
-                    <div class="testimonial-author">James K. • Strength Athlete</div>
-                </div>
-                
-                <div class="testimonial-card animate-in delay-1">
-                    <div class="testimonial-text">
-                        "As a doctor with insane hours, Victor's 3-day program delivered better results than my previous 6-day random approach. Structure changed everything—I finally have a system that works with my life."
-                    </div>
-                    <div class="testimonial-author">Dr. Sarah M. • Medical Professional</div>
-                </div>
-                
-                <div class="testimonial-card animate-in delay-2">
-                    <div class="testimonial-text">
-                        "I stopped the cycle of starting over every few months. Victor's system is the first one that actually works with my schedule AND delivers results. The holistic approach transformed not just my body but my mindset too."
-                    </div>
-                    <div class="testimonial-author">Michael T. • Software Engineer</div>
-                </div>
+            <div class="hero-buttons">
+                <a href="https://wa.me/254726707895" class="btn btn-whatsapp" target="_blank">
+                    <i class="fab fa-whatsapp"></i> WhatsApp
+                </a>
+                <a href="mailto:victorwilliamfit@gmail.com" class="btn btn-email">
+                    <i class="fas fa-envelope"></i> Email
+                </a>
+            </div>
+
+            <div class="social-links">
+                <a href="https://www.instagram.com/victorwilliam.coach" class="social-link" target="_blank">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.facebook.com/victorwilliam.coach" class="social-link" target="_blank">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
             </div>
         </div>
     </section>
 
-    <!-- FINAL CTA -->
-    <section id="cta" class="cta-section">
-        <div class="container">
-            <div class="cta-content animate-in">
-                <h2 class="text-center mb-3">LET'S GET STARTED!</h2>
-                <p class="lead text-center mb-4">Ready to transform your body, regain confidence, wear the clothes you love, get stronger, feel healthier, and discover a more confident YOU?</p>
-                
-                <p class="text-center mb-4">Whether you're just starting out or looking to get back on track, I'm here to support you every step of the way. Let's create a plan that fits your life, boosts your energy, and brings balance and well-being.</p>
-                
-                <div class="cta-buttons">
-                    <a href="https://form.jotform.com/260245859907064" class="btn">
-                        <i class="fas fa-calendar-check"></i> Apply for Coaching
-                    </a>
-                    <a href="https://form.jotform.com/260245818736059" class="btn btn-outline">
-                        <i class="fas fa-download"></i> Get Free Guide
-                    </a>
-                    <a href="tel:+254726707895" class="btn">
-                        <i class="fas fa-phone"></i> Call Me Now
-                    </a>
+    <!-- WHO IS VICTOR - victor.jpeg -->
+    <section id="who-is-victor" class="image-section">
+        <div class="section-bg" style="background-image: url('images/victor.jpeg');"></div>
+        <div class="section-overlay"></div>
+        <div class="section-content animate-in delay-1">
+            <h2>WHO IS VICTOR WILLIAM?</h2>
+            <p class="lead">ACE certified fitness coach, digital creator, trainer mentor, and founder of Fitbeat Wellness.</p>
+            
+            <p>As someone who juggles multiple roles, I understand the daily struggles of busy individuals trying to get many things done within 24 hours.</p>
+            
+            <p>Whether you're a professional aiming to elevate your performance, a parent balancing countless responsibilities, someone who has tried everything with little success, or simply unsure where to start—I'm here to guide you.</p>
+            
+            <p>I know what it's like to have big goals but feel stuck due to lack of time or direction, and I'm excited to help you make it all possible!</p>
+        </div>
+    </section>
+
+    <!-- MY STORY - victor2.jpeg -->
+    <section id="my-story" class="image-section">
+        <div class="section-bg" style="background-image: url('images/victor2.jpeg');"></div>
+        <div class="section-overlay"></div>
+        <div class="section-content animate-in delay-2">
+            <h2>MY STORY</h2>
+            <p class="lead">My fitness journey didn't start in the gym—it started as a skinny young boy with low self-esteem, searching for confidence and fulfillment in ALL areas of my life.</p>
+            
+            <p>After years of chasing external results, I realized that true wellness is not just about the physical body, but also about mental clarity, emotional resilience, and sustainable habits.</p>
+            
+            <p>That's when I decided to dive into holistic fitness, and let me tell you, it changed my life!</p>
+            
+            <p>Today, I live and breathe wellness, not just for myself, but to help YOU discover what you're truly capable of when you align your mind, body, and soul.</p>
+        </div>
+    </section>
+
+    <!-- WHAT I DO - victor3.jpeg -->
+    <section id="what-i-do" class="image-section">
+        <div class="section-bg" style="background-image: url('images/victor3.jpeg');"></div>
+        <div class="section-overlay"></div>
+        <div class="section-content animate-in">
+            <h2>WHAT I DO</h2>
+            <p class="lead">I help people achieve their fitness and wellness goals through a holistic approach:</p>
+            
+            <ul class="services-list">
+                <li><strong>Physical Fitness</strong> – Building strength, endurance, and flexibility while finding joy in movement</li>
+                <li><strong>High Performance Coaching</strong> – Restructuring routines for busy professionals</li>
+                <li><strong>Nutrition Coaching</strong> – Building positive relationships with food</li>
+                <li><strong>Mindset Coaching</strong> – Developing mental toughness and consistency</li>
+                <li><strong>Self-Care & Wellness</strong> – Incorporating routines that nurture mind and soul</li>
+            </ul>
+            
+            <p>With Fitbeat, we're creating a community that thrives on positivity, balance, accountability, and fun!</p>
+        </div>
+    </section>
+
+    <!-- MY APPROACH - victor4.jpeg -->
+    <section id="my-approach" class="image-section">
+        <div class="section-bg" style="background-image: url('images/victor4.jpeg');"></div>
+        <div class="section-overlay"></div>
+        <div class="section-content animate-in delay-1">
+            <h2>MY APPROACH</h2>
+            <p class="lead">Training transcends exercise. It's built on movement mastery, relentless consistency, and confidence through structure.</p>
+            
+            <p>I focus on the whole YOU—balancing physical fitness with emotional well-being and sustainable habits to keep you thriving and aging gracefully.</p>
+            
+            <p>This holistic approach isn't just about workouts; it's about creating a lifestyle that supports your goals, your schedule, and your vision for who you want to become.</p>
+        </div>
+    </section>
+
+    <!-- WHY I COACH - victor5.jpeg -->
+    <section id="why-i-coach" class="image-section">
+        <div class="section-bg" style="background-image: url('images/victor5.jpeg');"></div>
+        <div class="section-overlay"></div>
+        <div class="section-content animate-in delay-2">
+            <h2>WHY I COACH</h2>
+            <p class="lead">To help you stop the endless restart cycle and replace confusion with absolute clarity.</p>
+            
+            <p>I believe we all deserve to feel good, look good, wear the clothes we love, and experience what the good life truly looks like—not just in appearance, but in how we MOVE, FEEL, THINK, and LIVE.</p>
+            
+            <p>Fitness isn't one-size-fits-all. Everyone is made to move in their own unique way, and I'm here to help you find the path that works for YOU.</p>
+            
+            <p>My mission is to inspire and empower you to take that first step toward a life full of energy, confidence, and purpose.</p>
+        </div>
+    </section>
+
+    <!-- WHY TRAIN WITH ME - victor6.jpeg -->
+    <section id="why-train-with-me" class="image-section">
+        <div class="section-bg" style="background-image: url('images/victor6.jpeg');"></div>
+        <div class="section-overlay"></div>
+        <div class="section-content animate-in">
+            <h2>WHY TRAIN WITH ME</h2>
+            <p class="lead">No promises of shortcuts. Just pure execution based on years of experience.</p>
+            
+            <div class="reasons-grid">
+                <div class="reason-card">
+                    <div class="reason-number">01</div>
+                    <h3>Experience</h3>
+                    <p>Years of training people from all walks of life and mentoring other trainers</p>
                 </div>
                 
-                <p class="text-center mt-4">
-                    <a href="https://instagram.com/victorwilliam.coach" class="btn btn-instagram" target="_blank" style="padding: 15px 30px;">
-                        <i class="fab fa-instagram"></i> DM "COACHING" on Instagram
-                    </a>
-                </p>
+                <div class="reason-card">
+                    <div class="reason-number">02</div>
+                    <h3>Empathy & Accountability</h3>
+                    <p>Understanding the challenges and celebrating every win with you</p>
+                </div>
+                
+                <div class="reason-card">
+                    <div class="reason-number">03</div>
+                    <h3>Community</h3>
+                    <p>A thriving community of like-minded individuals who support each other</p>
+                </div>
+            </div>
+            
+            <p>For serious people ready to get serious results through crystal-clear structure and real accountability.</p>
+        </div>
+    </section>
+
+    <!-- CALL TO ACTION - victor7.jpeg -->
+    <section id="cta" class="image-section">
+        <div class="section-bg" style="background-image: url('images/victor7.jpeg');"></div>
+        <div class="section-overlay"></div>
+        <div class="section-content animate-in delay-1">
+            <h2>LET'S GET STARTED!</h2>
+            <p class="lead">Ready to transform your body, regain confidence, and discover a stronger, healthier, more confident YOU?</p>
+            
+            <p>I'd love to guide you! Whether you're just starting out or looking to get back on track, I'm here to support you every step of the way.</p>
+            
+            <p>Let's create a plan that fits your life, boosts your energy, and brings balance and well-being.</p>
+            
+            <div class="cta-buttons">
+                <a href="https://form.jotform.com/260245859907064" class="btn" target="_blank">
+                    <i class="fas fa-calendar-check"></i> Apply for Coaching
+                </a>
+                <a href="https://form.jotform.com/260245818736059" class="btn" target="_blank">
+                    <i class="fas fa-download"></i> Get Free Guide
+                </a>
+                <a href="https://wa.me/254726707895" class="btn btn-whatsapp" target="_blank">
+                    <i class="fab fa-whatsapp"></i> WhatsApp Consultation
+                </a>
             </div>
         </div>
     </section>
@@ -943,34 +760,32 @@
     <!-- FOOTER -->
     <footer class="footer">
         <div class="container">
-            <div class="footer-content">
-                <a href="#hero" class="footer-logo">VICTOR WILLIAM</a>
-                <p class="footer-tagline">Structured Strength Coaching • Holistic Wellness • Mombasa & Online Worldwide</p>
-                
-                <div class="footer-contact">
-                    <a href="mailto:victorwilliamfit@gmail.com" class="contact-item">
-                        <i class="fas fa-envelope"></i>
-                        <span>victorwilliamfit@gmail.com</span>
-                    </a>
-                    <a href="tel:+254726707895" class="contact-item">
-                        <i class="fas fa-phone"></i>
-                        <span>+254 726 707 895</span>
-                    </a>
-                    <a href="https://instagram.com/victorwilliam.coach" class="contact-item" target="_blank">
-                        <i class="fab fa-instagram"></i>
-                        <span>@victorwilliam.coach</span>
-                    </a>
-                    <a href="https://wa.me/254726707895" class="contact-item" target="_blank">
-                        <i class="fab fa-whatsapp"></i>
-                        <span>WhatsApp Consultation</span>
-                    </a>
-                </div>
-                
-                <p class="copyright">
-                    © 2024-2025 Victor William. All rights reserved.<br>
-                    ACE Certified Fitness Coach • Serving serious professionals worldwide
-                </p>
+            <a href="#hero" class="footer-logo">VICTOR WILLIAM</a>
+            <p class="footer-tagline">Structured Strength Coaching • Holistic Wellness • Mombasa & Online Worldwide</p>
+            
+            <div class="footer-contact">
+                <a href="mailto:victorwilliamfit@gmail.com" class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <span>victorwilliamfit@gmail.com</span>
+                </a>
+                <a href="tel:+254726707895" class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <span>+254 726 707 895</span>
+                </a>
+                <a href="https://instagram.com/victorwilliam.coach" class="contact-item" target="_blank">
+                    <i class="fab fa-instagram"></i>
+                    <span>@victorwilliam.coach</span>
+                </a>
+                <a href="https://facebook.com/victorwilliam.coach" class="contact-item" target="_blank">
+                    <i class="fab fa-facebook-f"></i>
+                    <span>Victor William Coach</span>
+                </a>
             </div>
+            
+            <p class="copyright">
+                © 2024-2025 Victor William. All rights reserved.<br>
+                ACE Certified Fitness Coach • Serving professionals worldwide
+            </p>
         </div>
     </footer>
 
@@ -983,7 +798,7 @@
 
     // Intersection Observer for animations
     const observerOptions = {
-        threshold: 0.15,
+        threshold: 0.2,
         rootMargin: '0px 0px -100px 0px'
     };
 
@@ -996,8 +811,20 @@
         });
     }, observerOptions);
 
-    document.querySelectorAll('.glass-section, .testimonial-card, .cta-content').forEach(el => {
+    document.querySelectorAll('.section-content').forEach(el => {
         observer.observe(el);
+    });
+
+    // Parallax effect for sections
+    window.addEventListener('scroll', () => {
+        const sections = document.querySelectorAll('.section-bg');
+        const scrollPosition = window.scrollY;
+        
+        sections.forEach((section, index) => {
+            const speed = 0.3 + (index * 0.05);
+            const yPos = -(scrollPosition * speed);
+            section.style.transform = `translateY(${yPos}px)`;
+        });
     });
 
     // Smooth scrolling for navigation
@@ -1010,34 +837,16 @@
             const targetElement = document.querySelector(targetId);
             if(targetElement) {
                 window.scrollTo({
-                    top: targetElement.offsetTop - 100,
+                    top: targetElement.offsetTop - 80,
                     behavior: 'smooth'
                 });
             }
         });
     });
 
-    // Initialize animations
+    // Initialize first section animation
     document.addEventListener('DOMContentLoaded', () => {
-        document.querySelector('#hero').classList.add('animate-in');
-        
-        // Add floating animation to some elements
-        const cards = document.querySelectorAll('.story-card, .reason-card');
-        cards.forEach((card, index) => {
-            card.style.animationDelay = `${index * 0.1}s`;
-        });
-    });
-
-    // Parallax effect for glass sections
-    window.addEventListener('scroll', () => {
-        const sections = document.querySelectorAll('.glass-section');
-        const scrollPosition = window.scrollY;
-        
-        sections.forEach((section, index) => {
-            const speed = 0.3;
-            const yPos = -(scrollPosition * speed);
-            section.style.backgroundPosition = `center ${yPos}px`;
-        });
+        document.querySelector('#hero .section-content').classList.add('animate-in');
     });
 </script>
 
