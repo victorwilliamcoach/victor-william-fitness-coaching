@@ -5,7 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Victor William — Structured Strength & Wellness Coach</title>
 <meta name="description" content="Structured strength, wellness, and high-performance training system for busy professionals.">
-
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -17,11 +16,11 @@
   --bg-secondary: #141414;
   --panel-bg: rgba(20, 20, 20, 0.7);
   --panel-strong: rgba(30, 30, 30, 0.9);
-
+  
   --text-primary: #FFFFFF;
   --text-secondary: #E0E0E0;
   --text-muted: #999999;
-
+  
   --accent-blue: #3B82F6;
   --accent-green: #10B981;
   --border-soft: rgba(255, 255, 255, 0.1);
@@ -99,54 +98,70 @@ p { color: var(--text-secondary); max-width: 700px; margin-bottom: 20px; font-si
 .footer-tagline { color: var(--text-muted); max-width:600px; margin:0 auto 30px; font-size:1rem; }
 .copyright { color: var(--text-muted); font-size:0.9rem; margin-top:30px; padding-top:30px; border-top:1px solid var(--border-soft); }
 
-/* ================= FADE SLIDER ================= */
+/* ABOUT ME / FADE SLIDER WITH IMAGES */
 .slider-container {
   position: relative;
-  min-height: 300px;
-  overflow: hidden;
+  height: 500px;
+  border-radius:16px;
+  overflow:hidden;
 }
 
-.slider-wrapper { position: relative; }
+.slider-wrapper {
+  position: relative;
+  width:100%;
+  height:100%;
+}
 
 .slide {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  opacity: 0;
+  top:0; left:0;
+  width:100%; height:100%;
+  background-size:cover;
+  background-position:center;
+  opacity:0;
   transition: opacity 1.5s ease-in-out;
-  padding: 40px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  color: var(--text-primary);
 }
 
-.slide.active {
-  opacity: 1;
-  z-index: 2;
+.slide.active { opacity:1; z-index:2; }
+
+.slide .panel-overlay {
+  position: absolute;
+  inset:0;
+  background: linear-gradient(180deg, rgba(10,10,10,0.3) 0%, rgba(10,10,10,0.7) 60%, rgba(10,10,10,0.9) 100%);
+  z-index:1;
 }
 
-.slide h2 { font-size:2rem; margin-bottom:15px; color: var(--accent-blue); }
-.slide p.lead { font-size:1.2rem; color: var(--text-secondary); }
+.slide .panel-content {
+  position: relative;
+  z-index:2;
+  padding:50px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  height:100%;
+  max-width:800px;
+}
 
-/* Navigation dots */
+/* Slider dots */
 .slider-dots {
-  display: flex;
-  justify-content: center;
-  margin-top: 25px;
-  gap: 12px;
+  position:absolute;
+  bottom:20px;
+  left:50%;
+  transform:translateX(-50%);
+  display:flex;
+  gap:10px;
+  z-index:3;
 }
 
 .slider-dot {
-  width: 12px; height: 12px;
-  border-radius: 50%;
-  background: rgba(255,255,255,0.3);
-  cursor: pointer;
-  transition: background 0.3s ease;
+  width:12px; height:12px;
+  border-radius:50%;
+  background:rgba(255,255,255,0.4);
+  cursor:pointer;
+  transition: all 0.3s ease;
 }
 
-.slider-dot.active { background: var(--accent-blue); }
+.slider-dot.active { background:var(--accent-blue); }
 
 @media(max-width:1024px){.panel-content{padding:40px;min-height:450px;}h1{font-size:2.8rem;}h2{font-size:2rem;}}
 @media(max-width:768px){.system-section{margin:80px auto;}.panel-content{padding:30px;min-height:400px;}h1{font-size:2.4rem;}h2{font-size:1.8rem;}.header-content{padding:0 20px;}.header-logo img{height:35px;}.grid{grid-template-columns:1fr;}}
@@ -189,31 +204,79 @@ p { color: var(--text-secondary); max-width: 700px; margin-bottom: 20px; font-si
     </div>
   </section>
 
-  <!-- ABOUT ME / FADE SLIDER -->
-  <section id="about-slider" class="system-section">
-    <div class="slider-container clean-panel">
-      <div class="slider-wrapper">
-        <div class="slide"><h2>About Me</h2><p class="lead">Hi, I'm Victor William, a structured strength & wellness coach dedicated to helping busy professionals achieve sustainable results in fitness and life.</p></div>
-        <div class="slide"><h2>My Philosophy</h2><p class="lead">I believe in clarity, consistency, and systems—no shortcuts. Training, nutrition, and mindset must all align for lasting transformation.</p></div>
-        <div class="slide"><h2>Why I Do This</h2><p class="lead">Having faced self-doubt and burnout, I now guide others to build confidence, energy, and strength while balancing life’s demands.</p></div>
-        <div class="slide"><h2>My Approach</h2><p class="lead">I combine strength training, nutrition guidance, and mindset coaching to create a holistic system for long-term success.</p></div>
-        <div class="slide"><h2>Client Focus</h2><p class="lead">I work with busy professionals, parents, and anyone committed to transforming their body and mind without extreme shortcuts.</p></div>
-        <div class="slide"><h2>Achievements</h2><p class="lead">Certified by ACE, mentored trainers, and helped hundreds of clients improve fitness, confidence, and lifestyle balance.</p></div>
-        <div class="slide"><h2>Join Me</h2><p class="lead">I guide you step-by-step toward a stronger, healthier, and more confident life with accountability and structured systems.</p></div>
+  <!-- ABOUT ME / FADE SLIDER WITH IMAGES -->
+<section id="about-slider" class="system-section">
+  <div class="slider-container clean-panel">
+    <div class="slider-wrapper">
+      <!-- Slide 1 -->
+      <div class="slide active" style="background-image:url('images/about1.jpg');">
+        <div class="panel-overlay"></div>
+        <div class="panel-content">
+          <h2>About Me</h2>
+          <p class="lead">Hi, I'm Victor William, a structured strength & wellness coach dedicated to helping busy professionals achieve sustainable results in fitness and life.</p>
+        </div>
       </div>
-      <div class="slider-dots">
-        <span class="slider-dot" data-index="0"></span>
-        <span class="slider-dot" data-index="1"></span>
-        <span class="slider-dot" data-index="2"></span>
-        <span class="slider-dot" data-index="3"></span>
-        <span class="slider-dot" data-index="4"></span>
-        <span class="slider-dot" data-index="5"></span>
-        <span class="slider-dot" data-index="6"></span>
+      <!-- Slide 2 -->
+      <div class="slide" style="background-image:url('images/about2.jpg');">
+        <div class="panel-overlay"></div>
+        <div class="panel-content">
+          <h2>My Philosophy</h2>
+          <p class="lead">I believe in clarity, consistency, and systems—no shortcuts. Training, nutrition, and mindset must all align for lasting transformation.</p>
+        </div>
+      </div>
+      <!-- Slide 3 -->
+      <div class="slide" style="background-image:url('images/about3.jpg');">
+        <div class="panel-overlay"></div>
+        <div class="panel-content">
+          <h2>Why I Do This</h2>
+          <p class="lead">Having faced self-doubt and burnout, I now guide others to build confidence, energy, and strength while balancing life’s demands.</p>
+        </div>
+      </div>
+      <!-- Slide 4 -->
+      <div class="slide" style="background-image:url('images/about4.jpg');">
+        <div class="panel-overlay"></div>
+        <div class="panel-content">
+          <h2>My Approach</h2>
+          <p class="lead">I combine strength training, nutrition guidance, and mindset coaching to create a holistic system for long-term success.</p>
+        </div>
+      </div>
+      <!-- Slide 5 -->
+      <div class="slide" style="background-image:url('images/about5.jpg');">
+        <div class="panel-overlay"></div>
+        <div class="panel-content">
+          <h2>Client Focus</h2>
+          <p class="lead">I work with busy professionals, parents, and anyone committed to transforming their body and mind without extreme shortcuts.</p>
+        </div>
+      </div>
+      <!-- Slide 6 -->
+      <div class="slide" style="background-image:url('images/about6.jpg');">
+        <div class="panel-overlay"></div>
+        <div class="panel-content">
+          <h2>Achievements</h2>
+          <p class="lead">Certified by ACE, mentored trainers, and helped hundreds of clients improve fitness, confidence, and lifestyle balance.</p>
+        </div>
+      </div>
+      <!-- Slide 7 -->
+      <div class="slide" style="background-image:url('images/about7.jpg');">
+        <div class="panel-overlay"></div>
+        <div class="panel-content">
+          <h2>Join Me</h2>
+          <p class="lead">I guide you step-by-step toward a stronger, healthier, and more confident life with accountability and structured systems.</p>
+        </div>
       </div>
     </div>
-  </section>
+    <div class="slider-dots">
+      <span class="slider-dot active" data-index="0"></span>
+      <span class="slider-dot" data-index="1"></span>
+      <span class="slider-dot" data-index="2"></span>
+      <span class="slider-dot" data-index="3"></span>
+      <span class="slider-dot" data-index="4"></span>
+      <span class="slider-dot" data-index="5"></span>
+      <span class="slider-dot" data-index="6"></span>
+    </div>
+  </div>
+</section>
 
-  <!-- Other sections remain the same -->
 </main>
 
 <footer class="system-footer">
@@ -235,7 +298,6 @@ p { color: var(--text-secondary); max-width: 700px; margin-bottom: 20px; font-si
 </footer>
 
 <script>
-  // HEADER SCROLL & RESPONSIVE
   const header = document.querySelector('.system-header');
   const phoneSpans = document.querySelectorAll('.desktop-only');
   const panels = document.querySelectorAll('.clean-panel');
@@ -267,6 +329,7 @@ p { color: var(--text-secondary); max-width: 700px; margin-bottom: 20px; font-si
   window.addEventListener('resize', handleResize);
   window.dispatchEvent(new Event('resize'));
 
+  // Smooth scroll
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e){
       e.preventDefault();
@@ -275,35 +338,24 @@ p { color: var(--text-secondary); max-width: 700px; margin-bottom: 20px; font-si
     });
   });
 
-  // ================= FADE SLIDER =================
+  // About Me Fade Slider
   const slides = document.querySelectorAll('.slide');
   const dots = document.querySelectorAll('.slider-dot');
   let currentIndex = 0;
-  slides[currentIndex].classList.add('active');
-  dots[currentIndex].classList.add('active');
 
-  function showSlide(index) {
-    slides.forEach(s => s.classList.remove('active'));
-    dots.forEach(d => d.classList.remove('active'));
-    slides[index].classList.add('active');
-    dots[index].classList.add('active');
-    currentIndex = index;
-  }
-
-  function fadeNext() {
-    const nextIndex = (currentIndex + 1) % slides.length;
-    showSlide(nextIndex);
-  }
-
-  // Auto-fade every 6 seconds
-  setInterval(fadeNext, 6000);
-
-  // Dots navigation
-  dots.forEach(dot => {
-    dot.addEventListener('click', () => {
-      showSlide(parseInt(dot.dataset.index));
+  function showSlide(index){
+    slides.forEach((slide,i)=>{
+      slide.classList.toggle('active', i===index);
+      dots[i].classList.toggle('active', i===index);
     });
-  });
+  }
+
+  function nextSlide(){
+    currentIndex = (currentIndex+1)%slides.length;
+    showSlide(currentIndex);
+  }
+
+  setInterval(nextSlide,6000); // change every 6 seconds
 </script>
 </body>
 </html>
