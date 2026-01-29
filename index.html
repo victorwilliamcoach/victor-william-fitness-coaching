@@ -1,1176 +1,1178 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-    <!-- Google Tag Manager (Optional - Add if needed) -->
-    <!-- <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-XXXXXXX');</script> -->
-
-    <!-- SEO & Verification -->
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#050505" />
-    <title>Victor William | Structured Strength & Wellness Coach</title>
-    <meta name="description" content="Victor William offers professional strength, wellness, and high-performance training for busy professionals in Mombasa and worldwide." />
-    <meta name="keywords" content="Strength Coach Mombasa, Wellness Training, Personal Trainer Kenya, Fitness Coach, Victor William" />
-    <link rel="canonical" href="https://victorwilliam.com/" />
-
-    <!-- Open Graph -->
-    <meta property="og:title" content="Victor William | Structured Strength & Wellness Coach" />
-    <meta property="og:description" content="Transform your training with proven methods. No confusion, no shortcuts—just sustainable results." />
-    <meta property="og:url" content="https://victorwilliam.com/" />
-    <meta property="og:image" content="https://victorwilliam.com/images/victor1.jpeg" />
-    <meta property="og:type" content="website" />
-
-    <!-- Preload & Preconnect -->
-    <link rel="preload" as="image" href="images/victor1.jpeg" type="image/jpeg" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="icon" href="favicon.ico" type="image/x-icon" />
-
-    <!-- AOS Animation Library -->
-    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
-
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-
-    <style>
-        /* CSS VARIABLES - Updated for fitness theme */
-        :root {
-            --bg-dark: #050505;
-            --bg-card: #121212;
-            --accent-primary: #3B82F6; /* Blue accent for fitness */
-            --accent-secondary: #10B981; /* Green accent */
-            --accent-gradient: linear-gradient(135deg, #3B82F6 0%, #2563EB 100%);
-            --accent-green-gradient: linear-gradient(135deg, #10B981 0%, #059669 100%);
-            --text-main: #f0f0f0;
-            --text-muted: #a0a0a0;
-            --glass: rgba(255, 255, 255, 0.05);
-            --glass-border: rgba(255, 255, 255, 0.1);
-            --blur: blur(10px);
-        }
-
-        /* RESET & BASE */
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        html { scroll-behavior: smooth; }
-        body {
-            font-family: 'Montserrat', 'Poppins', sans-serif;
-            background-color: var(--bg-dark);
-            color: var(--text-main);
-            overflow-x: hidden;
-            line-height: 1.6;
-        }
-        img { max-width: 100%; height: auto; display: block; }
-
-        /* TYPOGRAPHY */
-        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600&display=swap');
-
-        h1, h2, h3 { 
-            font-family: 'Montserrat', sans-serif; 
-            color: #fff; 
-            font-weight: 700; 
-            letter-spacing: -0.5px;
-        }
-        h1 { font-size: 3.5rem; line-height: 1.1; margin-bottom: 1.5rem; }
-        h2 { font-size: 2.5rem; margin-bottom: 1.5rem; color: var(--accent-primary); }
-        h3 { font-size: 1.5rem; color: var(--accent-primary); margin-bottom: 1rem; }
-        p { color: var(--text-muted); font-family: 'Poppins', sans-serif; font-weight: 400; }
-        .lead { font-size: 1.3rem; color: var(--text-main); font-weight: 500; }
-
-        /* NAVIGATION */
-        nav {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            padding: 15px 5%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background: rgba(5, 5, 5, 0.8);
-            backdrop-filter: var(--blur);
-            z-index: 1000;
-            border-bottom: 1px solid var(--glass-border);
-            transition: all 0.3s ease;
-        }
-
-        nav.scrolled {
-            background: rgba(5, 5, 5, 0.95);
-            padding: 10px 5%;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-        }
-
-        .logo { display: flex; align-items: center; text-decoration: none; gap: 10px; }
-        .logo img { height: 50px; width: auto; transition: transform 0.3s ease; }
-        .logo:hover img { transform: scale(1.05); }
-
-        .nav-links { list-style: none; display: flex; gap: 30px; align-items: center; }
-        .nav-links a {
-            text-decoration: none;
-            color: #fff;
-            font-size: 0.9rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            transition: 0.3s;
-            position: relative;
-            padding-bottom: 5px;
-            font-weight: 600;
-        }
-        .nav-links a:hover, .nav-links a.active { color: var(--accent-primary); }
-        .nav-links a::after {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: var(--accent-primary);
-            transition: width 0.3s ease;
-        }
-        .nav-links a:hover::after { width: 100%; }
-
-        .hamburger { display: none; cursor: pointer; flex-direction: column; gap: 5px; background: none; border: none; padding: 10px; }
-        .hamburger span { width: 25px; height: 3px; background: var(--accent-primary); transition: all 0.3s ease; display: block; }
-        .hamburger.active span:nth-child(1) { transform: rotate(45deg) translate(10px, 10px); }
-        .hamburger.active span:nth-child(2) { opacity: 0; }
-        .hamburger.active span:nth-child(3) { transform: rotate(-45deg) translate(7px, -7px); }
-
-        /* HERO SECTION - Same design pattern */
-        .hero {
-            height: auto;
-            min-height: 100vh;
-            background-color: var(--bg-dark);
-            padding: 80px 5% 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .hero-container {
-            max-width: 1200px;
-            width: 100%;
-            animation: fadeInUp 1s ease-out;
-        }
-
-        .hero-glass-box {
-            position: relative;
-            overflow: hidden;
-            height: 100vh;
-            display: flex;
-            align-items: flex-end;
-            justify-content: center;
-            border-radius: 30px;
-            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.5);
-            padding-bottom: 80px;
-        }
-
-        .hero-glass-image {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            overflow: hidden;
-            z-index: 1;
-        }
-
-        .hero-glass-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
-        }
-
-        .hero-glass-content {
-            padding: 60px 50px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            position: relative;
-            z-index: 2;
-            text-align: center;
-            max-width: 700px;
-            background: rgba(0, 0, 0, 0.3);
-            backdrop-filter: blur(5px);
-            border-radius: 15px;
-        }
-
-        .hero-glass-content h1 {
-            font-size: 3rem;
-            color: #ffffff;
-            margin-bottom: 1.2rem;
-            text-shadow: 0 4px 20px rgba(0, 0, 0, 0.9);
-            line-height: 1.2;
-            font-weight: 800;
-        }
-
-        .hero-glass-content .lead {
-            font-size: 1.25rem;
-            margin-bottom: 2rem;
-            color: #ffffff;
-            text-shadow: 0 2px 12px rgba(0, 0, 0, 0.9);
-            font-weight: 400;
-        }
-
-        @media (max-width: 992px) {
-            .hero-glass-box { min-height: 500px; }
-            .hero-glass-content { max-width: 400px; padding: 40px 30px; }
-            .hero-glass-content h1 { font-size: 2rem; }
-        }
-
-        @media (max-width: 768px) {
-            .hero { padding: 50px 5%; }
-            .hero-glass-box { min-height: 450px; }
-            .hero-glass-content { max-width: 350px; padding: 35px 25px; }
-            .hero-glass-content h1 { font-size: 1.8rem; }
-            .hero-glass-content .lead { font-size: 0.95rem; }
-        }
-
-        /* ABOUT SECTION - Image as background, text overlay */
-        .about-section {
-            min-height: auto;
-            background-color: var(--bg-dark);
-            padding: 0 5%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .about-container {
-            max-width: 1200px;
-            width: 100%;
-            animation: fadeInUp 1s ease-out;
-        }
-
-        .about-glass-box {
-            position: relative;
-            overflow: hidden;
-            height: 100vh;
-            display: flex;
-            align-items: flex-end;
-            justify-content: center;
-            border-radius: 30px;
-            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.5);
-            padding-bottom: 80px;
-        }
-
-        .about-glass-image {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            overflow: hidden;
-            z-index: 1;
-        }
-
-        .about-glass-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
-        }
-
-        .about-glass-content {
-            padding: 60px 50px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            position: relative;
-            z-index: 2;
-            text-align: center;
-            max-width: 700px;
-            background: rgba(0, 0, 0, 0.3);
-            backdrop-filter: blur(5px);
-            border-radius: 15px;
-        }
-
-        .about-glass-content h2 {
-            font-size: 3.2rem;
-            margin-bottom: 0.8rem;
-            color: var(--accent-primary);
-            text-shadow: 0 3px 15px rgba(0, 0, 0, 0.9);
-            font-weight: 700;
-        }
-
-        .about-glass-content .lead {
-            font-size: 1.15rem;
-            line-height: 1.9;
-            margin-bottom: 1.2rem;
-            color: #ffffff;
-            text-shadow: 0 2px 12px rgba(0, 0, 0, 0.9);
-        }
-
-        @media (max-width: 992px) {
-            .about-glass-box { min-height: 500px; }
-            .about-glass-content { max-width: 400px; padding: 40px 30px; }
-            .about-glass-content h2 { font-size: 2.2rem; }
-        }
-
-        @media (max-width: 768px) {
-            .about-section { padding: 60px 5%; }
-            .about-glass-box { min-height: 450px; }
-            .about-glass-content { max-width: 350px; padding: 35px 25px; }
-            .about-glass-content h2 { font-size: 2rem; }
-            .about-glass-content .lead { font-size: 0.95rem; }
-        }
-
-        /* CTA BUTTONS */
-        .cta-buttons {
-            display: flex;
-            gap: 15px;
-            flex-wrap: wrap;
-            justify-content: center;
-            margin-top: 20px;
-        }
-
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            padding: 14px 28px;
-            border-radius: 10px;
-            background: var(--bg-card);
-            border: 1px solid var(--glass-border);
-            color: var(--text-main);
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 1rem;
-            transition: all 0.3s ease;
-            cursor: pointer;
-            font-family: 'Montserrat', sans-serif;
-        }
-
-        .btn:hover { 
-            background: rgba(40,40,40,0.9); 
-            border-color: var(--accent-primary); 
-            transform: translateY(-2px); 
-            box-shadow: 0 8px 25px rgba(59,130,246,0.2); 
-        }
-        .btn-primary { 
-            background: var(--accent-gradient); 
-            border: none; 
-        }
-        .btn-primary:hover { 
-            background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%); 
-            box-shadow: 0 8px 25px rgba(37, 99, 235, 0.3);
-        }
-        .btn-whatsapp { 
-            background: #25D366; 
-            border: none; 
-            color: #fff; 
-        }
-        .btn-whatsapp:hover { 
-            background: #128C7E; 
-            box-shadow: 0 8px 25px rgba(37,211,102,0.3); 
-        }
-        .btn-green { 
-            background: var(--accent-green-gradient); 
-            border: none; 
-            color: white; 
-        }
-        .btn-green:hover { 
-            background: linear-gradient(135deg, #059669 0%, #047857 100%); 
-            box-shadow: 0 8px 25px rgba(16,185,129,0.3); 
-        }
-
-        /* SECTIONS */
-        .section { padding: 60px 5%; }
-        .section.dark-section { background: #0a0a0a; }
-        .container { max-width: 1200px; margin: 0 auto; }
-        .box { max-width: 1200px; margin: 0 auto; }
-        .section-subtext { font-size: 1.1rem; margin-top: 1rem; color: var(--text-muted); }
-
-        /* SERVICES SECTION - Adapted for coaching */
-        .services-section {
-            padding: 60px 5%;
-            background: #0a0a0a;
-        }
-
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 40px;
-            margin-top: 60px;
-        }
-
-        .service-card {
-            position: relative;
-            height: 600px;
-            border-radius: 20px;
-            overflow: hidden;
-            cursor: pointer;
-            transition: all 0.4s ease;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
-        }
-
-        .service-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            transition: transform 0.4s ease;
-            z-index: 0;
-        }
-
-        .service-card:nth-child(1)::before { background-image: url('images/victor2.jpeg'); }
-        .service-card:nth-child(2)::before { background-image: url('images/victor3.jpeg'); }
-        .service-card:nth-child(3)::before { background-image: url('images/victor4.jpeg'); }
-
-        .service-card:hover::before { transform: scale(1.08); }
-
-        .service-card::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(to top, rgba(5, 5, 5, 0.95) 0%, rgba(5, 5, 5, 0.7) 30%, rgba(5, 5, 5, 0.3) 60%, rgba(5, 5, 5, 0) 100%);
-            z-index: 1;
-        }
-
-        .service-content {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            padding: 50px 40px;
-            z-index: 2;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-end;
-            height: 100%;
-        }
-
-        .service-content h3 {
-            font-size: 2.5rem;
-            margin-bottom: 1.5rem;
-            color: #ffffff;
-            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.9);
-            transition: all 0.3s ease;
-        }
-
-        .service-card:hover .service-content h3 {
-            color: var(--accent-primary);
-            font-size: 2.8rem;
-        }
-
-        .service-content p {
-            font-size: 1.1rem;
-            line-height: 1.8;
-            margin-bottom: 2rem;
-            color: #f0f0f0;
-            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.9);
-            opacity: 1;
-            display: block;
-        }
-
-        .service-link {
-            display: inline-block;
-            padding: 14px 35px;
-            background: var(--accent-gradient);
-            color: #000;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-            text-decoration: none;
-            border-radius: 50px;
-            border: none;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            font-family: 'Montserrat', sans-serif;
-            font-size: 0.95rem;
-            opacity: 1;
-        }
-
-        .service-link:hover { 
-            transform: translateY(-5px) scale(1.05);
-            box-shadow: 0 15px 30px rgba(59, 130, 246, 0.5);
-        }
-
-        .service-card:hover {
-            transform: translateY(-15px);
-            box-shadow: 0 20px 60px rgba(59, 130, 246, 0.25);
-        }
-
-        @media (max-width: 768px) {
-            .services-grid { grid-template-columns: 1fr; }
-            .service-card { height: 450px; }
-            .service-content { padding: 35px 25px; }
-        }
-
-        /* SLIDER SECTION - About Me */
-        .slider-section {
-            padding: 60px 5%;
-            background: #050505;
-        }
-
-        .slider-container {
-            position: relative;
-            height: 500px;
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.5);
-        }
-
-        .slider-wrapper {
-            position: relative;
-            width: 100%;
-            height: 100%;
-        }
-
-        .slide {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-size: cover;
-            background-position: center;
-            opacity: 0;
-            transition: opacity 1.5s ease-in-out;
-        }
-
-        .slide.active { opacity: 1; z-index: 2; }
-
-        .slide .slider-overlay {
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(180deg, rgba(5,5,5,0.3) 0%, rgba(5,5,5,0.7) 60%, rgba(5,5,5,0.9) 100%);
-            z-index: 1;
-        }
-
-        .slide .slider-content {
-            position: relative;
-            z-index: 2;
-            padding: 50px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            height: 100%;
-            max-width: 800px;
-        }
-
-        .slider-dots {
-            position: absolute;
-            bottom: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-            display: flex;
-            gap: 10px;
-            z-index: 3;
-        }
-
-        .slider-dot {
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            background: rgba(255, 255, 255, 0.4);
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-
-        .slider-dot.active { background: var(--accent-primary); }
-
-        /* TESTIMONIALS */
-        #testimonials.section {
-            padding-top: 20px;
-            padding-bottom: 60px;
-        }
-
-        .testimonials-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 40px;
-            margin: 50px 0;
-        }
-
-        .testimonial-card {
-            background: rgba(18, 18, 18, 0.8);
-            padding: 40px 35px;
-            border-radius: 20px;
-            border: 1px solid var(--glass-border);
-            transition: all 0.3s ease;
-            backdrop-filter: var(--blur);
-        }
-
-        .testimonial-card:hover {
-            border-color: var(--accent-primary);
-            transform: translateY(-10px);
-            box-shadow: 0 20px 50px rgba(59, 130, 246, 0.2);
-        }
-
-        .stars { color: var(--accent-primary); font-size: 1.4rem; margin-bottom: 1.2rem; letter-spacing: 4px; }
-        .testimonial-text { font-style: italic; margin-bottom: 1.8rem; line-height: 1.8; font-size: 1.1rem; }
-        .testimonial-author { color: var(--accent-primary); font-weight: 600; margin-bottom: 0.5rem; }
-        .testimonial-service { color: var(--text-muted); font-size: 0.95rem; }
-
-        /* CONTACT FORM */
-        .contact-section { padding: 60px 5%; }
-
-        .contact-form {
-            max-width: 700px;
-            margin: 50px auto;
-            display: grid;
-            gap: 1.8rem;
-        }
-
-        .contact-form input,
-        .contact-form textarea,
-        .contact-form select {
-            padding: 18px 20px;
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid var(--glass-border);
-            border-radius: 12px;
-            color: white;
-            font-family: 'Montserrat', sans-serif;
-            transition: all 0.3s ease;
-            font-size: 1.05rem;
-        }
-
-        .contact-form input:focus,
-        .contact-form textarea:focus,
-        .contact-form select:focus {
-            outline: none;
-            border-color: var(--accent-primary);
-            background: rgba(59, 130, 246, 0.08);
-            box-shadow: 0 0 25px rgba(59, 130, 246, 0.25);
-        }
-
-        .contact-form textarea { resize: vertical; min-height: 150px; }
-
-        /* SOCIAL LINKS */
-        .social-links {
-            display: flex;
-            gap: 15px;
-            margin-top: 25px;
-            justify-content: center;
-        }
-
-        .social-link {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 45px;
-            height: 45px;
-            border-radius: 50%;
-            background: rgba(255, 255, 255, 0.08);
-            color: var(--text-secondary);
-            font-size: 1.1rem;
-            transition: all 0.3s;
-            text-decoration: none;
-        }
-
-        .social-link:hover {
-            background: var(--accent-primary);
-            color: white;
-            transform: translateY(-3px);
-        }
-
-        /* FOOTER */
-        footer {
-            background: #000;
-            padding: 60px 0;
-            text-align: center;
-            border-top: 1px solid #222;
-        }
-
-        footer h3 { color: var(--accent-primary); margin-bottom: 1rem; }
-
-        .footer-logo { 
-            font-family: 'Montserrat', sans-serif; 
-            font-weight: 800; 
-            font-size: 2.5rem; 
-            margin-bottom: 20px; 
-            letter-spacing: 2px; 
-            color: var(--accent-primary);
-        }
-
-        .footer-tagline { 
-            color: var(--text-muted); 
-            max-width: 600px; 
-            margin: 0 auto 30px; 
-            font-size: 1.1rem; 
-        }
-
-        .copyright { 
-            color: var(--text-muted); 
-            font-size: 0.9rem; 
-            margin-top: 30px; 
-            padding-top: 30px; 
-            border-top: 1px solid var(--border-soft); 
-        }
-
-        /* FLOATING BUTTONS */
-        .floating-whatsapp {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            width: 70px;
-            height: 70px;
-            background: #25D366;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            z-index: 999;
-            transition: all 0.3s ease;
-            text-decoration: none;
-            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.5);
-            border: none;
-            animation: slideInUp 0.8s ease-out;
-        }
-
-        .floating-whatsapp:hover {
-            transform: scale(1.2) rotate(-15deg);
-            box-shadow: 0 12px 35px rgba(37, 211, 102, 0.7);
-        }
-
-        .floating-whatsapp img { width: 45px; height: 45px; }
-
-        #backToTopBtn {
-            position: fixed;
-            bottom: 120px;
-            right: 30px;
-            z-index: 998;
-            display: none;
-            background: rgba(59, 130, 246, 0.3);
-            color: var(--accent-primary);
-            border: 2px solid var(--accent-primary);
-            border-radius: 50%;
-            font-size: 24px;
-            padding: 15px 18px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-
-        #backToTopBtn:hover {
-            background: var(--accent-primary);
-            color: #000;
-            transform: translateY(-5px);
-        }
-
-        /* ANIMATIONS */
-        @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(30px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        @keyframes slideInUp {
-            from { opacity: 0; transform: translateY(50px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        /* RESPONSIVE */
-        @media (max-width: 768px) {
-            .nav-links { gap: 15px; }
-            .hamburger { display: flex; }
-            .nav-links { 
-                position: absolute; 
-                right: 0; 
-                top: 70px; 
-                background: #000; 
-                flex-direction: column; 
-                width: 100%; 
-                text-align: center; 
-                padding: 20px; 
-                display: none; 
-                border-bottom: 1px solid var(--accent-primary); 
-                gap: 15px; 
-                z-index: 999; 
-            }
-            .nav-links.active { display: flex; }
-            .cta-buttons { flex-direction: column; }
-            .btn { justify-content: center; }
-        }
-
-        @media (max-width: 480px) {
-            h1 { font-size: 1.8rem; }
-            h2 { font-size: 1.6rem; }
-            .section { padding: 50px 5%; }
-            .footer-logo { font-size: 2rem; }
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Victor William — Structured Strength & Wellness Coach</title>
+<meta name="description" content="Structured strength, wellness, and high-performance training system for busy professionals.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Cormorant+Garamond:wght@300;400;500&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+
+<style>
+/* ========== CSS VARIABLES ========== */
+:root {
+  --bg-dark: #000000;
+  --bg-card: #0a0a0a;
+  --accent-blue: #1e3a8a;
+  --accent-blue-light: #3b82f6;
+  --accent-green: #10B981;
+  --text-main: #f0f0f0;
+  --text-muted: #a0a0a0;
+  --glass: rgba(30, 58, 138, 0.08);
+  --glass-border: rgba(30, 58, 138, 0.15);
+  --blur: blur(10px);
+  --gradient-blue: linear-gradient(135deg, rgba(30, 58, 138, 0.6) 0%, rgba(30, 58, 138, 0.5) 100%);
+  --gradient-green: linear-gradient(135deg, #10B981 0%, #059669 100%);
+}
+
+/* ========== RESET & BASE ========== */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 100px; }
+body {
+  font-family: 'Cormorant Garamond', serif;
+  background-color: var(--bg-dark);
+  color: var(--text-main);
+  overflow-x: hidden;
+  line-height: 1.6;
+}
+img { max-width: 100%; height: auto; display: block; }
+
+/* ========== TYPOGRAPHY ========== */
+h1, h2, h3, h4, h5, h6 { font-family: 'Playfair Display', serif; font-weight: 700; line-height: 1.2; color: #fff; }
+h1 { font-size: 3.5rem; margin-bottom: 1rem; letter-spacing: -0.5px; }
+h2 { font-size: 2.8rem; margin-bottom: 1.2rem; color: #fff; }
+h3 { font-size: 1.8rem; margin-bottom: 1rem; color: #3b82f6; }
+h4 { font-size: 1.4rem; margin-bottom: 0.8rem; }
+p { color: var(--text-muted); font-weight: 300; font-size: 1.1rem; line-height: 1.8; margin-bottom: 1.2rem; }
+.lead { font-size: 1.3rem; font-weight: 500; color: var(--text-main); margin-bottom: 2rem; }
+
+/* ========== SECTION LABEL ========== */
+.section-label {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #3b82f6;
+  margin-bottom: 1rem;
+  padding: 8px 20px;
+  background: rgba(30, 58, 138, 0.15);
+  border-radius: 25px;
+  border: 1px solid rgba(30, 58, 138, 0.3);
+}
+
+/* ========== NAVIGATION ========== */
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 15px 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.9);
+  backdrop-filter: var(--blur);
+  z-index: 1000;
+  border-bottom: 1px solid rgba(30, 58, 138, 0.2);
+  transition: all 0.3s ease;
+}
+
+nav.scrolled {
+  background: rgba(0, 0, 0, 0.98);
+  padding: 10px 5%;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.logo { display: flex; align-items: center; text-decoration: none; gap: 10px; }
+.logo img { height: 50px; width: auto; transition: transform 0.3s ease; }
+.logo:hover img { transform: scale(1.05); }
+
+.nav-links { list-style: none; display: flex; gap: 30px; }
+.nav-links a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: 0.3s;
+  position: relative;
+  padding-bottom: 5px;
+}
+.nav-links a:hover, .nav-links a.active { color: #3b82f6; }
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #3b82f6;
+  transition: width 0.3s ease;
+}
+.nav-links a:hover::after { width: 100%; }
+
+.hamburger { display: none; cursor: pointer; flex-direction: column; gap: 5px; background: none; border: none; padding: 10px; }
+.hamburger span { width: 25px; height: 3px; background: #3b82f6; transition: all 0.3s ease; display: block; }
+.hamburger.active span:nth-child(1) { transform: rotate(45deg) translate(10px, 10px); }
+.hamburger.active span:nth-child(2) { opacity: 0; }
+.hamburger.active span:nth-child(3) { transform: rotate(-45deg) translate(7px, -7px); }
+
+/* ========== HERO SECTION - GLASS MORPHISM ========== */
+.hero {
+  height: auto;
+  min-height: 100vh;
+  background-color: var(--bg-dark);
+  padding: 80px 5% 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 60px;
+}
+
+.hero-container {
+  max-width: 1200px;
+  width: 100%;
+  animation: fadeInUp 1s ease-out;
+}
+
+.hero-glass-box {
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  border-radius: 30px;
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.5);
+  padding-bottom: 80px;
+}
+
+.hero-glass-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.hero-glass-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.hero-glass-content {
+  padding: 60px 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  max-width: 700px;
+  background: rgba(30, 58, 138, 0.08);
+  backdrop-filter: blur(8px);
+  border: 1px solid var(--glass-border);
+  border-radius: 15px;
+  margin-top: auto;
+}
+
+.hero-glass-content h1 {
+  font-size: 3rem;
+  color: #ffffff;
+  margin-bottom: 1.2rem;
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.9);
+  line-height: 1.2;
+  font-weight: 700;
+}
+
+.hero-glass-content p {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+  color: #ffffff;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.9);
+  font-weight: 300;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+
+/* ========== BUTTONS ========== */
+.cta-btn, .btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 15px 40px;
+  background: rgba(30, 58, 138, 0.15);
+  color: #fff;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-decoration: none;
+  border-radius: 50px;
+  border: 1.5px solid rgba(30, 58, 138, 0.4);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.95rem;
+  backdrop-filter: blur(10px);
+}
+
+.cta-btn:hover, .btn:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(30, 58, 138, 0.4);
+  border-color: #1e3a8a;
+  background: rgba(30, 58, 138, 0.3);
+  outline: none;
+}
+
+.btn-primary {
+  background: rgba(30, 58, 138, 0.25);
+  border: 1.5px solid rgba(30, 58, 138, 0.5);
+  color: white;
+  backdrop-filter: blur(10px);
+}
+.btn-primary:hover {
+  box-shadow: 0 15px 40px rgba(30, 58, 138, 0.5);
+  transform: translateY(-5px);
+  background: rgba(30, 58, 138, 0.35);
+  border-color: #1e3a8a;
+}
+
+.btn-whatsapp {
+  background: #25D366;
+  border: none;
+  color: white;
+}
+.btn-whatsapp:hover {
+  background: #128C7E;
+  box-shadow: 0 15px 40px rgba(37, 211, 102, 0.4);
+}
+
+.btn-green {
+  background: var(--gradient-green);
+  border: none;
+  color: white;
+}
+.btn-green:hover {
+  box-shadow: 0 15px 40px rgba(16, 185, 129, 0.4);
+}
+
+/* ========== SOCIAL LINKS ========== */
+.social-links {
+  display: flex;
+  gap: 15px;
+  margin-top: 25px;
+  justify-content: center;
+}
+
+.social-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: rgba(30, 58, 138, 0.1);
+  color: var(--text-main);
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  border: 1px solid rgba(30, 58, 138, 0.3);
+  backdrop-filter: blur(8px);
+}
+
+.social-link:hover {
+  background: rgba(30, 58, 138, 0.3);
+  color: white;
+  transform: translateY(-5px);
+  border-color: #3b82f6;
+}
+
+/* ========== ABOUT SECTION - GLASS MORPHISM ========== */
+.about-section {
+  min-height: auto;
+  background-color: var(--bg-dark);
+  padding: 60px 5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-container {
+  max-width: 1200px;
+  width: 100%;
+  animation: fadeInUp 1s ease-out;
+}
+
+.about-glass-box {
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  border-radius: 30px;
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.5);
+  padding-bottom: 80px;
+}
+
+.about-glass-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.about-glass-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.about-glass-content {
+  padding: 60px 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  max-width: 700px;
+  background: rgba(30, 58, 138, 0.08);
+  backdrop-filter: blur(8px);
+  border: 1px solid var(--glass-border);
+  border-radius: 15px;
+  margin-top: auto;
+}
+
+.about-glass-content h2 {
+  font-size: 3.2rem;
+  margin-bottom: 0.8rem;
+  color: #3b82f6;
+  text-shadow: 0 3px 15px rgba(0, 0, 0, 0.9);
+  font-weight: 700;
+}
+
+.about-glass-content p {
+  font-size: 1.15rem;
+  line-height: 1.9;
+  margin-bottom: 1.2rem;
+  color: #ffffff;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.9);
+}
+
+/* ========== SLIDER SECTION ========== */
+.slider-section {
+  padding: 60px 5%;
+  background: #0a0a0a;
+}
+
+.slider-container {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 600px;
+  border-radius: 30px;
+  overflow: hidden;
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.5);
+}
+
+.slider-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 1.5s ease-in-out;
+  z-index: 1;
+}
+
+.slide.active {
+  opacity: 1;
+  z-index: 2;
+}
+
+.slide-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(5, 5, 5, 0.3) 0%, rgba(5, 5, 5, 0.7) 60%, rgba(5, 5, 5, 0.95) 100%);
+  z-index: 1;
+}
+
+.slide-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 60px 50px;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 100%;
+  max-width: 800px;
+}
+
+.slide-content h2 {
+  font-size: 2.8rem;
+  margin-bottom: 1.5rem;
+  color: #3b82f6;
+  text-shadow: 0 3px 15px rgba(0, 0, 0, 0.9);
+}
+
+.slide-content p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  margin-bottom: 2rem;
+  color: #f0f0f0;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.9);
+}
+
+/* Slider dots */
+.slider-dots {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 12px;
+  z-index: 3;
+}
+
+.slider-dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.slider-dot.active {
+  background: #3b82f6;
+  border-color: #3b82f6;
+  width: 40px;
+  border-radius: 10px;
+}
+
+/* ========== SERVICES SECTION ========== */
+.services-section {
+  padding: 60px 5%;
+  background: #0a0a0a;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 40px;
+  margin-top: 60px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.service-card {
+  position: relative;
+  height: 400px;
+  border-radius: 20px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+  background: var(--bg-card);
+  border: 1px solid var(--glass-border);
+  padding: 40px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 60px rgba(59, 130, 246, 0.25);
+  border-color: rgba(59, 130, 246, 0.5);
+  background: rgba(59, 130, 246, 0.05);
+}
+
+.service-content h3 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #3b82f6;
+  transition: all 0.3s ease;
+}
+
+.service-card:hover .service-content h3 {
+  color: var(--accent-green);
+  font-size: 2.3rem;
+}
+
+.service-content p {
+  font-size: 1rem;
+  line-height: 1.7;
+  margin-bottom: 2rem;
+  color: #e0e0e0;
+}
+
+.service-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 28px;
+  background: rgba(30, 58, 138, 0.15);
+  color: #3b82f6;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 25px;
+  border: 1px solid rgba(30, 58, 138, 0.4);
+  transition: all 0.3s ease;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  width: fit-content;
+  backdrop-filter: blur(10px);
+}
+
+.service-link:hover {
+  background: rgba(30, 58, 138, 0.3);
+  color: white;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(30, 58, 138, 0.3);
+}
+
+/* ========== CONTACT SECTION ========== */
+.contact-section {
+  padding: 60px 5%;
+  background: var(--bg-dark);
+}
+
+.contact-box {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.contact-form {
+  display: grid;
+  gap: 1.5rem;
+  margin-top: 40px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 18px 20px;
+  background: rgba(30, 58, 138, 0.08);
+  border: 1px solid rgba(30, 58, 138, 0.2);
+  border-radius: 12px;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  transition: all 0.3s ease;
+  font-size: 1.05rem;
+  backdrop-filter: blur(8px);
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: var(--text-muted);
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: #3b82f6;
+  background: rgba(30, 58, 138, 0.15);
+  box-shadow: 0 0 25px rgba(30, 58, 138, 0.3);
+}
+
+.contact-form textarea { resize: vertical; min-height: 150px; }
+
+.contact-info {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  margin-top: 60px;
+  padding-top: 60px;
+  border-top: 1px solid var(--glass-border);
+}
+
+.info-item {
+  text-align: center;
+}
+
+.info-item h4 {
+  color: #3b82f6;
+  margin-bottom: 10px;
+}
+
+.info-item a {
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.info-item a:hover {
+  color: #3b82f6;
+}
+
+/* ========== FOOTER ========== */
+footer h3 {
+  color: #3b82f6;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  letter-spacing: 2px;
+}
+
+footer {
+  background: #000;
+  padding: 60px 0;
+  text-align: center;
+  border-top: 1px solid rgba(30, 58, 138, 0.2);
+}
+
+footer p {
+  color: var(--text-muted);
+  max-width: 600px;
+  margin: 0 auto 30px;
+}
+
+.footer-copyright {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  margin-top: 30px;
+  padding-top: 30px;
+  border-top: 1px solid var(--glass-border);
+}
+
+/* ========== ANIMATIONS ========== */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideInUp {
+  from { opacity: 0; transform: translateY(50px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ========== FLOATING BUTTONS ========== */
+.floating-whatsapp {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 70px;
+  height: 70px;
+  background: #25D366;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  box-shadow: 0 8px 25px rgba(37, 211, 102, 0.5);
+  border: none;
+  animation: slideInUp 0.8s ease-out;
+}
+
+.floating-whatsapp:hover {
+  transform: scale(1.2) rotate(-15deg);
+  box-shadow: 0 12px 35px rgba(37, 211, 102, 0.7);
+}
+
+.floating-whatsapp i { font-size: 30px; color: white; }
+
+#backToTopBtn {
+  position: fixed;
+  bottom: 120px;
+  right: 30px;
+  z-index: 998;
+  display: none;
+  background: rgba(30, 58, 138, 0.3);
+  color: #3b82f6;
+  border: 2px solid rgba(30, 58, 138, 0.5);
+  border-radius: 50%;
+  font-size: 24px;
+  padding: 15px 18px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+#backToTopBtn:hover {
+  background: rgba(30, 58, 138, 0.5);
+  color: #fff;
+  transform: translateY(-5px);
+  border-color: #3b82f6;
+}
+
+/* ========== RESPONSIVE DESIGN ========== */
+@media (max-width: 1024px) {
+  .hero-glass-box,
+  .about-glass-box { min-height: 500px; }
+  .hero-glass-content,
+  .about-glass-content { max-width: 400px; padding: 40px 30px; }
+  .hero-glass-content h1,
+  .about-glass-content h2 { font-size: 2.2rem; }
+  h1 { font-size: 2.8rem; }
+  h2 { font-size: 2.2rem; }
+}
+
+@media (max-width: 768px) {
+  nav { padding: 12px 5%; }
+  .nav-links { gap: 15px; }
+  .hamburger { display: flex; }
+  .nav-links {
+    position: absolute;
+    right: 0;
+    top: 70px;
+    background: #000;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    display: none;
+    border-bottom: 1px solid var(--glass-border);
+    gap: 15px;
+    z-index: 999;
+  }
+  .nav-links.active { display: flex; }
+
+  .hero { padding: 50px 5%; margin-top: 60px; }
+  .hero-glass-box,
+  .about-glass-box { min-height: 450px; }
+  .hero-glass-content,
+  .about-glass-content { max-width: 350px; padding: 35px 25px; }
+  .hero-glass-content h1,
+  .about-glass-content h2 { font-size: 1.8rem; }
+  .hero-glass-content p,
+  .about-glass-content p { font-size: 0.95rem; }
+
+  .services-grid { grid-template-columns: 1fr; }
+  .service-card { height: auto; }
+
+  .slider-container { height: 400px; }
+  .slide-content { padding: 40px 30px; }
+  .slide-content h2 { font-size: 2rem; }
+  .slide-content p { font-size: 1rem; }
+
+  .cta-buttons { flex-direction: column; }
+  .cta-btn, .btn { width: 100%; justify-content: center; }
+
+  .contact-info { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 480px) {
+  h1 { font-size: 1.8rem; }
+  h2 { font-size: 1.6rem; }
+  h3 { font-size: 1.3rem; }
+  p, .lead { font-size: 1rem; }
+
+  .hero { padding: 40px 5%; margin-top: 60px; }
+  .hero-glass-box,
+  .about-glass-box { min-height: 350px; }
+  .hero-glass-content,
+  .about-glass-content { padding: 25px 20px; }
+
+  .section { padding: 40px 5%; }
+  .cta-btn, .btn { padding: 12px 20px; font-size: 0.9rem; }
+
+  .slider-dots { gap: 8px; bottom: 20px; }
+  .slider-dot { width: 10px; height: 10px; }
+  .slider-dot.active { width: 30px; }
+}
+</style>
+
 </head>
 
 <body>
-    <!-- NAVIGATION -->
-    <header>
-        <nav class="container" id="navbar" role="navigation" aria-label="Main navigation">
-            <a href="#home" class="logo" aria-label="Victor William Home">
-                <img src="images/logo.png" alt="Victor William Logo" width="150" height="50" />
-            </a>
-            <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
-                <span></span><span></span><span></span>
-            </button>
-            <ul class="nav-links" id="navLinks" role="menubar">
-                <li><a href="#home" role="menuitem">Home</a></li>
-                <li><a href="#about" role="menuitem">About</a></li>
-                <li><a href="#services" role="menuitem">Services</a></li>
-                <li><a href="#slider" role="menuitem">Philosophy</a></li>
-                <li><a href="#testimonials" role="menuitem">Results</a></li>
-                <li><a href="#contact" role="menuitem">Contact</a></li>
-                <li><a href="#contact" class="btn btn-primary" role="menuitem"><i class="fas fa-calendar-check"></i> Book Now</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <!-- MAIN CONTENT -->
-    <main id="main-content">
-        <!-- HERO SECTION -->
-        <section class="hero" id="home" aria-label="Hero section">
-            <div class="hero-container" data-aos="fade-up">
-                <div class="hero-glass-box">
-                    <div class="hero-glass-image">
-                        <img src="images/victor1.jpeg" alt="Victor William - Strength Coach" width="500" height="600" />
-                    </div>
-                    <div class="hero-glass-content">
-                        <h1>Victor William — Structured Strength & Wellness Coach</h1>
-                        <p class="lead">Transform your training with proven methods. No confusion, no shortcuts—just sustainable results.</p>
-                        <div class="cta-buttons">
-                            <a href="https://wa.me/254726707895" class="btn btn-whatsapp" target="_blank" rel="noopener noreferrer">
-                                <i class="fab fa-whatsapp"></i> WhatsApp
-                            </a>
-                            <a href="https://form.jotform.com/260245859907064" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
-                                <i class="fas fa-calendar-check"></i> Apply Now
-                            </a>
-                            <a href="tel:+254726707895" class="btn" target="_blank" rel="noopener noreferrer">
-                                <i class="fas fa-phone"></i> Call Now
-                            </a>
-                        </div>
-                        <div class="social-links">
-                            <a href="https://www.instagram.com/victorwilliam.coach" class="social-link" target="_blank" rel="noopener noreferrer">
-                                <i class="fab fa-instagram"></i>
-                            </a>
-                            <a href="https://www.facebook.com/victorwilliam.coach" class="social-link" target="_blank" rel="noopener noreferrer">
-                                <i class="fab fa-facebook-f"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+<!-- ========== NAVIGATION ========== -->
 
-        <!-- ABOUT SECTION -->
-        <section class="about-section" id="about" aria-label="About Victor">
-            <div class="about-container" data-aos="fade-up">
-                <div class="about-glass-box">
-                    <div class="about-glass-image">
-                        <img src="images/victor2.jpeg" alt="Victor William - About" width="500" height="600" />
-                    </div>
-                    <div class="about-glass-content">
-                        <h2>My Mission</h2>
-                        <p class="lead"><strong style="color: var(--accent-primary);">Empowering Busy Professionals</strong></p>
-                        <p class="lead">I help high-achieving professionals build sustainable strength, energy, and confidence without sacrificing their career or family life. My structured systems provide clarity, accountability, and results that last.</p>
-                        <a href="https://wa.me/254726707895" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
-                            <i class="fab fa-whatsapp"></i> Start Your Transformation
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- SERVICES SECTION -->
-        <section id="services" class="services-section" data-aos="fade-up" aria-label="Our Services">
-            <div class="container">
-                <h2 data-aos="fade-up">Coaching Services</h2>
-                <p class="section-subtext" data-aos="fade-up">Structured programs designed for sustainable results</p>
-
-                <div class="services-grid">
-                    <div class="service-card" data-aos="fade-up" data-aos-delay="100">
-                        <div class="service-content">
-                            <h3>1-on-1 Coaching</h3>
-                            <p>Personalized strength and wellness programming with weekly check-ins, form analysis, and nutritional guidance.</p>
-                            <a href="#contact" class="service-link">Learn More →</a>
-                        </div>
-                    </div>
-
-                    <div class="service-card" data-aos="fade-up" data-aos-delay="200">
-                        <div class="service-content">
-                            <h3>Online Programs</h3>
-                            <p>Structured training and nutrition plans with video tutorials, progress tracking, and community support.</p>
-                            <a href="#contact" class="service-link">Learn More →</a>
-                        </div>
-                    </div>
-
-                    <div class="service-card" data-aos="fade-up" data-aos-delay="300">
-                        <div class="service-content">
-                            <h3>Corporate Wellness</h3>
-                            <p>Workplace wellness programs, team fitness challenges, and executive health coaching for organizations.</p>
-                            <a href="#contact" class="service-link">Learn More →</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- SLIDER SECTION - About Philosophy -->
-        <section id="slider" class="slider-section" data-aos="fade-up" aria-label="My Philosophy">
-            <div class="container">
-                <h2 data-aos="fade-up">My Philosophy</h2>
-                <p class="section-subtext" data-aos="fade-up">The principles that guide every transformation</p>
-                
-                <div class="slider-container" data-aos="fade-up">
-                    <div class="slider-wrapper">
-                        <!-- Slide 1 -->
-                        <div class="slide active" style="background-image:url('images/victor3.jpeg');">
-                            <div class="slider-overlay"></div>
-                            <div class="slider-content">
-                                <h3>Clarity Over Complexity</h3>
-                                <p class="lead">Simple, structured systems yield better results than complicated routines. We focus on what actually works.</p>
-                            </div>
-                        </div>
-                        <!-- Slide 2 -->
-                        <div class="slide" style="background-image:url('images/victor4.jpeg');">
-                            <div class="slider-overlay"></div>
-                            <div class="slider-content">
-                                <h3>Consistency Is King</h3>
-                                <p class="lead">Sustainable progress comes from showing up consistently, not from extreme short-term efforts.</p>
-                            </div>
-                        </div>
-                        <!-- Slide 3 -->
-                        <div class="slide" style="background-image:url('images/victor5.jpeg');">
-                            <div class="slider-overlay"></div>
-                            <div class="slider-content">
-                                <h3>Mindset Matters</h3>
-                                <p class="lead">Strength training builds mental resilience. Confidence grows with every rep, every set, every session.</p>
-                            </div>
-                        </div>
-                        <!-- Slide 4 -->
-                        <div class="slide" style="background-image:url('images/victor6.jpeg');">
-                            <div class="slider-overlay"></div>
-                            <div class="slider-content">
-                                <h3>Balance & Sustainability</h3>
-                                <p class="lead">Fitness should enhance your life, not consume it. We build programs that work with your lifestyle.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="slider-dots">
-                        <span class="slider-dot active" data-index="0"></span>
-                        <span class="slider-dot" data-index="1"></span>
-                        <span class="slider-dot" data-index="2"></span>
-                        <span class="slider-dot" data-index="3"></span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- TESTIMONIALS SECTION -->
-        <section id="testimonials" class="section" data-aos="fade-up" aria-label="Client Results">
-            <div class="box">
-                <h2 data-aos="fade-up">Client Transformations</h2>
-                <p class="section-subtext" data-aos="fade-up">Real results from professionals who transformed their fitness</p>
-
-                <div class="testimonials-grid">
-                    <div class="testimonial-card" data-aos="fade-up" data-aos-delay="100">
-                        <div class="stars">★★★★★</div>
-                        <p class="testimonial-text">"Victor's structured approach helped me gain 15lbs of muscle while balancing my 60-hour work week. Finally, a program that actually fits my life."</p>
-                        <div class="testimonial-author">David K., Tech Executive</div>
-                        <div class="testimonial-service">1-on-1 Coaching · 6 Months</div>
-                    </div>
-
-                    <div class="testimonial-card" data-aos="fade-up" data-aos-delay="200">
-                        <div class="stars">★★★★★</div>
-                        <p class="testimonial-text">"As a busy mom and lawyer, I needed efficiency. Victor's online program gave me clear direction and accountability without the guesswork."</p>
-                        <div class="testimonial-author">Sarah M., Attorney</div>
-                        <div class="testimonial-service">Online Program · 4 Months</div>
-                    </div>
-
-                    <div class="testimonial-card" data-aos="fade-up" data-aos-delay="300">
-                        <div class="stars">★★★★★</div>
-                        <p class="testimonial-text">"The corporate wellness program Victor designed for our team reduced stress levels by 40% and improved productivity. Exceptional results."</p>
-                        <div class="testimonial-author">James R., HR Director</div>
-                        <div class="testimonial-service">Corporate Wellness · 3 Months</div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- CONTACT SECTION -->
-        <section id="contact" class="contact-section" data-aos="fade-up" aria-label="Contact">
-            <div class="box">
-                <h2 data-aos="fade-up">Ready to Transform?</h2>
-                <p class="section-subtext" data-aos="fade-up">Book your consultation or ask questions directly</p>
-
-                <form class="contact-form" action="https://formspree.io/f/xvgqzwke" method="POST" id="bookingForm">
-                    <input type="text" name="name" placeholder="Your Name" required />
-                    <input type="email" name="email" placeholder="Your Email" required />
-                    <input type="tel" name="phone" placeholder="Phone Number (e.g. +254...)" required />
-                    <select name="service" required>
-                        <option value="" disabled selected>Select Service</option>
-                        <option value="1-on-1 Coaching">1-on-1 Coaching</option>
-                        <option value="Online Program">Online Program</option>
-                        <option value="Corporate Wellness">Corporate Wellness</option>
-                        <option value="Consultation">Free Consultation</option>
-                    </select>
-                    <input type="date" name="date" required />
-                    <textarea name="goals" placeholder="Tell me about your fitness goals and challenges..." required></textarea>
-                    <input type="hidden" name="_next" value="https://victorwilliam.com/thankyou.html" />
-                    <button type="submit" class="btn btn-primary" id="submitBtn" style="width: 100%;">
-                        <i class="fas fa-paper-plane"></i> Send Application
-                    </button>
-                </form>
-
-                <div style="text-align: center; margin-top: 2rem;">
-                    <p style="color: var(--text-muted); margin-bottom: 1.5rem;">Or reach out directly:</p>
-                    <a href="https://wa.me/254726707895" target="_blank" class="btn btn-whatsapp" rel="noopener noreferrer" style="margin-right: 10px;">
-                        <i class="fab fa-whatsapp"></i> WhatsApp
-                    </a>
-                    <a href="tel:+254726707895" class="btn" target="_blank" rel="noopener noreferrer">
-                        <i class="fas fa-phone"></i> Call Now
-                    </a>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- FOOTER -->
-    <footer class="section dark-section">
-        <div class="container">
-            <div class="footer-logo">VICTOR WILLIAM</div>
-            <p class="footer-tagline">Structured Strength & Wellness Coaching • Mombasa & Online Worldwide</p>
-
-            <div class="social-links">
-                <a href="https://www.instagram.com/victorwilliam.coach" target="_blank" rel="noopener noreferrer">Instagram</a>
-                <a href="https://www.facebook.com/victorwilliam.coach" target="_blank" rel="noopener noreferrer">Facebook</a>
-                <a href="mailto:victorwilliamfit@gmail.com" target="_blank" rel="noopener noreferrer">
-                    <i class="fas fa-envelope"></i> Email
-                </a>
-                <a href="https://wa.me/254726707895" target="_blank" rel="noopener noreferrer">
-                    <i class="fab fa-whatsapp"></i> WhatsApp
-                </a>
-            </div>
-
-            <div class="contact-info" style="text-align: center; margin: 25px 0;">
-                <a href="mailto:victorwilliamfit@gmail.com" class="contact-item" style="justify-content: center; display: flex; align-items: center; gap: 10px; color: var(--text-muted); text-decoration: none;">
-                    <i class="fas fa-envelope"></i>
-                    <span>victorwilliamfit@gmail.com</span>
-                </a>
-                <a href="tel:+254726707895" class="contact-item" style="justify-content: center; display: flex; align-items: center; gap: 10px; color: var(--text-muted); text-decoration: none;">
-                    <i class="fas fa-phone"></i>
-                    <span>+254 726 707 895</span>
-                </a>
-            </div>
-
-            <p class="copyright">© 2024-2025 Victor William — Professional Coaching System<br>ACE Certified Fitness Coach • All Rights Reserved</p>
-        </div>
-    </footer>
-
-    <!-- Floating WhatsApp -->
-    <a href="https://wa.me/254726707895" class="floating-whatsapp" target="_blank" rel="noopener noreferrer">
-        <i class="fab fa-whatsapp" style="color: white; font-size: 2rem;"></i>
+<header>
+  <nav id="navbar" role="navigation" aria-label="Main navigation">
+    <a href="#hero" class="logo" aria-label="Victor William Home">
+      <img src="images/logo.png" alt="Victor William Logo" width="150" height="50" />
     </a>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks" role="menubar">
+      <li><a href="#hero" role="menuitem">Home</a></li>
+      <li><a href="#about" role="menuitem">About</a></li>
+      <li><a href="#approach" role="menuitem">My Approach</a></li>
+      <li><a href="#services" role="menuitem">Services</a></li>
+      <li><a href="#contact" role="menuitem">Contact</a></li>
+      <li><a href="https://form.jotform.com/260245859907064" class="cta-btn" role="menuitem" target="_blank">Apply Now</a></li>
+    </ul>
+  </nav>
+</header>
 
-    <!-- Back to Top -->
-    <button id="backToTopBtn" title="Go to top">↑</button>
+<main>
+  <!-- ========== HERO SECTION ========== -->
+  <section class="hero" id="hero" data-aos="fade-up" aria-label="Hero section">
+    <div class="hero-container">
+      <div class="hero-glass-box">
+        <div class="hero-glass-image">
+          <img src="images/victor1.jpeg" alt="Victor William - Structured Training" width="500" height="600" />
+        </div>
+        <div class="hero-glass-content">
+          <span class="section-label">PROFESSIONAL COACHING</span>
+          <h1>Structured Strength & Wellness</h1>
+          <p class="lead">Transform your training with proven methods. No confusion, no shortcuts—just sustainable results.</p>
+          <div class="cta-buttons">
+            <a href="https://wa.me/254726707895" class="btn btn-whatsapp" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+            <a href="https://form.jotform.com/260245859907064" class="btn btn-primary" target="_blank" rel="noopener noreferrer"><i class="fas fa-calendar-check"></i> Apply Now</a>
+            <a href="tel:+254726707895" class="btn"><i class="fas fa-phone"></i> Call Now</a>
+          </div>
+          <div class="social-links">
+            <a href="https://www.instagram.com/victorwilliam.coach" class="social-link" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.facebook.com/victorwilliam.coach" class="social-link" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <!-- Scripts -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        // Initialize AOS
-        AOS.init({ 
-            duration: 800, 
-            once: true, 
-            easing: 'ease-in-out',
-            offset: 100,
-            disable: function() {
-                return window.innerWidth < 768;
-            }
-        });
+  <!-- ========== ABOUT SECTION ========== -->
 
-        // Slider functionality
-        const slides = document.querySelectorAll('.slide');
-        const dots = document.querySelectorAll('.slider-dot');
-        let currentSlideIndex = 0;
+  <section class="about-section" id="about" data-aos="fade-up" aria-label="About Victor William">
+    <div class="about-container">
+      <div class="about-glass-box">
+        <div class="about-glass-image">
+          <img src="images/victor1.jpeg" alt="Victor William - Structured Training" width="500" height="600" />
+        </div>
+        <div class="about-glass-content">
+          <span class="section-label" style="color: var(--accent-green);">WHO I AM</span>
+          <h2>Hi, I'm Victor William</h2>
+          <p><strong style="color: var(--accent-green);">A Naturally Gifted Strength & Wellness Coach</strong></p>
+          <p>I'm a structured strength and wellness coach dedicated to helping busy professionals achieve sustainable results in fitness and life. Having faced self-doubt and burnout, I now guide others to build confidence, energy, and strength while balancing life's demands.</p>
+          <a href="https://wa.me/254726707895" class="btn btn-green" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i> Chat with Victor</a>
+        </div>
+      </div>
+    </div>
+  </section>
 
-        function showSlide(index) {
-            slides.forEach((slide, i) => {
-                slide.classList.toggle('active', i === index);
-                dots[i].classList.toggle('active', i === index);
-            });
-        }
+  <!-- ========== MY APPROACH - FADE SLIDER ========== -->
 
-        function nextSlide() {
-            currentSlideIndex = (currentSlideIndex + 1) % slides.length;
-            showSlide(currentSlideIndex);
-        }
+  <section class="slider-section" id="approach" data-aos="fade-up" aria-label="My Approach">
+    <div style="max-width: 1200px; margin: 0 auto; padding: 0 5%;">
+      <span class="section-label">MY PHILOSOPHY</span>
+      <h2 style="margin-bottom: 40px;">My Approach to Coaching</h2>
+    </div>
 
-        // Add click functionality to dots
-        dots.forEach((dot, index) => {
-            dot.addEventListener('click', () => {
-                currentSlideIndex = index;
-                showSlide(currentSlideIndex);
-            });
-        });
+```
+<div class="slider-container">
+  <div class="slider-wrapper">
+    <!-- Slide 1 -->
+    <div class="slide active" style="background-image:url('images/victor1.jpeg');">
+      <div class="slide-overlay"></div>
+      <div class="slide-content">
+        <h2>My Philosophy</h2>
+        <p class="lead">I believe in clarity, consistency, and systems—no shortcuts. Training, nutrition, and mindset must all align for lasting transformation.</p>
+      </div>
+    </div>
+    <!-- Slide 2 -->
+    <div class="slide" style="background-image:url('images/victor2.jpeg');">
+      <div class="slide-overlay"></div>
+      <div class="slide-content">
+        <h2>Why I Do This</h2>
+        <p class="lead">Having faced self-doubt and burnout, I now guide others to build confidence, energy, and strength while balancing life's demands.</p>
+      </div>
+    </div>
+    <!-- Slide 3 -->
+    <div class="slide" style="background-image:url('images/victor3.jpeg');">
+      <div class="slide-overlay"></div>
+      <div class="slide-content">
+        <h2>Holistic System</h2>
+        <p class="lead">I combine strength training, nutrition guidance, and mindset coaching to create a complete system for long-term success.</p>
+      </div>
+    </div>
+    <!-- Slide 4 -->
+    <div class="slide" style="background-image:url('images/victor4.jpeg');">
+      <div class="slide-overlay"></div>
+      <div class="slide-content">
+        <h2>Who I Work With</h2>
+        <p class="lead">I work with busy professionals, parents, and anyone committed to transforming their body and mind without extreme shortcuts.</p>
+      </div>
+    </div>
+    <!-- Slide 5 -->
+    <div class="slide" style="background-image:url('images/victor5.jpeg');">
+      <div class="slide-overlay"></div>
+      <div class="slide-content">
+        <h2>My Credentials</h2>
+        <p class="lead">Certified by ACE, mentored trainers, and helped hundreds of clients improve fitness, confidence, and lifestyle balance.</p>
+      </div>
+    </div>
+    <!-- Slide 6 -->
+    <div class="slide" style="background-image:url('images/victor6.jpeg');">
+      <div class="slide-overlay"></div>
+      <div class="slide-content">
+        <h2>Your Success</h2>
+        <p class="lead">I guide you step-by-step toward a stronger, healthier, and more confident life with accountability and structured systems.</p>
+      </div>
+    </div>
+  </div>
+  <!-- Slider dots -->
+  <div class="slider-dots">
+    <span class="slider-dot active" data-index="0"></span>
+    <span class="slider-dot" data-index="1"></span>
+    <span class="slider-dot" data-index="2"></span>
+    <span class="slider-dot" data-index="3"></span>
+    <span class="slider-dot" data-index="4"></span>
+    <span class="slider-dot" data-index="5"></span>
+  </div>
+</div>
+```
 
-        // Auto-advance slides
-        setInterval(nextSlide, 6000);
+  </section>
 
-        // Navigation
-        window.addEventListener('scroll', () => {
-            document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 50);
-        });
+  <!-- ========== SERVICES SECTION ========== -->
 
-        document.getElementById('hamburger').addEventListener('click', () => {
-            document.getElementById('navLinks').classList.toggle('active');
-            document.getElementById('hamburger').classList.toggle('active');
-        });
+  <section class="services-section" id="services" data-aos="fade-up" aria-label="My Services">
+    <div style="max-width: 1200px; margin: 0 auto; padding: 0 5%; margin-bottom: 40px;">
+      <span class="section-label">WHAT I OFFER</span>
+      <h2>Training Programs & Services</h2>
+      <p>Expert coaching tailored to your goals and lifestyle.</p>
+    </div>
 
-        // Close mobile menu when clicking a link
-        document.querySelectorAll('.nav-links a').forEach(link => {
-            link.addEventListener('click', () => {
-                document.getElementById('navLinks').classList.remove('active');
-                document.getElementById('hamburger').classList.remove('active');
-            });
-        });
+```
+<div class="services-grid">
+  <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+    <div class="service-content">
+      <h3><i class="fas fa-dumbbell"></i> Strength Training</h3>
+      <p>Structured programs designed for sustainable muscle building, fat loss, and functional strength. Perfect for busy professionals.</p>
+      <a href="#contact" class="service-link">Learn More →</a>
+    </div>
+  </div>
 
-        // Back to Top
-        window.addEventListener('scroll', () => {
-            document.getElementById('backToTopBtn').style.display = window.scrollY > 200 ? 'block' : 'none';
-        });
+  <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+    <div class="service-content">
+      <h3><i class="fas fa-apple-alt"></i> Nutrition Guidance</h3>
+      <p>Personalized nutrition plans that fit your lifestyle, preferences, and goals. No restrictive diets—just sustainable eating.</p>
+      <a href="#contact" class="service-link">Learn More →</a>
+    </div>
+  </div>
 
-        document.getElementById('backToTopBtn').addEventListener('click', () => {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        });
+  <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+    <div class="service-content">
+      <h3><i class="fas fa-brain"></i> Mindset Coaching</h3>
+      <p>Build confidence, overcome limiting beliefs, and develop mental resilience for lasting transformation and success.</p>
+      <a href="#contact" class="service-link">Learn More →</a>
+    </div>
+  </div>
+</div>
+```
 
-        // Form Submission
-        document.getElementById('bookingForm').addEventListener('submit', async (e) => {
-            e.preventDefault();
-            const btn = document.getElementById('submitBtn');
-            const originalText = btn.innerHTML;
-            btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
-            btn.disabled = true;
-            try {
-                const response = await fetch(e.target.action, {
-                    method: 'POST',
-                    body: new FormData(e.target),
-                    headers: { 'Accept': 'application/json' }
-                });
-                if (response.ok) {
-                    btn.innerHTML = '<i class="fas fa-check"></i> Sent!';
-                    btn.style.background = '#10B981';
-                    e.target.reset();
-                    setTimeout(() => {
-                        btn.innerHTML = originalText;
-                        btn.style.background = '';
-                        btn.disabled = false;
-                    }, 3000);
-                }
-            } catch (error) {
-                btn.innerHTML = '<i class="fas fa-times"></i> Error';
-                setTimeout(() => {
-                    btn.innerHTML = originalText;
-                    btn.disabled = false;
-                }, 3000);
-            }
-        });
-    </script>
-</body>
-</html>
+  </section>
+
+  <!-- ========== CONTACT SECTION ========== -->
+
+  <section class="contact-section" id="contact" data-aos="fade-up" aria-label="Contact">
+    <div class="contact-box">
+      <span class="section-label">GET IN TOUCH</span>
+      <h2>Ready to Transform?</h2>
+      <p>Let's discuss your goals and create a personalized plan for your success.</p>
+
+```
+  <div class="contact-info">
+    <div class="info-item">
+      <h4><i class="fas fa-phone"></i> Phone</h4>
+      <a href="tel:+254726707895">+254 726 707 895</a>
+    </div>
+    <div class="info-item">
+      <h4><i class="fab fa-whatsapp"></i> WhatsApp</h4>
+      <a href="https://wa.me/254726707895" target="_blank" rel="noopener noreferrer">Send a Message</a>
+    </div>
+    <div class="info-item">
+      <h4><i class="fas fa-envelope"></i> Email</h4>
+      <a href="/cdn-cgi/l/email-protection#97e1fef4e3f8e5e0fefbfbfef6faf1fee3d7f0faf6fefbb9f4f8fa"><span class="__cf_email__" data-cfemail="acdac5cfd8c3dedbc5c0c0c5cdc1cac5d8eccbc1cdc5c082cfc3c1">[email&#160;protected]</span></a>
+    </div>
+  </div>
+
+  <form class="contact-form" action="https://formspree.io/f/xvgqzwke" method="POST" id="contactForm">
+    <input type="text" name="name" placeholder="Your Name" required />
+    <input type="email" name="email" placeholder="Your Email" required />
+    <input type="tel" name="phone" placeholder="Phone Number (e.g. +254...)" required />
+    <input type="text" name="service" placeholder="Service Interested (e.g. 1-on-1 Coaching)" required />
+    <textarea name="message" placeholder="Tell me about your goals..." required></textarea>
+    <button type="submit" class="btn btn-primary" id="submitBtn">Send Message</button>
+  </form>
+</div>
+```
+
+  </section>
+</main>
+
+<!-- ========== FOOTER ========== -->
+
+<footer>
+  <div style="max-width: 1200px; margin: 0 auto; padding: 0 5%;">
+    <h3>VICTOR WILLIAM</h3>
+    <p>Structured Strength & Wellness Coaching • Mombasa & Online Worldwide</p>
+
+```
+<div class="social-links" style="justify-content:center;">
+  <a href="https://instagram.com/victorwilliam.coach" class="social-link" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+  <a href="https://facebook.com/victorwilliam.coach" class="social-link" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
+  <a href="/cdn-cgi/l/email-protection#21574842554e5356484d4d48404c47485561464c40484d0f424e4c" class="social-link" target="_blank" rel="noopener noreferrer"><i class="fas fa-envelope"></i></a>
+  <a href="https://wa.me/254726707895" class="social-link" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i></a>
+</div>
+
+<p class="footer-copyright">© 2024-2025 Victor William — Professional Coaching System<br>ACE Certified Fitness Coach • All Rights Reserved</p>
+```
+
+  </div>
+</footer>
+
+<!-- Floating WhatsApp -->
+
+<a href="https://wa.me/254726707895" class="floating-whatsapp" title="Chat on WhatsApp">
+  <i class="fab fa-whatsapp"></i>
+</a>
+
+<!-- Back to Top -->
+
+<button id="backToTopBtn" title="Go to top">↑</button>
+
+<!-- Scripts -->
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<script>
+  // Initialize AOS
+  AOS.init({
+    duration: 800,
+    once: true,
+    easing: 'ease-in-out',
+    offset: 100,
+    disable: function() {
+      return window.innerWidth < 768;
+    }
+  });
+
+  // Navigation Scroll Effect
+  const navbar = document.getElementById('navbar');
+  window.addEventListener('scroll', () => {
+    navbar.classList.toggle('scrolled', window.scrollY > 50);
+  });
+
+  // Mobile Menu Toggle
+  const hamburger = document.getElementById('hamburger');
+  const navLinks = document.getElementById('navLinks');
+
+  hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+    hamburger.classList.toggle('active');
+  });
+
+  // Close mobile menu when clicking a link
+  document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+      navLinks.classList.remove('active');
+      hamburger.classList.remove('active');
+    });
+  });
+
+  // Back to Top Button
+  const backToTopBtn = document.getElementById('backToTopBtn');
+
+  window.addEventListener('scroll', () => {
+    backToTopBtn.style.display = window.scrollY > 200 ? 'block' : 'none';
+  });
+
+  backToTopBtn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
+  // Slider Functionality
+  const slides = document.querySelectorAll('.slide');
+  const dots = document.querySelectorAll('.slider-dot');
+  let currentIndex = 0;
+
+  function showSlide(index) {
+    slides.forEach((slide, i) => {
+      slide.classList.toggle('active', i === index);
+    });
+    dots.forEach((dot, i) => {
+      dot.classList.toggle('active', i === index);
+    });
+  }
+
+  function nextSlide() {
+    currentIndex = (currentIndex + 1) % slides.length;
+    showSlide(currentIndex);
+  }
+
+  // Click dots to navigate
+  dots.forEach((dot, index) => {
+    dot.addEventListener('click', () => {
+      currentIndex = index;
+      showSlide(currentIndex);
+    });
+  });
+
+  // Auto-advance slides every 6 seconds
+  setInterval(nextSlide, 6000);
+
+  // Form Submission
+  document.getElementById('contactForm').addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const btn = document.getElementById('submitBtn');
+    const originalText = btn.textContent;
+    btn.textContent = 'Sending...';
+    btn.disabled = true;
+    try {
+      const response = await fetch(e.target.action, {
+        method: 'POST',
+        body: new FormData(e.target),
+        headers: { 'Accept': 'application/json' }
+      });
+      if (response.ok) {
+        btn.textContent = '✓ Sent!';
+        btn.style.background = '#10B981';
+        e.target.reset();
+        setTimeout(() => {
+          btn.textContent = originalText;
+          btn.style.background = '';
+          btn.disabled = false;
+        }, 3000);
+      }
+    } catch (error) {
+      btn.textContent = '✗ Error';
+      setTimeout(() => {
+        btn.textContent = originalText;
+        btn.disabled = false;
+      }, 3000);
+    }
+  });
+
+  // Smooth scroll for anchor links
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      const href = this.getAttrib
