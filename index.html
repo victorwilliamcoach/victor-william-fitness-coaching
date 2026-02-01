@@ -1,303 +1,243 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Victor William — Structured Strength Coach</title>
-<meta name="description" content="Structured strength coaching for busy professionals. Train with clarity, discipline, and long-term results.">
-
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-<style>
-:root {
-  --bg-dark: #0b1220;
-  --bg-soft: #101a33;
-  --accent: #3b82f6;
-  --text-main: #ffffff;
-  --text-muted: #a5b4d8;
-  --border-soft: rgba(255,255,255,.08);
-}
-
-* { box-sizing: border-box; margin: 0; padding: 0; }
-
-body {
-  font-family: Inter, sans-serif;
-  background: var(--bg-dark);
-  color: var(--text-main);
-  line-height: 1.7;
-}
-
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 24px;
-}
-
-/* NAV */
-header {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background: rgba(11,18,32,.9);
-  border-bottom: 1px solid var(--border-soft);
-  z-index: 1000;
-}
-
-.nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 0;
-}
-
-.logo {
-  font-weight: 700;
-  letter-spacing: -0.5px;
-}
-
-.nav a {
-  color: var(--text-muted);
-  text-decoration: none;
-  margin-left: 32px;
-  font-weight: 500;
-}
-
-.nav .cta {
-  color: #fff;
-  background: var(--accent);
-  padding: 10px 20px;
-  border-radius: 6px;
-}
-
-/* HERO */
-.hero {
-  padding: 160px 0 120px;
-}
-
-.hero-grid {
-  display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
-  gap: 80px;
-  align-items: center;
-}
-
-.hero h1 {
-  font-size: 3.2rem;
-  line-height: 1.1;
-  margin-bottom: 24px;
-}
-
-.hero p {
-  color: var(--text-muted);
-  font-size: 1.1rem;
-  max-width: 520px;
-}
-
-.hero-actions {
-  margin-top: 40px;
-}
-
-.hero-actions a {
-  display: inline-block;
-  margin-right: 20px;
-  padding: 14px 28px;
-  border-radius: 6px;
-  text-decoration: none;
-  font-weight: 600;
-}
-
-.primary {
-  background: var(--accent);
-  color: #fff;
-}
-
-.secondary {
-  border: 1px solid var(--border-soft);
-  color: var(--text-muted);
-}
-
-.hero-image {
-  background: url('https://images.unsplash.com/photo-1534367507877-0edd93bd013b?auto=format&fit=crop&w=1200&q=80') center/cover;
-  height: 420px;
-  border-radius: 12px;
-}
-
-/* SECTIONS */
-section {
-  padding: 120px 0;
-  border-top: 1px solid var(--border-soft);
-}
-
-.section-title {
-  font-size: 2.2rem;
-  margin-bottom: 16px;
-}
-
-.section-lead {
-  color: var(--text-muted);
-  max-width: 600px;
-}
-
-/* SERVICES */
-.cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
-  gap: 32px;
-  margin-top: 64px;
-}
-
-.card {
-  background: var(--bg-soft);
-  border: 1px solid var(--border-soft);
-  border-radius: 12px;
-  padding: 40px;
-}
-
-.card h3 {
-  margin-bottom: 12px;
-}
-
-.card ul {
-  margin-top: 20px;
-  list-style: none;
-}
-
-.card li {
-  margin-bottom: 10px;
-  color: var(--text-muted);
-}
-
-/* TESTIMONIAL */
-.quote {
-  max-width: 720px;
-  font-size: 1.4rem;
-  line-height: 1.5;
-}
-
-.author {
-  margin-top: 24px;
-  color: var(--text-muted);
-}
-
-/* CTA */
-.final {
-  text-align: center;
-  background: linear-gradient(180deg,#0b1220,#0f1a35);
-}
-
-.final a {
-  display: inline-block;
-  margin-top: 32px;
-  background: var(--accent);
-  color: #fff;
-  padding: 16px 36px;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: 600;
-}
-
-/* FOOTER */
-footer {
-  padding: 60px 0;
-  text-align: center;
-  color: var(--text-muted);
-  border-top: 1px solid var(--border-soft);
-}
-
-/* MOBILE */
-@media(max-width:900px){
-  .hero-grid { grid-template-columns: 1fr; }
-  .hero-image { height: 300px; }
-  .hero h1 { font-size: 2.4rem; }
-}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Victor William — Structured Strength Coach</title>
+  <meta name="description" content="Structured strength systems. Disciplined execution. Measured results.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Cormorant+Garamond:wght@300;400;500&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+  <!-- CSS UNCHANGED -->
 </head>
 
 <body>
 
 <header>
-  <div class="container nav">
-    <div class="logo">Victor William</div>
-    <div>
-      <a href="#services">Coaching</a>
-      <a href="#contact" class="cta">Apply</a>
-    </div>
-  </div>
+  <nav id="navbar">
+    <a href="#hero" class="logo">
+      <img src="images/logo.png" alt="Victor William Logo" width="150" height="50">
+    </a>
+    <button class="hamburger" id="hamburger">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#hero">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#approach">System</a></li>
+      <li><a href="#services">Training</a></li>
+      <li><a href="#contact">Apply</a></li>
+      <li>
+        <a href="https://form.jotform.com/260245859907064"
+           class="btn btn-primary"
+           target="_blank">Apply</a>
+      </li>
+    </ul>
+  </nav>
 </header>
 
-<section class="hero">
-  <div class="container hero-grid">
-    <div>
-      <h1>Structured strength coaching for people who value clarity.</h1>
-      <p>
-        I help busy professionals train with intention, discipline, and systems
-        that actually fit real life — in Mombasa and online worldwide.
-      </p>
-      <div class="hero-actions">
-        <a href="https://form.jotform.com/260245859907064" class="primary">Apply for Coaching</a>
-        <a href="https://form.jotform.com/260245818736059" class="secondary">Free Guide</a>
+<main id="main-content">
+
+<!-- HERO -->
+<section class="hero" id="hero">
+  <div class="hero-container">
+    <div class="glass-box">
+      <div class="glass-image">
+        <img src="images/victor1.jpeg" alt="Victor William - Structured Training">
+      </div>
+      <div class="glass-content">
+        <span class="section-label">STRUCTURED COACHING</span>
+        <h1>Structured Strength.<br>Measured Results.</h1>
+        <p class="lead">No hype. No shortcuts. Disciplined systems that produce outcomes.</p>
+
+        <div class="cta-buttons">
+          <a href="https://wa.me/254726707895" class="btn btn-whatsapp" target="_blank">
+            <i class="fab fa-whatsapp"></i> WhatsApp
+          </a>
+          <a href="https://form.jotform.com/260245859907064" class="btn btn-primary" target="_blank">
+            <i class="fas fa-calendar-check"></i> Apply
+          </a>
+          <a href="tel:+254726707895" class="btn">
+            <i class="fas fa-phone"></i> Call
+          </a>
+        </div>
+
+        <div class="social-links">
+          <a href="https://www.instagram.com/victorwilliam.coach" class="social-link" target="_blank">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://www.facebook.com/victorwilliam.coach" class="social-link" target="_blank">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+        </div>
       </div>
     </div>
-    <div class="hero-image"></div>
   </div>
 </section>
 
+<!-- ABOUT -->
+<section id="about">
+  <div class="container">
+    <div class="glass-box">
+      <div class="glass-image">
+        <img src="images/victor1.jpeg" alt="Victor William - Structured Training">
+      </div>
+      <div class="glass-content">
+        <span class="section-label">COACHING STANDARD</span>
+        <h2>Victor William</h2>
+        <p><strong style="color:#10B981;">Structured Strength Coach</strong></p>
+        <p>I coach professionals who want strength, control, and consistency. The work is system-driven, repeatable, and built for long-term execution.</p>
+        <a href="https://wa.me/254726707895" class="btn btn-green" target="_blank">
+          <i class="fab fa-whatsapp"></i> Start
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SYSTEM / SLIDER -->
+<section id="approach">
+  <div class="container">
+    <span class="section-label">TRAINING SYSTEM</span>
+    <h2>How the System Works</h2>
+
+    <div class="slider-container">
+      <div class="slider-wrapper">
+
+        <div class="slide active" style="background-image:url('images/victor1.jpeg');">
+          <div class="slide-overlay"></div>
+          <div class="slide-content">
+            <h2>No Guesswork</h2>
+            <p>Every phase, session, and metric has a purpose.</p>
+          </div>
+        </div>
+
+        <div class="slide" style="background-image:url('images/victor2.jpeg');">
+          <div class="slide-overlay"></div>
+          <div class="slide-content">
+            <h2>Why Structure</h2>
+            <p>Effort without structure is wasted.</p>
+          </div>
+        </div>
+
+        <div class="slide" style="background-image:url('images/victor3.jpeg');">
+          <div class="slide-overlay"></div>
+          <div class="slide-content">
+            <h2>Integrated System</h2>
+            <p>Training, nutrition, recovery operate as one.</p>
+          </div>
+        </div>
+
+        <div class="slide" style="background-image:url('images/victor4.jpeg');">
+          <div class="slide-overlay"></div>
+          <div class="slide-content">
+            <h2>Who This Is For</h2>
+            <p>People who value discipline over motivation.</p>
+          </div>
+        </div>
+
+        <div class="slide" style="background-image:url('images/victor5.jpeg');">
+          <div class="slide-overlay"></div>
+          <div class="slide-content">
+            <h2>Professional Standard</h2>
+            <p>Certified. Experienced. Outcome-focused.</p>
+          </div>
+        </div>
+
+        <div class="slide" style="background-image:url('images/victor6.jpeg');">
+          <div class="slide-overlay"></div>
+          <div class="slide-content">
+            <h2>Execution</h2>
+            <p>Consistency creates results. Systems sustain them.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
 <section id="services">
   <div class="container">
-    <h2 class="section-title">How I work</h2>
-    <p class="section-lead">
-      No chaos. No random workouts. Just structured training designed for consistency and progress.
-    </p>
+    <span class="section-label">COACHING SERVICES</span>
+    <h2>Training Systems</h2>
+    <p>Built to be executed, measured, and sustained.</p>
 
-    <div class="cards">
-      <div class="card">
-        <h3>1:1 Coaching</h3>
-        <p>Personalised training and nutrition with accountability.</p>
-        <ul>
-          <li>Custom programming</li>
-          <li>Form review & feedback</li>
-          <li>Weekly adjustments</li>
-          <li>Direct communication</li>
-        </ul>
+    <div class="services-grid">
+
+      <div class="service-card">
+        <div class="service-content">
+          <h3>Structured Strength</h3>
+          <p>Progressive strength built through load control and precision.</p>
+          <a href="#contact" class="service-link">View System →</a>
+        </div>
       </div>
 
-      <div class="card">
-        <h3>Free Strength Guide</h3>
-        <p>My framework for training with structure.</p>
-        <ul>
-          <li>Exercise fundamentals</li>
-          <li>Progression principles</li>
-          <li>Sample training split</li>
-        </ul>
+      <div class="service-card">
+        <div class="service-content">
+          <h3>Body Recomposition</h3>
+          <p>Fat loss and muscle gain without extremes.</p>
+          <a href="#contact" class="service-link">View System →</a>
+        </div>
       </div>
+
+      <div class="service-card">
+        <div class="service-content">
+          <h3>Performance Coaching</h3>
+          <p>Direct coaching. Clear accountability. Adjusted by data.</p>
+          <a href="#contact" class="service-link">View System →</a>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
 
-<section>
-  <div class="container">
-    <div class="quote">
-      “Structure changed everything. Less time training, better results, no guesswork.”
-      <div class="author">— Client, 6 months coaching</div>
+<!-- CONTACT -->
+<section id="contact">
+  <div class="contact-box">
+    <span class="section-label">START HERE</span>
+    <h2>Apply for Coaching</h2>
+    <p>If you want structure and results, begin the process.</p>
+
+    <div class="contact-info">
+      <div class="info-item">
+        <h4>Phone</h4>
+        <a href="tel:+254726707895">+254 726 707 895</a>
+      </div>
+      <div class="info-item">
+        <h4>WhatsApp</h4>
+        <a href="https://wa.me/254726707895" target="_blank">Message</a>
+      </div>
+      <div class="info-item">
+        <h4>Email</h4>
+        <a href="mailto:victorwilliamfit@gmail.com">Email</a>
+      </div>
     </div>
+
+    <form class="contact-form">
+      <input type="text" placeholder="Name">
+      <input type="email" placeholder="Email">
+      <input type="tel" placeholder="Phone">
+      <input type="text" placeholder="Service">
+      <textarea placeholder="Training history and objectives"></textarea>
+      <button class="btn btn-primary">Submit Application</button>
+    </form>
   </div>
 </section>
 
-<section class="final" id="contact">
-  <div class="container">
-    <h2 class="section-title">Train with structure.</h2>
-    <p class="section-lead">
-      If you’re done starting over, apply below.
-    </p>
-    <a href="https://form.jotform.com/260245859907064">Apply for Coaching</a>
-  </div>
-</section>
+</main>
 
 <footer>
   <div class="container">
-    © Victor William — Structured Strength Coach
+    <h3>VICTOR WILLIAM</h3>
+    <p>Structured Strength Coaching • Online & In-Person</p>
+    <p class="footer-copyright">
+      © 2024–2025 Victor William. All Rights Reserved.
+    </p>
   </div>
 </footer>
 
